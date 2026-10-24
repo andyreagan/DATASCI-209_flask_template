@@ -28,11 +28,13 @@ Press Run and let it build while talking.
 
 If asked: this is the binomial model behind a Wilson interval, shown rather than stated.
 
-## 4. Time, 30 seconds [iteration, appropriate type]
+## 4. Place and time, 35 seconds [iteration, appropriate type, audience]
 
-Toggle to "all crashes" mid sentence, or press Play.
+Press Play first, then type "Austin" in the search box (or click a bubble) while talking.
 
-"One panel per metro on one time axis. Gray bars are hours of rain each month, each blue dot is one rain crash. In San Francisco the dots pile up under the wet winters, correlation 0.56. Switch to all crashes and the pattern vanishes: totals follow the size of the fleet, not the weather. So step 2 is not an averaging artifact, and the fleets were clearly still running through the rainy months. My first version was one city on a dual axis chart; the course was right that it said nothing."
+"Every bubble is a city with at least one report, sized by the number of reports. Play the months and you watch the fleets spread: San Francisco first, then Phoenix, Los Angeles, Austin, Atlanta, and now dozens of smaller cities. Search or click any city to follow it. The strip underneath is that city month by month: gray bars are hours of rain, each blue dot is one rain crash. In San Francisco the dots pile up under the wet winters, correlation 0.56, while all crashes together ignore the rain. So slide 2 is not an averaging artifact, and the fleets kept operating through the rainy months. Austin shows the same shape."
+
+If asked why a map now: the audience's first question in every dry run was "where is this happening"; the six small multiples that used to be here are folded into the strip, one city at a time.
 
 ## 5. Severity, 20 seconds [insight]
 
