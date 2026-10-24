@@ -4,7 +4,7 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap">
 <style>
-  /* Rain and robotaxi crashes: a unit visualization of every NHTSA report, then the analytic views that test the rain hypothesis. */
+  /* Five visuals that tell one story: every crash report is a dot, and the question is whether rain is where the dots are. */
   :root { --bg:#f4f6f9; --bg2:#fbfcfd; --card:#ffffff; --line:#dde3ea; --fg:#18212c; --text2:#4a5563; --muted:#8591a0; --grid:#e9edf2; --tipbg:#ffffff;
           --ink:#14213d; --rain:#2b6cd4; --rain2:#9fc0ef; --clear:#e2a23b; --cloudy:#9aa5b1; --other:#cfd6de; --gray:#8a949e; --bar:#d9dee5; --pale:#dbe6f6; --warn:#c0392b; }
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#0d131b; --bg2:#111923; --card:#162030; --line:#273344; --fg:#e7edf4; --text2:#b3bdc9; --muted:#8793a1; --grid:#1d2735; --tipbg:#162030;
@@ -14,296 +14,201 @@
   * { box-sizing:border-box; }
   html { scroll-behavior:smooth; }
   body { margin:0; font-family:"Inter", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; color:var(--fg); background:var(--bg); font-variant-numeric:tabular-nums; font-size:15px; }
-  h1, h2, .big, .step .n, .hstep h2 { font-family:"Fraunces", Georgia, "Times New Roman", serif; }
-  section.slide { min-height:100vh; padding-block:34px 24px; padding-left:max(56px, env(safe-area-inset-left, 0px)); padding-right:max(56px, env(safe-area-inset-right, 0px)); display:flex; flex-direction:column; }
+  h1, h2, .big, .beat .n { font-family:"Fraunces", Georgia, "Times New Roman", serif; }
+  section.slide { min-height:100vh; padding-block:28px 20px; padding-left:max(56px, env(safe-area-inset-left, 0px)); padding-right:max(56px, env(safe-area-inset-right, 0px)); display:flex; flex-direction:column; }
   section.slide.alt { background:var(--bg2); }
   .kicker { font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--rain); font-weight:600; margin:0 0 8px; }
-  h1 { font-size:40px; line-height:1.08; margin:0 0 14px; color:var(--ink); text-wrap:balance; font-weight:700; letter-spacing:-.01em; }
-  h2 { font-size:28px; line-height:1.15; margin:0 0 8px; color:var(--ink); text-wrap:balance; font-weight:600; }
-  p.lede { font-size:16.5px; color:var(--text2); max-width:880px; margin:0 0 14px; line-height:1.5; }
-  .row { display:flex; gap:28px; align-items:flex-start; flex:1; min-height:0; }
-  .chart { flex:1 1 auto; min-width:0; }
-  .aside { flex:0 0 300px; min-width:0; font-size:14px; line-height:1.55; }
-  .aside h3 { margin:0 0 6px; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--rain); }
-  .aside p { margin:0 0 12px; }
-  .controls { display:flex; gap:10px; align-items:center; margin:4px 0 8px; font-size:14px; flex-wrap:wrap; color:var(--text2); }
+  h1 { font-size:34px; line-height:1.1; margin:0 0 12px; color:var(--ink); text-wrap:balance; font-weight:700; letter-spacing:-.01em; }
+  h2 { font-size:27px; line-height:1.15; margin:0 0 10px; color:var(--ink); text-wrap:balance; font-weight:600; }
+  .beat { display:grid; grid-template-columns:minmax(0,1fr) 380px; gap:36px; flex:1; min-height:0; align-items:stretch; }
+  .visual { min-width:0; display:flex; flex-direction:column; }
+  .frame { position:relative; flex:1; min-height:400px; max-height:calc(100vh - 175px); }
+  .frame canvas { position:absolute; inset:0; width:100%; height:100%; display:block; }
+  .legend { position:absolute; left:0; top:0; display:flex; gap:14px; font-size:12.5px; color:var(--text2); flex-wrap:wrap; }
+  .legend span::before { content:""; display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:6px; vertical-align:-1px; background:var(--sw); }
+  .story { font-size:14px; line-height:1.5; color:var(--text2); display:flex; flex-direction:column; justify-content:center; min-width:0; }
+  .story p { margin:0 0 12px; }
+  .story .n { font-size:13px; color:var(--rain); font-weight:700; letter-spacing:.04em; margin-bottom:4px; }
+  .story .box { background:var(--card); border:1px solid var(--line); border-left:4px solid var(--rain); border-radius:10px; padding:12px 14px; margin-top:4px; font-size:13px; line-height:1.45; }
+  .story .box h3 { margin:0 0 6px; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--rain); }
+  .story .box p { margin:0 0 6px; } .story .box p:last-child { margin:0; }
+  .story .iter { border-left-color:var(--clear); }
+  .story .iter h3 { color:var(--clear); }
+  .bigrow { display:flex; gap:26px; margin:6px 0 12px; flex-wrap:wrap; }
+  .big { font-size:36px; font-weight:700; color:var(--ink); line-height:1; letter-spacing:-.01em; }
+  .bigrow .lbl { font-size:12.5px; color:var(--text2); margin-top:4px; max-width:140px; line-height:1.3; }
+  .controls { display:flex; gap:10px; align-items:center; margin:0 0 8px; font-size:14px; flex-wrap:wrap; color:var(--text2); min-height:32px; }
   button.ctl { font:inherit; font-size:13px; padding:6px 12px; border:1px solid var(--line); border-radius:6px; background:var(--card); cursor:pointer; color:var(--ink); }
   button.ctl:hover { border-color:var(--rain); }
   button.ctl:focus-visible, input:focus-visible { outline:2px solid var(--rain); outline-offset:2px; }
   button.ctl.on { background:var(--ink); color:var(--bg2); border-color:var(--ink); }
   button.ctl.go { background:var(--rain); color:#fff; border-color:var(--rain); font-weight:600; }
-  input[type=range] { accent-color:var(--rain); width:220px; }
+  input[type=range] { accent-color:var(--rain); width:200px; }
   .pill { display:inline-block; padding:3px 10px; border-radius:999px; background:var(--pale); color:var(--ink); font-size:13px; font-weight:600; }
   svg text { font-family:inherit; }
   .axis path, .axis line { stroke:var(--line); }
   .axis text { fill:var(--text2); font-size:12px; }
   .grid line { stroke:var(--grid); }
   .grid path { display:none; }
-  .foot { margin-top:auto; padding-top:10px; font-size:12px; color:var(--muted); display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  .foot { margin-top:auto; padding-top:8px; font-size:12px; color:var(--muted); display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
   .tip { position:fixed; pointer-events:none; background:var(--tipbg); color:var(--fg); border:1px solid var(--line); border-radius:8px; padding:9px 11px; font-size:13px; line-height:1.45; box-shadow:0 4px 18px rgba(0,0,0,.14); opacity:0; transition:opacity .12s; max-width:290px; z-index:5; }
   .tip b { color:var(--ink); }
+  .hint { font-size:12px; color:var(--muted); }
   .cards { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:18px; margin-top:8px; }
   .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 18px; font-size:14px; line-height:1.5; min-width:0; }
   .card h3 { margin:0 0 8px; font-size:15px; color:var(--ink); }
   .card ul { margin:0; padding-left:18px; }
   .card li { margin-bottom:5px; }
-  .steps { display:grid; grid-template-columns:repeat(5, minmax(0,1fr)); gap:16px; margin-top:6px; }
-  .step { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:12px 12px 10px; font-size:13px; line-height:1.45; min-width:0; cursor:pointer; transition:transform .15s, border-color .15s; }
-  .step:hover { transform:translateY(-2px); border-color:var(--rain); }
-  .step .n { font-size:13px; color:var(--rain); font-weight:700; }
-  .step b { color:var(--ink); }
-  .step svg { display:block; width:100%; height:120px; margin:6px 0; }
-  .dead { color:var(--warn); font-weight:600; }
-  .hint { font-size:12px; color:var(--muted); }
-  .big { font-size:44px; font-weight:700; color:var(--ink); line-height:1; letter-spacing:-.01em; }
-  .bigrow { display:flex; gap:28px; margin:10px 0 6px; flex-wrap:wrap; }
-  .bigrow .lbl { font-size:12.5px; color:var(--text2); margin-top:4px; max-width:150px; line-height:1.3; }
   .dots { position:fixed; right:max(10px, env(safe-area-inset-right, 0px)); top:50%; transform:translateY(-50%); display:flex; flex-direction:column; gap:8px; z-index:4; }
   .dots a { width:9px; height:9px; border-radius:50%; background:var(--line); display:block; border:1px solid var(--muted); }
   .dots a.on { background:var(--rain); border-color:var(--rain); }
-  .nav { position:fixed; right:max(30px, env(safe-area-inset-right, 0px)); top:calc(10px + env(safe-area-inset-top, 0px)); font-size:12px; color:var(--muted); background:var(--card); border:1px solid var(--line); padding:4px 8px; border-radius:6px; z-index:4; }
-
-  /* hero: sticky canvas on the left, scrolling steps on the right */
-  .hero { padding-block:0 !important; display:block !important; }
-  .scrolly { display:grid; grid-template-columns:minmax(0,1fr) 400px; gap:36px; }
-  .sticky { position:sticky; top:0; height:100vh; display:flex; align-items:center; }
-  .sticky .frame { position:relative; width:100%; height:calc(100vh - 56px); }
-  .sticky canvas { position:absolute; inset:0; width:100%; height:100%; display:block; }
-  .legend { position:absolute; left:0; top:0; display:flex; gap:14px; font-size:12.5px; color:var(--text2); flex-wrap:wrap; }
-  .legend span::before { content:""; display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:6px; vertical-align:-1px; background:var(--sw); }
-  .hstep { min-height:100vh; display:flex; flex-direction:column; justify-content:center; padding-block:40px; }
-  .hstep h2 { font-size:26px; }
-  .hstep h1 { font-size:32px; }
-  .hstep p { font-size:15px; line-height:1.55; color:var(--text2); margin:0 0 10px; }
-  .hstep .num { font-family:"Fraunces", Georgia, serif; font-size:30px; color:var(--ink); font-weight:600; }
-  .hstep .box { background:var(--card); border:1px solid var(--line); border-left:4px solid var(--rain); border-radius:10px; padding:16px 18px; }
-  .hstep .box h3 { margin:0 0 6px; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--rain); }
-  .hstep .box p { margin:0 0 8px; font-size:14px; }
-  .hstep .box p:last-child { margin:0; }
-  .hstep.title .box { border-left-color:var(--clear); }
-  .ann { font-size:13px; color:var(--text2); margin-top:12px; }
-
+  .nav { position:fixed; right:max(30px, env(safe-area-inset-right, 0px)); top:calc(8px + env(safe-area-inset-top, 0px)); font-size:12px; color:var(--muted); background:var(--card); border:1px solid var(--line); padding:4px 8px; border-radius:6px; z-index:4; }
   @media (prefers-reduced-motion: reduce) { * { transition:none !important; animation:none !important; } html { scroll-behavior:auto; } }
-  @media (max-width: 900px) { .row { flex-direction:column; } .aside { flex-basis:auto; } .cards, .steps { grid-template-columns:1fr; } section.slide { padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); } h1 { font-size:28px; } .dots, .nav { display:none; }
-    .scrolly { grid-template-columns:1fr; gap:0; } .sticky { height:52vh; } .sticky .frame { height:48vh; } .hstep { min-height:60vh; } }
+  @media (max-width: 900px) { .beat { grid-template-columns:1fr; } .cards { grid-template-columns:1fr; } section.slide { padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); } h1 { font-size:26px; } h2 { font-size:24px; } .dots, .nav { display:none; } .frame { min-height:340px; } }
 </style>
 
 <div class="tip" id="tip"></div>
 <nav class="dots" id="dots" aria-label="Sections"></nav>
-<div class="nav">↑ ↓ to move · hover any dot or row · click a metro to follow it</div>
+<div class="nav">↑ ↓ to move · hover any dot</div>
 
-<section class="slide hero" id="s1">
-  <div class="scrolly">
-    <div class="sticky"><div class="frame">
-      <canvas id="dotsCanvas" aria-label="Every ADS crash report as one dot"></canvas>
-      <div class="legend" id="legend"></div>
-    </div></div>
-    <div class="steps-col">
-      <div class="hstep title snap" data-layout="all">
-        <p class="kicker">DATASCI 209 · Group 4 · Midterm · Weather dimension</p>
-        <h1>Do self driving cars crash more in the rain?</h1>
-        <p>Every dot on the left is one crash report filed with NHTSA under the Standing General Order for an automated driving system, July 2021 to August 2026. Color is the weather the operator ticked on the form.</p>
-        <div class="bigrow">
-          <div><div class="big" id="n1">0</div><div class="lbl">crash reports</div></div>
-          <div><div class="big" id="n2">0</div><div class="lbl">in rain</div></div>
-          <div><div class="big" id="n3">0%</div><div class="lbl">of crashes in rain</div></div>
-        </div>
-        <div class="box">
-          <h3>Tasks and audience</h3>
-          <p><b>Team task:</b> let a curious non expert explore when, where and how ADS vehicles crash.</p>
-          <p><b>My task:</b> weather. Compare crash rates across conditions and let a reader judge whether rain raises the risk.</p>
-          <p><b>Audience:</b> regulators, journalists and riders who have heard that sensors fail in rain and want evidence. They know percentages; they do not know intervals, so every number gets a sentence.</p>
-        </div>
-        <p class="ann">Scroll, or press ↓, to sort the dots.</p>
+<!-- 1. The question -->
+<section class="slide" id="s1">
+  <p class="kicker">DATASCI 209 · Group 4 · Midterm · Weather dimension · Solomon Azariah</p>
+  <h1>Do self driving cars crash more in the rain?</h1>
+  <div class="beat">
+    <div class="visual">
+      <div class="controls"><span>Sort the dots:</span>
+        <button class="ctl on" data-lay="all">in order filed</button>
+        <button class="ctl" data-lay="weather">by weather</button>
+        <button class="ctl" data-lay="metro">by metro</button>
+        <span class="hint">Every dot is one NHTSA report. Hover one.</span></div>
+      <div class="frame"><canvas id="cv1" aria-label="Every ADS crash report as one dot"></canvas><div class="legend" id="lg1"></div></div>
+    </div>
+    <div class="story">
+      <div class="n">1 of 5 · The question</div>
+      <h2>114 of 2,945 crashes happened in rain. Is that a lot?</h2>
+      <div class="bigrow">
+        <div><div class="big" id="n1">0</div><div class="lbl">crash reports, Jul 2021 to Aug 2026</div></div>
+        <div><div class="big" id="n2">0</div><div class="lbl">in rain</div></div>
+        <div><div class="big" id="n3">0%</div><div class="lbl">of all crashes</div></div>
       </div>
-      <div class="hstep snap" data-layout="weather">
-        <p class="kicker">Step 1 · What the forms say</p>
-        <h2>114 of 2,945 crashes happened in rain</h2>
-        <p>Clear weather carries 77 percent of reports and cloudy 18. Rain is 3.9 percent. Fog, snow and wind together are six crashes, far too few to test, so rain is the only adverse condition this analysis can speak to.</p>
-        <p>On its own this number says nothing about risk. A small share of crashes in rain is exactly what you would expect in cities where it rarely rains.</p>
-      </div>
-      <div class="hstep snap" data-layout="metro">
-        <p class="kicker">Step 2 · Where the fleets drive</p>
-        <h2>Six metros carry 82 percent of the reports</h2>
-        <p>San Francisco alone is 1,109 crashes, mostly Waymo and Cruise. Phoenix, Los Angeles and Austin follow. The rain share inside each cluster is small, and it is smallest in the desert cities.</p>
-        <p>Metros are the right unit for the question, because it is where both the crashes and the weather can be measured over the same months.</p>
-      </div>
-      <div class="hstep snap" data-layout="expected">
-        <p class="kicker">Step 3 · What rain would predict</p>
-        <h2>If rain were neutral there would be about 187 rain crashes. There were 91.</h2>
-        <p>Each ring is a rain crash the weather would predict: a metro's crash count times the share of hours it was raining there, from an hourly weather archive. Filled dots are the rain crashes that were actually reported.</p>
-        <p>Every metro has empty rings. Atlanta and Austin, the rainiest cities, have the most. This is the step where the hypothesis flipped.</p>
-      </div>
-      <div class="hstep snap" data-layout="hour">
-        <p class="kicker">Step 4 · Time of day</p>
-        <h2>Rain crashes keep the same daily rhythm, with a slight lean to the evening</h2>
-        <p>Stacking the dots by hour shows the fleet's working day: a trough at 4 to 6 am and a plateau from 9 am to 6 pm. Rain crashes sit on the same curve. About 31 percent of them fall between 6 pm and midnight against 26 percent of all crashes, a lean of a few points on 114 cases, which is a hint and not a finding.</p>
-        <p>The rest of this page tests the step 3 result properly: per metro, with uncertainty, over time, by severity and by crash partner.</p>
-      </div>
+      <p>Every dot is one crash report filed with NHTSA under the Standing General Order for an automated driving system, colored by the weather box the operator ticked. Fog, snow and wind together are six reports, so rain is the only adverse condition this analysis can test.</p>
+      <p>On its own, 3.9 percent says nothing about risk. It would be a lot in Seattle and a lot of nothing in Phoenix. The whole story is finding the right denominator.</p>
+      <div class="box"><h3>Tasks and audience</h3>
+        <p><b>Team task:</b> let a curious non expert explore when, where and how ADS vehicles crash. <b>My task:</b> weather, so a reader can compare crash rates across conditions and judge whether rain raises the risk.</p>
+        <p><b>Audience:</b> regulators, journalists and riders who have heard that sensors fail in rain and want evidence. They know percentages, not intervals, so every number gets a plain sentence.</p></div>
     </div>
   </div>
+  <div class="foot"><span>Data: two NHTSA schemas merged and deduplicated by report and incident id; weather is a tick box per report. Sorting by metro shows where the fleets drive: six metros carry 82 percent of the reports.</span><span>1 / 5</span></div>
 </section>
 
-<section class="slide alt snap" id="s2">
-  <p class="kicker">How the chart got here</p>
-  <h2>Five iterations, two dead ends</h2>
-  <p class="lede">Each step is drawn from the real data. The first two could not answer the question because they had no denominator; the exposure variable in step three is where the hypothesis flipped. Click a step to jump to its full size version.</p>
-  <div class="steps" id="steps"></div>
-  <div class="foot"><span>Exposure = share of hours with precipitation per metro from the Open Meteo hourly archive, over the months each metro had reports.</span><span>Section 2 of 9</span></div>
-</section>
-
-<section class="slide snap" id="s3">
-  <p class="kicker">The main view</p>
-  <h2>Rain crashes are rarer than rain itself, in every metro</h2>
-  <div class="controls">
-    <span>Show:</span>
-    <button class="ctl on" data-mode="crash">Crash share in rain</button>
-    <button class="ctl" data-mode="both">Add how often it rains</button>
-    <span class="hint">Hover a row for the numbers, click to follow that metro through the next sections.</span>
-  </div>
-  <div class="row">
-    <div class="chart" id="c3"></div>
-    <div class="aside">
-      <h3>How to read it</h3>
-      <p>Blue dot: share of a metro's ADS crashes that happened in rain. Gray dot: share of that metro's hours that had rain while the fleet was reporting. If rain were neutral the two dots would sit on top of each other.</p>
-      <h3>Insight</h3>
-      <p>The blue dot is left of the gray dot in all six metros. Austin and Atlanta, the rainiest cities, show the biggest gaps. Rain is not where the crashes are.</p>
-      <h3>Design choices</h3>
-      <p>A dumbbell instead of two bars so the gap is one visual object. Metros sorted by exposure so the eye reads a trend. Length from zero is not needed because the task is comparing two positions, not reading a magnitude.</p>
+<!-- 2. The denominator -->
+<section class="slide alt" id="s2">
+  <div class="beat">
+    <div class="visual">
+      <div class="controls"><span>What if fleets drive only <span class="pill" id="milesLbl">100%</span> of their usual miles when it rains?</span>
+        <input type="range" id="miles" min="30" max="100" step="5" value="100" aria-label="share of usual miles driven in rain">
+        <span class="hint" id="milesHint"></span></div>
+      <div class="frame"><canvas id="cv2" aria-label="Rain crashes predicted by rain hours against rain crashes reported"></canvas><div class="legend" id="lg2"></div></div>
+    </div>
+    <div class="story">
+      <div class="n">2 of 5 · The denominator</div>
+      <h2>It rained far more often than the reports say it did</h2>
+      <p>For each of the six metros, take its crash count and multiply by the share of hours it was actually raining there, from an hourly weather archive over the same months. That is how many rain crashes there would be if rain made no difference. Each ring is one of those predicted crashes. Each filled dot is a rain crash that was really reported.</p>
+      <p><b>187 predicted. 91 reported.</b> Every metro has empty rings, and the rainiest cities, Austin and Atlanta, have the most. This is the step where the hypothesis flipped.</p>
+      <p>The reports contain no miles, so the slider asks the obvious question: how much less would the fleets have to drive in rain for the rings to fill? The answer is about half.</p>
+      <div class="box iter"><h3>Iteration</h3><p>Version one was a bar chart of weather codes, version two the share of each metro's crashes in rain. Both lacked a denominator. The dumbbell of crash share against rain hours came next, and the rings replaced it because a non expert can count empty rings without reading an axis.</p></div>
     </div>
   </div>
-  <div class="foot"><span>Metros with at least 60 crashes. Phoenix includes Tempe, Scottsdale, Chandler, Mesa and Gilbert.</span><span>Section 3 of 9</span></div>
+  <div class="foot"><span>Exposure = share of hours with precipitation per metro (Open Meteo archive) over the months each metro had reports. Metros with at least 60 crashes.</span><span>2 / 5</span></div>
 </section>
 
-<section class="slide alt snap" id="s4">
-  <p class="kicker">Could this be chance?</p>
-  <h2>Rerun the world 1,000 times with rain made neutral</h2>
-  <div class="controls">
-    <span>Metro:</span><span id="simMetros"></span>
-    <button class="ctl go" id="runSim">▶ Run 1,000 worlds</button>
-    <span id="simStatus" class="hint"></span>
-  </div>
-  <div class="row">
-    <div class="chart" id="c4"></div>
-    <div class="aside">
-      <h3>How to read it</h3>
-      <p>Each world keeps every metro's real crash count and real rain hours, but lets each crash fall in rain purely by chance, with probability equal to the share of hours it rained there. The bars count how many rain crashes each world produced. The blue line is what really happened.</p>
-      <h3>Insight</h3>
-      <p>For the six metros together the worlds land between roughly 145 and 230 rain crashes. The real count, 91, is far below all of them. Chance is not the explanation.</p>
-      <h3>Per metro</h3>
-      <p>Pick a metro to see how much it can say on its own. San Francisco is decisive by itself. Las Vegas, with one rain crash, lands inside its own cloud: it tells us nothing either way, which is exactly what its wide interval in the next section means.</p>
+<!-- 3. Chance -->
+<section class="slide" id="s3">
+  <div class="beat">
+    <div class="visual">
+      <div class="controls"><span>Metro:</span><span id="simMetros"></span>
+        <button class="ctl go" id="runSim">▶ Run 1,000 worlds</button>
+        <span id="simStatus" class="hint"></span></div>
+      <div class="frame" id="c4"></div>
+    </div>
+    <div class="story">
+      <div class="n">3 of 5 · Chance</div>
+      <h2>No rain neutral world comes anywhere near 91</h2>
+      <p>Could 91 against 187 be luck? Rerun the world a thousand times. Each world keeps every metro's real crash count and real rain hours, but lets each crash land in rain purely by chance, with probability equal to the share of hours it rained there. The bars count the rain crashes each world produced; the blue line is what really happened.</p>
+      <p>The worlds land between roughly 150 and 230. None of them gets close to 91. Pick a single metro to see how much it can say alone: San Francisco is decisive by itself; Las Vegas, with one rain crash, sits inside its own cloud and tells us nothing either way.</p>
+      <div class="box iter"><h3>Iteration</h3><p>This started as a table of Wilson intervals. The intervals are still the statistics underneath (binomial per metro, the same model), but the audience does not know the word interval, and watching a thousand worlds pile up to the right of the line needs no explanation.</p></div>
     </div>
   </div>
-  <div class="foot"><span>Binomial draws per metro, summed. This is the same model as the intervals in the next section, shown instead of stated.</span><span>Section 4 of 9</span></div>
+  <div class="foot"><span>Binomial draws per metro, summed. Exposure treated as known: it comes from thousands of hourly observations, so its error is tiny next to the crash counts.</span><span>3 / 5</span></div>
 </section>
 
-<section class="slide snap" id="s5">
-  <p class="kicker">One number per metro, with uncertainty</p>
-  <h2>Crashes in rain run at 38 to 63 percent of what the weather would predict</h2>
-  <div class="controls">
-    <span>Sort by:</span>
-    <button class="ctl on" data-sort="ratio">ratio</button>
-    <button class="ctl" data-sort="crashes">number of crashes</button>
-    <span style="margin-left:18px">What if fleets drive only <span class="pill" id="milesLbl">100%</span> of their usual miles when it rains?</span>
-    <input type="range" id="miles" min="30" max="100" step="5" value="100" aria-label="share of usual miles driven in rain">
-  </div>
-  <div class="row">
-    <div class="chart" id="c5"></div>
-    <div class="aside">
-      <h3>How to read it</h3>
-      <p>Ratio = crash share in rain divided by rain hour share. 1 means crashes happen in rain exactly as often as it rains. The bar is a 95 percent Wilson interval on the crash share, so small metros get wide bars.</p>
-      <h3>Insight</h3>
-      <p>Every point is below 1 and the four metros with the most data exclude 1. Las Vegas rests on a single rain crash, which is why its interval runs off the chart; it is shown, not hidden.</p>
-      <h3>The slider</h3>
-      <p>The reports have no miles. The slider rescales the ratios as if the fleet drove a fraction of its usual miles in rain. Around 50 percent every metro lands on 1: the data is consistent with fleets being half as present in rain, which is the exposure explanation.</p>
+<!-- 4. Time -->
+<section class="slide alt" id="s4">
+  <div class="beat">
+    <div class="visual">
+      <div class="controls"><span>Show:</span>
+        <button class="ctl on" data-series="rain">rain crashes, one dot each</button>
+        <button class="ctl" data-series="crashes">all crashes, as a line</button>
+        <button class="ctl" id="play">▶ Play the months</button>
+        <span class="hint">Gray bars are hours of rain that month, same scale in every panel.</span></div>
+      <div class="frame" id="c6"></div>
+    </div>
+    <div class="story">
+      <div class="n">4 of 5 · Time</div>
+      <h2>The rainy season shows up in rain crashes, and nowhere else</h2>
+      <p>One panel per metro on a shared time axis. The gray bars are hours of rain each month; each blue dot is one rain crash that month. In San Francisco the dots pile up under the tallest bars, the wet winters, with a correlation of 0.56. Los Angeles and Austin show the same shape with fewer months; Phoenix and Las Vegas barely have a season to follow.</p>
+      <p>Switch to all crashes and the pattern vanishes: totals track how many vehicles were on the road, not the weather. So the result in step 2 is not an averaging artifact, and the fleets were plainly still operating through the rainy months.</p>
+      <div class="box iter"><h3>Iteration</h3><p>Version one was San Francisco alone on a dual axis chart. The course's warning about dual axes was right: where the lines crossed meant nothing. Six small multiples with one time axis show the whole pattern at once, and the dots keep the unit of the first slide.</p></div>
     </div>
   </div>
-  <div class="foot"><span>Wilson score interval, z = 1.96. Exposure treated as known. Adjusted ratio = ratio ÷ (miles share).</span><span>Section 5 of 9</span></div>
+  <div class="foot"><span>Blank months: the metro had no reports that month, so no exposure was counted either. Correlations use the months shown.</span><span>4 / 5</span></div>
 </section>
 
-<section class="slide alt snap" id="s6">
-  <p class="kicker">Does the pattern hold over time?</p>
-  <h2>Rain crashes follow the rainy season in every metro that has one</h2>
-  <div class="controls">
-    <span>Dots:</span>
-    <button class="ctl on" data-series="rain">rain crashes, one dot each</button>
-    <button class="ctl" data-series="crashes">all crashes, as a line</button>
-    <button class="ctl" id="play">▶ Play the months</button>
-    <span class="hint">Gray bars are hours of rain that month, same scale in every panel. Hover a month to read it.</span>
-  </div>
-  <div class="row">
-    <div class="chart" id="c6"></div>
-    <div class="aside">
-      <h3>How to read it</h3>
-      <p>One panel per metro, sharing the time axis. Gray bars: hours of rain in the month. Blue dots: the rain crashes reported that month, stacked one per crash. Switch to the line to see all crashes on each panel's own scale.</p>
-      <h3>Insight</h3>
-      <p>In San Francisco the dots pile up under the tallest bars, the wet winters (r = 0.56). Switch to all crashes and the correlation disappears (r = minus 0.13): total crashes track how many vehicles were on the road, not the weather. Los Angeles and Austin show the same shape with fewer months; Phoenix and Las Vegas barely have a rainy season to follow.</p>
-      <h3>Iteration note</h3>
-      <p>The first version was one metro on a dual axis chart. Six small multiples with one shared time axis show the whole pattern at once, and the dots keep the unit of the first section: a dot is a crash.</p>
+<!-- 5. Severity -->
+<section class="slide" id="s5">
+  <div class="beat">
+    <div class="visual">
+      <div class="controls"><span class="hint">Share of crashes with any reported injury, with 95 percent intervals. Hover a row.</span></div>
+      <div class="frame" id="c7"></div>
+    </div>
+    <div class="story">
+      <div class="n">5 of 5 · Severity</div>
+      <h2>And the rain crashes that do happen are no worse</h2>
+      <p>If rain crashes were rarer but more serious, the hypothesis could survive in another form. It does not. Ten percent of clear weather crashes injured someone, 8.4 percent of cloudy ones and 7.0 percent of rain crashes; on dry and wet roads the rate is identical at 9.6 percent. Nothing points up in rain.</p>
+      <p>What rain does change, in the narrative fields, is who the vehicle hits: a few more fixed objects and passenger cars, fewer SUVs and trucks. With 114 rain crashes that is a hint for the final project, not a finding for today.</p>
+      <div class="box iter"><h3>Iteration</h3><p>A stacked bar of severity counts came first. Rain was a sliver next to clear and the eye compared heights, not proportions. Rates with intervals replaced it, in the same color code as every other slide.</p></div>
     </div>
   </div>
-  <div class="foot"><span>Blank months: the metro had no reports that month, so no exposure was counted either. Correlations use the months shown.</span><span>Section 6 of 9</span></div>
+  <div class="foot"><span>Injury = any severity above "no injury" in the report. Wilson score intervals, z = 1.96.</span><span>5 / 5</span></div>
 </section>
 
-<section class="slide snap" id="s7">
-  <p class="kicker">Could the risk be hiding in severity?</p>
-  <h2>Rain crashes are no more likely to injure anyone</h2>
-  <div class="row">
-    <div class="chart" id="c7"></div>
-    <div class="aside">
-      <h3>How to read it</h3>
-      <p>Share of crashes with any reported injury, by reported weather and by road surface, with 95 percent intervals. The dashed line is the overall rate.</p>
-      <h3>Insight</h3>
-      <p>Clear 10.0 percent, cloudy 8.4, rain 7.0; dry 9.6, wet 9.6. Nothing points up in rain. If rain crashes were rarer but worse, the hypothesis could have survived in another form. It does not.</p>
-      <h3>Dead end on the way</h3>
-      <p>A stacked bar of severity counts came first. Rain was a sliver next to clear and the eye compared heights, not proportions. Rates with intervals replaced it.</p>
-    </div>
-  </div>
-  <div class="foot"><span>Injury = any severity above "no injury" in the report.</span><span>Section 7 of 9</span></div>
-</section>
-
-<section class="slide alt snap" id="s8">
-  <p class="kicker">What rain does change</p>
-  <h2>In rain the ADS more often hits fixed objects and passenger cars</h2>
-  <div class="row">
-    <div class="chart" id="c8"></div>
-    <div class="aside">
-      <h3>How to read it</h3>
-      <p>Share of crashes by crash partner, clear weather on the left, rain on the right. A rising line means the partner is more common in rain. Hover a line to isolate it.</p>
-      <h3>Insight</h3>
-      <p>Fixed objects go from 4 to 6 percent and passenger cars from 37 to 44 percent, while SUVs, heavy trucks and cyclists fall. With 114 rain crashes this is a hint, not a finding, and it is labeled that way.</p>
-      <h3>Why a slope chart</h3>
-      <p>Two conditions, nine categories: the slope chart is the minimum ink that shows direction of change for every category at once.</p>
-    </div>
-  </div>
-  <div class="foot"><span>Partners under 2 percent in both conditions omitted.</span><span>Section 8 of 9</span></div>
-</section>
-
-<section class="slide snap" id="s9">
+<!-- So what -->
+<section class="slide alt" id="s6">
   <p class="kicker">So what</p>
-  <h2>Hypothesis rejected, and what it means for the final visualization</h2>
+  <h2>Hypothesis rejected. Rain is where the fleets are not, and the final visualization should say so</h2>
   <div class="cards">
     <div class="card"><h3>Finding</h3><ul>
       <li>Rain is 3.9 percent of ADS crashes (114 of 2,945).</li>
-      <li>Relative to how often it rains, rain crashes run at 0.38 to 0.63 of expectation in all six metros; four intervals exclude 1, and no rain neutral simulation comes close to the real count.</li>
-      <li>Rain crashes are no more severe; the pattern holds month by month and across operators.</li>
+      <li>Against how often it rains, rain crashes run at 0.38 to 0.63 of expectation in all six metros; four metros exclude 1 on their own, and no rain neutral simulation comes near the real count.</li>
+      <li>Rain crashes are no more severe, and the pattern holds month by month.</li>
       <li>Most likely cause: exposure. Fleets drive fewer miles in rain, by demand and by operator policy. The reports contain no miles, so "safer in rain" and "mostly absent in rain" cannot be separated yet.</li>
     </ul></div>
     <div class="card"><h3>Design decisions for the final</h3><ul>
       <li>Weather becomes a filter and seasonal context, not a headline risk number.</li>
-      <li>The dot stays the unit: every view in the final can dissolve back into the 2,945 reports, so a reader never loses the sense of what a percentage is made of.</li>
-      <li>Every rate gets a denominator and an interval; the simulation is the explanation of the interval for readers who do not know the word.</li>
-      <li>D3 throughout: the canvas dot layer, dumbbell, simulation and small multiples here are the components, already linked by one metro selection; the final adds operator and time filters.</li>
-      <li>Next data: Waymo publishes rider only miles by city and month. Dividing rain crashes by rain miles turns the ratio into a true crash rate and retires the slider.</li>
+      <li>The dot stays the unit: every view can dissolve back into the 2,945 reports, so a reader never loses what a percentage is made of.</li>
+      <li>Every rate gets a denominator and an interval; the thousand worlds are how the interval is explained.</li>
+      <li>D3 throughout: the canvas dot field, the simulation and the small multiples are the components, already sharing one metro selection; the final adds operator and time filters.</li>
+      <li>Next data: Waymo publishes rider only miles by city and month. Dividing rain crashes by rain miles turns the prediction into a true rate and retires the slider.</li>
     </ul></div>
     <div class="card"><h3>Testing plan</h3><ul>
-      <li>Five think aloud sessions with non experts (two MIDS classmates outside the team, three people who have ridden a robotaxi).</li>
-      <li>Tasks: "Which city has the biggest gap between rain crashes and rain?", "Is a rain crash more likely to injure someone?", "What does an empty ring mean?" Success = correct answer under 20 seconds without help.</li>
-      <li>Measure: task success, time, and where people hesitate (the rings, the interval bar and the ratio of 1 line are the suspected trouble spots).</li>
-      <li>Iterate: after round one, rewrite the two worst labels and retest with two new people.</li>
+      <li>Five think aloud sessions with non experts: two MIDS classmates outside the team, three people who have ridden a robotaxi.</li>
+      <li>Tasks: "Which city has the most empty rings, and what does an empty ring mean?", "Is a rain crash more likely to injure someone?", "What is the blue line in the thousand worlds?" Success = correct answer under 20 seconds without help.</li>
+      <li>Measure task success, time, and where people hesitate (the rings and the slider are the suspected trouble spots).</li>
+      <li>After round one, rewrite the two worst labels and retest with two new people.</li>
     </ul></div>
   </div>
-  <div class="foot"><span>Code and data: weather_eda folder of the team repo (clean_sgo.py, Group4_Weather_EDA.ipynb, this page).</span><span>Section 9 of 9</span></div>
+  <div class="foot"><span>Code and data: weather_eda folder of the team repo (clean_sgo.py, Group4_Weather_EDA.ipynb, this page).</span><span>End</span></div>
 </section>
 
 <script>
@@ -315,114 +220,89 @@ const tip = d3.select("#tip");
 const showTip = (ev, html) => tip.html(html).style("left", Math.min(ev.clientX + 14, window.innerWidth - 310) + "px").style("top", (ev.clientY - 10) + "px").style("opacity", 1);
 const hideTip = () => tip.style("opacity", 0);
 const widthOf = el => Math.max(480, el.getBoundingClientRect().width || 800);
+const heightOf = el => Math.max(380, el.getBoundingClientRect().height || 480);
 const metros = DATA.totals.metros;
 const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const dur = ms => reduced ? 0 : ms;
 const short = m => m.replace("San Francisco", "SF").replace("Los Angeles", "LA");
 const expectedOf = e => e.crashes * e.rainHours;
-
-// ---------- shared selection: one metro followed through sections 3 to 6 ----------
 let selectedMetro = "San Francisco";
 const listeners = [];
 function selectMetro(m) { selectedMetro = m; listeners.forEach(f => f(m)); }
 
-// ---------- hero: every crash as a dot on canvas ----------
-function heroInit() {
-  const L = DATA.lookups, k0 = C();
-  const canvas = document.getElementById("dotsCanvas"), ctx = canvas.getContext("2d");
+// ---------- dot field: every crash as a dot on a canvas, with named layouts ----------
+function dotField(canvas, legendEl) {
+  const L = DATA.lookups, ctx = canvas.getContext("2d");
   const nodes = DATA.crashes.map((r, i) => ({i, metro: r[0], w: r[1], m: r[2], h: r[3], op: r[4], p: r[5], sev: r[6], city: r[7], date: r[8], x: 0, y: -40, a: 0, r: 2.6, tx: 0, ty: 0, ta: 1, tr: 2.6, sx: 0, sy: 0, sa: 0, sr: 2.6}));
   const n = nodes.length;
   const drawOrder = nodes.slice().sort((a, b) => (a.w === 2) - (b.w === 2));
   const wColor = k => [k.clear, k.cloudy, k.rain, k.other];
-  let W = 0, H = 0, dpr = 1, labels = [], rings = [], layout = "all", quad = null, hovered = null, timer = null, t0 = 0, T = 1200;
-  const legend = d3.select("#legend");
-  const setLegend = items => legend.selectAll("span").data(items).join("span").style("--sw", d => d[1]).text(d => d[0]);
+  let W = 0, H = 0, dpr = 1, labels = [], rings = [], layout = null, quad = null, hovered = null, timer = null, miles = 1;
+  const legend = d3.select(legendEl);
+  const setLegend = items => { legend.selectAll("*").remove(); legend.selectAll("span").data(items).join("span").style("--sw", d => d[1]).text(d => d[0]); };
   function size() {
     const box = canvas.parentElement.getBoundingClientRect(); W = Math.max(320, box.width); H = Math.max(320, box.height); dpr = Math.min(2, window.devicePixelRatio || 1);
     canvas.width = W * dpr; canvas.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   }
   const golden = Math.PI * (3 - Math.sqrt(5));
   const phyllo = (j, cx, cy, s) => { const rr = s * Math.sqrt(j + 0.5), th = j * golden; return [cx + rr * Math.cos(th), cy + rr * Math.sin(th)]; };
-  function clusters(groups, s, pad) { // groups: [{key, count, label, sub}] → packed circles centered in the frame
+  function clusters(groups, s, pad) {
     const circ = groups.map(g => ({...g, r: s * Math.sqrt(g.count) + pad}));
     d3.packSiblings(circ);
     const enc = d3.packEnclose(circ);
     const scale = Math.min(2.4, (Math.min(W, H) - 110) / (2 * enc.r));
-    circ.forEach(c => { c.cx = W / 2 + (c.x - enc.x) * scale; c.cy = H / 2 + 16 + (c.y - enc.y) * scale; c.s = s * scale; });
+    circ.forEach(c => { c.cx = W / 2 + (c.x - enc.x) * scale; c.cy = H / 2 + 16 + (c.y - enc.y) * scale; c.s = s * scale; c.R = c.r * scale; });
     return circ;
   }
-  // big clusters are labeled at their center with a halo; small ones below
-  const clusterLabel = (c, text, sub2) => { const R = c.r * (c.s / 2.9); return R > 58 ? {x: c.cx, y: c.cy - 2, text, sub2, halo: true, strong: true} : {x: c.cx, y: c.cy + R + 16, text, sub2, halo: true}; };
+  const clusterLabel = (c, text, sub2) => c.R > 58 ? {x: c.cx, y: c.cy - 2, text, sub2, halo: true, strong: true} : {x: c.cx, y: c.cy + c.R + 16, text, sub2, halo: true};
+  const weatherLegend = k => setLegend([["Clear", k.clear], ["Cloudy", k.cloudy], ["Rain", k.rain], ["Other or unknown", k.other]]);
   const layouts = {
-    all() {
+    all(k) {
       const s = Math.min(W, H - 60) / (2 * Math.sqrt(n)) * 0.92;
       nodes.forEach((d, j) => { [d.tx, d.ty] = phyllo(j, W / 2, H / 2 + 16, s); d.ta = 1; d.tr = Math.min(3.4, s * 0.44); });
       labels = [{x: W / 2, y: H - 14, text: `${fmtN(n)} reports, oldest at the center, newest at the rim`, sub: true}];
-      rings = [];
-      setLegend([["Clear", k0.clear], ["Cloudy", k0.cloudy], ["Rain", k0.rain], ["Other or unknown", k0.other]]);
+      rings = []; weatherLegend(k);
     },
-    weather() {
-      const g = [0, 1, 2, 3].map(w => ({key: w, count: nodes.filter(d => d.w === w).length, label: L.weather[w] === "Other" ? "Other" : L.weather[w]}));
+    weather(k) {
+      const g = [0, 1, 2, 3].map(w => ({key: w, count: nodes.filter(d => d.w === w).length, label: L.weather[w]}));
       const cs = clusters(g, 2.9, 26), idx = [0, 0, 0, 0];
       nodes.forEach(d => { const c = cs[d.w]; [d.tx, d.ty] = phyllo(idx[d.w]++, c.cx, c.cy, c.s * 1.1); d.ta = 1; d.tr = Math.min(3.4, c.s * 0.46); });
       labels = cs.map(c => clusterLabel(c, `${c.label} ${fmtN(c.count)}`, c.key === 3 ? "fog, snow, wind, unknown" : fmtP(c.count / n)));
-      rings = [];
-      setLegend([["Clear", k0.clear], ["Cloudy", k0.cloudy], ["Rain", k0.rain], ["Other or unknown", k0.other]]);
+      rings = []; weatherLegend(k);
     },
-    metro() {
+    metro(k) {
       const g = d3.range(7).map(mi => ({key: mi, count: nodes.filter(d => d.metro === mi).length, label: L.metros[mi]}));
       const cs = clusters(g, 2.9, 22), idx = new Array(7).fill(0);
       nodes.forEach(d => { const c = cs[d.metro]; [d.tx, d.ty] = phyllo(idx[d.metro]++, c.cx, c.cy, c.s * 1.1); d.ta = 1; d.tr = Math.min(3.4, c.s * 0.46); });
       labels = cs.map(c => { const rainN = nodes.filter(d => d.metro === c.key && d.w === 2).length; return clusterLabel(c, `${c.label} ${fmtN(c.count)}`, `${rainN} in rain`); });
-      rings = [];
-      setLegend([["Clear", k0.clear], ["Cloudy", k0.cloudy], ["Rain", k0.rain], ["Other or unknown", k0.other]]);
+      rings = []; weatherLegend(k);
     },
-    expected() {
+    expected(k) {
       const cols = W > 700 ? 2 : 1, rowsN = Math.ceil(6 / cols), cw = W / cols, ch = (H - 70) / rowsN, sp = Math.max(10, Math.min(26, (cw - 40) / 14, (ch - 56) / 8)), rr = sp * 0.37;
       rings = []; labels = [];
       nodes.forEach(d => { d.ta = 0; d.tr = rr; });
       let obsTot = 0, expTot = 0;
       DATA.exposure.forEach((e, mi) => {
-        const E = Math.round(expectedOf(e)), ncol = Math.max(6, Math.ceil(Math.sqrt(E * 1.9)));
+        const E = Math.round(expectedOf(e) * miles), ncol = Math.max(6, Math.ceil(Math.sqrt(Math.round(expectedOf(e)) * 1.9)));
         const x0 = (mi % cols) * cw + 24, y0 = 44 + Math.floor(mi / cols) * ch + 30;
         const slot = j => [x0 + (j % ncol) * sp + sp / 2, y0 + Math.floor(j / ncol) * sp + sp / 2];
         const rainDots = nodes.filter(d => d.metro === mi && d.w === 2);
         rainDots.forEach((d, j) => { [d.tx, d.ty] = slot(j); d.ta = 1; });
         for (let j = rainDots.length; j < E; j++) { const [x, y] = slot(j); rings.push({x, y, r: rr}); }
         obsTot += rainDots.length; expTot += E;
-        labels.push({x: x0, y: y0 - 12, text: `${e.metro}`, left: true, strong: true, sub2: `${rainDots.length} of ${E} predicted`});
+        labels.push({x: x0, y: y0 - 12, text: `${e.metro}  ·  ${rainDots.length} reported, ${E} predicted`, left: true, strong: true});
       });
-      labels.push({x: W / 2, y: H - 14, text: `Six metros: ${obsTot} rain crashes reported, ${expTot} predicted if rain were neutral. Empty rings are the missing ones.`, sub: true});
-      setLegend([["Rain crash reported", k0.rain]]);
-      legend.append("span").style("--sw", "transparent").style("outline", "none").html(`<i style="display:inline-block;width:10px;height:10px;border-radius:50%;border:1.5px solid ${k0.rain};margin-right:6px;vertical-align:-1px"></i>Predicted by rain hours, not reported`);
-    },
-    hour() {
-      const x0 = 36, cw = (W - x0 - 10) / 24, gap = 1.6, per = cw > 30 ? 3 : 2, base = H - 50;
-      const cols = d3.range(24).map(() => []);
-      nodes.forEach(d => { if (d.h >= 0) cols[d.h].push(d); });
-      const maxRows = Math.ceil(d3.max(cols, c => c.length) / per);
-      const rr = Math.max(1.5, Math.min(4.2, ((cw - 6) / per - gap) / 2, ((H - 130) / maxRows - gap) / 2));
-      cols.forEach(c => c.sort((a, b) => (a.w === 2) - (b.w === 2)));
-      nodes.forEach(d => { d.ta = d.h >= 0 ? 1 : 0; d.tr = rr; });
-      cols.forEach((c, h) => c.forEach((d, j) => { const row = Math.floor(j / per), ci = j % per; d.tx = x0 + h * cw + 2 + ci * (2 * rr + gap) + rr; d.ty = base - row * (2 * rr + gap) - rr; }));
-      labels = [0, 6, 12, 18].map(h => ({x: x0 + h * cw + cw / 2, y: base + 18, text: h === 0 ? "midnight" : h === 12 ? "noon" : h < 12 ? h + " am" : (h - 12) + " pm"}));
-      labels.push({x: W / 2, y: H - 10, text: "Hour of the crash, local time as reported. Rain crashes drawn on top of each column.", sub: true});
-      rings = [];
-      setLegend([["Clear", k0.clear], ["Cloudy", k0.cloudy], ["Rain", k0.rain], ["Other or unknown", k0.other]]);
+      labels.push({x: W / 2, y: H - 14, text: miles < 1 ? `If fleets drove ${fmtP0(miles)} of their usual miles in rain: ${expTot} predicted, ${obsTot} reported.` : `Six metros: ${expTot} rain crashes predicted if rain were neutral, ${obsTot} reported. Empty rings are the missing ones.`, sub: true});
+      setLegend([["Rain crash reported", k.rain]]);
+      legend.append("span").style("--sw", "transparent").html(`<i style="display:inline-block;width:10px;height:10px;border-radius:50%;border:1.5px solid ${k.rain};margin-right:6px;vertical-align:-1px"></i>Predicted by rain hours, not reported`);
     }
   };
   function draw(t) {
-    const k = C(), wc = wColor(k);
+    const k = C(), wc = wColor(k), e = t == null ? 1 : t;
     ctx.clearRect(0, 0, W, H);
-    const e = t == null ? 1 : t;
     ctx.lineWidth = 1.2; ctx.strokeStyle = k.rain; ctx.globalAlpha = 0.55 * e;
     rings.forEach(r => { ctx.beginPath(); ctx.arc(r.x, r.y, r.r, 0, 6.2832); ctx.stroke(); });
-    for (const d of drawOrder) {
-      if (d.a <= 0.01) continue;
-      ctx.globalAlpha = d.a; ctx.fillStyle = wc[d.w];
-      ctx.beginPath(); ctx.arc(d.x, d.y, d.r, 0, 6.2832); ctx.fill();
-    }
-    ctx.globalAlpha = e;
+    for (const d of drawOrder) { if (d.a <= 0.01) continue; ctx.globalAlpha = d.a; ctx.fillStyle = wc[d.w]; ctx.beginPath(); ctx.arc(d.x, d.y, d.r, 0, 6.2832); ctx.fill(); }
     labels.forEach(l => {
       ctx.textAlign = l.left ? "left" : "center"; ctx.textBaseline = "alphabetic";
       ctx.font = (l.strong ? "600 13px " : l.sub ? "12px " : "500 13px ") + "Inter, system-ui, sans-serif";
@@ -435,13 +315,10 @@ function heroInit() {
   }
   function go(name, first) {
     layout = name; hovered = null; quad = null; hideTip();
-    legend.selectAll("*").remove();
-    layouts[name]();
-    // left-aligned labels in the expected layout put the sub line to the right of the title
-    if (name === "expected") labels.forEach(l => { if (l.left) { l.text = l.text + "   ·   " + l.sub2; l.sub2 = null; } });
+    layouts[name](C());
     nodes.forEach(d => { d.sx = d.x; d.sy = d.y; d.sa = d.a; d.sr = d.r; if (first) { d.sx = d.tx; d.sy = -30 - Math.random() * H * 0.6; d.sa = 0; } });
     if (timer) timer.stop();
-    T = dur(first ? 1800 : 1200); const stagger = dur(first ? 900 : 500);
+    const T = dur(first ? 1800 : 1200), stagger = dur(first ? 900 : 500);
     if (T === 0) { nodes.forEach(d => { d.x = d.tx; d.y = d.ty; d.a = d.ta; d.r = d.tr; }); draw(1); buildQuad(); return; }
     timer = d3.timer(el => {
       let done = true;
@@ -457,125 +334,40 @@ function heroInit() {
   function buildQuad() { quad = d3.quadtree().x(d => d.x).y(d => d.y).addAll(nodes.filter(d => d.a > 0.5)); }
   canvas.addEventListener("mousemove", ev => {
     if (!quad) return;
-    const b = canvas.getBoundingClientRect(), mx = ev.clientX - b.left, my = ev.clientY - b.top;
-    const d = quad.find(mx, my, 7);
+    const b = canvas.getBoundingClientRect(), d = quad.find(ev.clientX - b.left, ev.clientY - b.top, 7);
     if (d !== hovered) { hovered = d || null; draw(1); }
     if (d) showTip(ev, `<b>${d.city}</b> · ${d.date}<br>${L.weather[d.w]} weather · ${d.h >= 0 ? (d.h % 12 || 12) + (d.h < 12 ? " am" : " pm") : "time not given"}<br>${L.operators[d.op]} · hit ${L.partners[d.p].toLowerCase()}<br>Severity: ${L.severity[d.sev].toLowerCase()}`); else hideTip();
   });
   canvas.addEventListener("mouseleave", () => { hovered = null; hideTip(); if (quad) draw(1); });
-  size(); go("all", true);
-  // counters
-  const countUp = (id, to, format) => { const el = document.getElementById(id); d3.select(el).transition().duration(dur(1600)).ease(d3.easeCubicOut).tween("t", () => { const i = d3.interpolateNumber(0, to); return t => el.textContent = format(i(t)); }); };
+  let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { if (layout) { size(); go(layout); } }, 150); });
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => layout && go(layout));
+  return {start(name) { size(); go(name, true); }, go: name => go(name), setMiles(v) { miles = v; if (layout === "expected") go("expected"); }, get layout() { return layout; }};
+}
+
+// ---------- 1. the question ----------
+function drawQuestion(el) {
+  const f = dotField(document.getElementById("cv1"), document.getElementById("lg1"));
+  f.start("all");
+  const countUp = (id, to, format) => { const e = document.getElementById(id); d3.select(e).transition().duration(dur(1600)).ease(d3.easeCubicOut).tween("t", () => { const i = d3.interpolateNumber(0, to); return t => e.textContent = format(i(t)); }); };
   countUp("n1", DATA.totals.crashes, v => fmtN(Math.round(v))); countUp("n2", DATA.totals.rain, v => fmtN(Math.round(v))); countUp("n3", DATA.totals.rain / DATA.totals.crashes, fmtP);
-  // step observer
-  const steps = [...document.querySelectorAll(".hstep")];
-  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting && e.target.dataset.layout !== layout) go(e.target.dataset.layout); }), {rootMargin: "-45% 0px -45% 0px"});
-  steps.forEach(s => io.observe(s));
-  let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { size(); go(layout); }, 150); });
-  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => go(layout));
+  const btns = d3.selectAll("#s1 button[data-lay]");
+  btns.on("click", (ev, d) => { const lay = ev.currentTarget.dataset.lay; btns.classed("on", function () { return this.dataset.lay === lay; }); f.go(lay); });
+  // after the dots have settled, sort them by weather so the slide answers its own headline
+  setTimeout(() => { if (f.layout === "all") { btns.classed("on", function () { return this.dataset.lay === "weather"; }); f.go("weather"); } }, dur(3200) + 200);
 }
 
-// ---------- iteration strip ----------
-function drawSteps(el) {
-  const steps = [
-    {n: "Step 1", t: "Raw counts, eight codes", s: "Bar chart of every weather code.", v: "Unreadable and no denominator. <span class='dead'>Dead end.</span>", draw: miniCounts, go: "s1"},
-    {n: "Step 2", t: "Share of each metro's crashes", s: "Collapsed to four groups, normalized per metro.", v: "Rain is 1 to 6 percent everywhere, in the order of how rainy the cities are. That pointed at exposure.", draw: miniShare, go: "s3"},
-    {n: "Step 3", t: "Exposure next to outcome", s: "Added hours of rain per metro from a weather archive.", v: "The blue dot sits left of the gray one in all six. <b>The hypothesis flipped here.</b>", draw: miniDumbbell, go: "s3"},
-    {n: "Step 4", t: "Ratio with intervals", s: "One number per metro plus a Wilson interval, then a simulation to show what the interval means.", v: "Separated evidence from noise: four metros exclude 1, Las Vegas does not.", draw: miniRatio, go: "s5"},
-    {n: "Step 5", t: "Month by month", s: "Rain hours against rain crashes, one panel per metro.", v: "r = 0.56 in San Francisco for rain crashes, minus 0.13 for all crashes. Not an averaging artifact.", draw: miniMonthly, go: "s6"},
-  ];
-  const box = d3.select(el).selectAll("div.step").data(steps).join("div").attr("class", "step").attr("tabindex", 0).attr("role", "link")
-     .on("click", (ev, d) => document.getElementById(d.go).scrollIntoView()).on("keydown", (ev, d) => { if (ev.key === "Enter") document.getElementById(d.go).scrollIntoView(); });
-  box.append("div").attr("class", "n").text(d => d.n);
-  box.append("div").html(d => `<b>${d.t}</b>`);
-  box.append("svg").attr("viewBox", "0 0 220 120").each(function (d) { d.draw(d3.select(this)); });
-  box.append("div").style("color", "var(--text2)").text(d => d.s);
-  box.append("div").style("margin-top", "4px").html(d => d.v);
-}
-function miniLabels(svg, y, data, key = "metro") {
-  svg.selectAll("text").data(data).join("text").attr("x", 74).attr("y", d => y(d[key]) + y.bandwidth() / 2).attr("dy", "0.35em").attr("text-anchor", "end").style("font-size", "8px").style("fill", "var(--muted)").text(d => short(d[key]));
-}
-function miniCounts(svg) {
-  const data = DATA.weatherCounts; const x = d3.scaleLinear().domain([0, d3.max(data, d => d.n)]).range([78, 214]);
-  const y = d3.scaleBand().domain(data.map(d => d.weather)).range([6, 114]).padding(0.2);
-  svg.selectAll("rect").data(data).join("rect").attr("x", 78).attr("y", d => y(d.weather)).attr("height", y.bandwidth()).attr("width", d => x(d.n) - 78).style("fill", d => d.weather === "Rain" ? "var(--rain)" : "var(--other)");
-  miniLabels(svg, y, data, "weather");
-}
-function miniShare(svg) {
-  const data = DATA.shareByMetro; const keys = ["Clear", "Cloudy", "Rain", "Other"]; const col = {Clear: "var(--clear)", Cloudy: "var(--cloudy)", Rain: "var(--rain)", Other: "var(--other)"};
-  const y = d3.scaleBand().domain(data.map(d => d.metro)).range([6, 114]).padding(0.2); const x = d3.scaleLinear().domain([0, 1]).range([78, 214]);
-  data.forEach(d => { let acc = 0; const tot = d3.sum(keys, k => d[k] || 0); keys.forEach(k => { const v = (d[k] || 0) / tot; svg.append("rect").attr("x", x(acc)).attr("y", y(d.metro)).attr("width", x(acc + v) - x(acc)).attr("height", y.bandwidth()).style("fill", col[k]).style("opacity", k === "Rain" ? 1 : 0.55); acc += v; }); });
-  miniLabels(svg, y, data);
-}
-function miniDumbbell(svg) {
-  const data = DATA.exposure; const y = d3.scaleBand().domain(data.map(d => d.metro)).range([6, 114]).padding(0.3); const x = d3.scaleLinear().domain([0, 0.18]).range([78, 214]);
-  const g = svg.selectAll("g").data(data).join("g");
-  g.append("line").attr("x1", d => x(d.crashShare)).attr("x2", d => x(d.rainHours)).attr("y1", d => y(d.metro) + y.bandwidth() / 2).attr("y2", d => y(d.metro) + y.bandwidth() / 2).style("stroke", "var(--bar)");
-  g.append("circle").attr("cx", d => x(d.rainHours)).attr("cy", d => y(d.metro) + y.bandwidth() / 2).attr("r", 4).style("fill", "var(--gray)");
-  g.append("circle").attr("cx", d => x(d.crashShare)).attr("cy", d => y(d.metro) + y.bandwidth() / 2).attr("r", 4).style("fill", "var(--rain)");
-  miniLabels(svg, y, data);
-}
-function miniRatio(svg) {
-  const data = DATA.exposure; const y = d3.scaleBand().domain(data.map(d => d.metro)).range([6, 114]).padding(0.3); const x = d3.scaleLinear().domain([0, 1.4]).range([78, 214]);
-  svg.append("line").attr("x1", x(1)).attr("x2", x(1)).attr("y1", 4).attr("y2", 116).style("stroke", "var(--warn)").attr("stroke-dasharray", "3,3");
-  const g = svg.selectAll("g").data(data).join("g");
-  g.append("line").attr("x1", d => x(d.ratioLo)).attr("x2", d => x(Math.min(d.ratioHi, 1.4))).attr("y1", d => y(d.metro) + y.bandwidth() / 2).attr("y2", d => y(d.metro) + y.bandwidth() / 2).style("stroke", "var(--rain)").attr("stroke-width", 2);
-  g.append("circle").attr("cx", d => x(d.ratio)).attr("cy", d => y(d.metro) + y.bandwidth() / 2).attr("r", 4).style("fill", "var(--ink)");
-  miniLabels(svg, y, data);
-}
-function miniMonthly(svg) {
-  const data = DATA.sfMonthly; const x = d3.scaleBand().domain(data.map(d => d.month)).range([8, 214]).padding(0.1);
-  const yb = d3.scaleLinear().domain([0, d3.max(data, d => d.rainHours)]).range([112, 40]);
-  svg.selectAll("rect").data(data).join("rect").attr("x", d => x(d.month)).attr("y", d => yb(d.rainHours)).attr("width", x.bandwidth()).attr("height", d => 112 - yb(d.rainHours)).style("fill", "var(--bar)");
-  data.forEach(d => { for (let j = 0; j < d.rain; j++) svg.append("circle").attr("cx", x(d.month) + x.bandwidth() / 2).attr("cy", 110 - j * 5.2).attr("r", 2.2).style("fill", "var(--rain)"); });
-}
-
-// ---------- dumbbell ----------
-function drawDumbbell(el) {
-  const k = C();
-  const data = DATA.exposure.slice().sort((a, b) => a.rainHours - b.rainHours);
-  const W = widthOf(el), H = 420, m = {top: 40, right: 40, bottom: 44, left: 130};
-  const x = d3.scaleLinear().domain([0, 0.18]).range([m.left, W - m.right]);
-  const y = d3.scaleBand().domain(data.map(d => d.metro)).range([m.top, H - m.bottom]).padding(0.45);
-  const svg = d3.select(el).append("svg").attr("viewBox", [0, 0, W, H]).attr("width", "100%");
-  svg.append("g").attr("class", "grid").attr("transform", `translate(0,${H - m.bottom})`).call(d3.axisBottom(x).ticks(9).tickSize(-(H - m.top - m.bottom)).tickFormat(""));
-  svg.append("g").attr("class", "axis").attr("transform", `translate(0,${H - m.bottom})`).call(d3.axisBottom(x).ticks(9).tickFormat(fmtP0));
-  svg.append("text").attr("x", (m.left + W - m.right) / 2).attr("y", H - 8).attr("text-anchor", "middle").style("font-size", "12px").style("fill", k.text2).text("Share of crashes in rain (blue) and share of hours with rain (gray)");
-  const yAxis = svg.append("g").attr("class", "axis").attr("transform", `translate(${m.left - 10},0)`).call(d3.axisLeft(y).tickSize(0));
-  yAxis.select(".domain").remove(); yAxis.selectAll("text").style("font-size", "13px").style("cursor", "pointer").on("click", (ev, d) => selectMetro(d));
-  const hlRow = svg.append("rect").attr("x", m.left - 120).attr("width", W - m.right - m.left + 150).attr("height", y.bandwidth() * 2.2).attr("rx", 6).style("fill", k.rain).style("fill-opacity", 0.09);
-  const row = svg.append("g").selectAll("g").data(data).join("g").attr("transform", d => `translate(0,${y(d.metro) + y.bandwidth() / 2})`).style("cursor", "pointer");
-  const link = row.append("line").attr("x1", d => x(d.crashShare)).attr("x2", d => x(d.crashShare)).style("stroke", k.bar).attr("stroke-width", 3);
-  const gray = row.append("circle").attr("cx", d => x(d.crashShare)).attr("r", 0).style("fill", k.gray);
-  const blue = row.append("circle").attr("cx", x(0)).attr("r", 9).style("fill", k.rain).style("stroke", k.bg).attr("stroke-width", 1.5);
-  blue.transition().duration(dur(900)).delay((d, i) => dur(i * 80)).ease(d3.easeCubicOut).attr("cx", d => x(d.crashShare));
-  const lblB = row.append("text").attr("x", d => x(d.crashShare)).attr("y", -14).attr("text-anchor", "middle").style("font-size", "12px").style("fill", k.rain).style("font-weight", 600).text(d => fmtP(d.crashShare)).style("opacity", 0);
-  lblB.transition().delay(dur(1000)).duration(dur(300)).style("opacity", 1);
-  const lblG = row.append("text").attr("x", d => x(d.rainHours)).attr("y", -14).attr("text-anchor", "middle").style("font-size", "12px").style("fill", k.text2).text(d => fmtP(d.rainHours)).style("opacity", 0);
-  const gapLbl = row.append("text").attr("x", d => (x(d.rainHours) + x(d.crashShare)) / 2).attr("y", 20).attr("text-anchor", "middle").style("font-size", "11px").style("fill", k.muted).text(d => `${fmt2(d.ratio)}× what rain would predict`).style("opacity", 0);
-  const legend = svg.append("g").attr("transform", `translate(${m.left},${m.top - 22})`).style("font-size", "12px");
-  legend.append("circle").attr("cx", 6).attr("cy", 0).attr("r", 6).style("fill", k.rain); legend.append("text").attr("x", 16).attr("y", 4).style("fill", k.text2).text("crash share in rain");
-  const lg2 = legend.append("g").attr("transform", "translate(170,0)").style("opacity", 0);
-  lg2.append("circle").attr("cx", 6).attr("cy", 0).attr("r", 6).style("fill", k.gray); lg2.append("text").attr("x", 16).attr("y", 4).style("fill", k.text2).text("share of hours with rain (exposure)");
-  row.append("rect").attr("x", m.left - 10).attr("y", -y.bandwidth()).attr("width", W - m.left - m.right + 10).attr("height", y.bandwidth() * 2).attr("fill", "transparent");
-  row.on("mousemove", (ev, d) => showTip(ev, `<b>${d.metro}</b><br>${fmtN(d.crashes)} crashes, ${d.rainCrashes} in rain (${fmtP(d.crashShare)})<br>Rain in ${fmtP(d.rainHours)} of hours<br>Ratio ${fmt2(d.ratio)}<br><span style="color:var(--muted)">click to follow this metro</span>`)).on("mouseleave", hideTip)
-     .on("click", (ev, d) => selectMetro(d.metro));
-  const place = () => hlRow.transition().duration(dur(400)).attr("y", y(selectedMetro) - y.bandwidth() * 0.6);
-  place(); listeners.push(place);
-  el.update = mode => {
-    const both = mode === "both";
-    gray.transition().duration(dur(900)).ease(d3.easeCubicOut).attr("r", both ? 9 : 0).attr("cx", d => x(both ? d.rainHours : d.crashShare));
-    link.transition().duration(dur(900)).ease(d3.easeCubicOut).attr("x2", d => x(both ? d.rainHours : d.crashShare));
-    lblG.transition().duration(dur(500)).delay(dur(both ? 600 : 0)).style("opacity", both ? 1 : 0);
-    gapLbl.transition().duration(dur(500)).delay(dur(both ? 900 : 0)).style("opacity", both ? 1 : 0);
-    lg2.transition().duration(dur(400)).style("opacity", both ? 1 : 0);
-  };
+// ---------- 2. the denominator ----------
+function drawRings(el) {
+  const f = dotField(document.getElementById("cv2"), document.getElementById("lg2"));
+  f.start("expected");
+  const slider = document.getElementById("miles"), lbl = document.getElementById("milesLbl"), hint = document.getElementById("milesHint");
+  slider.addEventListener("input", () => { const v = +slider.value / 100; lbl.textContent = slider.value + "%"; f.setMiles(v); hint.textContent = v < 1 ? "prediction rescaled to the miles actually driven in rain" : ""; });
 }
 
 // ---------- simulation: rain neutral worlds ----------
 function drawSim(el) {
   const k = C();
-  const W = widthOf(el), H = 400, m = {top: 50, right: 30, bottom: 50, left: 50};
+  const W = widthOf(el), H = Math.min(520, heightOf(el)), m = {top: 50, right: 30, bottom: 50, left: 50};
   const svg = d3.select(el).append("svg").attr("viewBox", [0, 0, W, H]).attr("width", "100%");
   const gx = svg.append("g").attr("class", "axis").attr("transform", `translate(0,${H - m.bottom})`);
   const gy = svg.append("g").attr("class", "axis").attr("transform", `translate(${m.left},0)`);
@@ -635,60 +427,10 @@ function drawSim(el) {
   setup();
 }
 
-// ---------- ratio with intervals + what if slider ----------
-function drawRatio(el) {
-  const k = C();
-  const base = DATA.exposure.slice();
-  const W = widthOf(el), H = 420, m = {top: 30, right: 70, bottom: 44, left: 150};
-  const clip = 1.6;
-  const x = d3.scaleLinear().domain([0, clip]).range([m.left, W - m.right]);
-  const y = d3.scaleBand().range([m.top, H - m.bottom]).padding(0.45);
-  const svg = d3.select(el).append("svg").attr("viewBox", [0, 0, W, H]).attr("width", "100%");
-  svg.append("g").attr("class", "grid").attr("transform", `translate(0,${H - m.bottom})`).call(d3.axisBottom(x).ticks(8).tickSize(-(H - m.top - m.bottom)).tickFormat(""));
-  svg.append("g").attr("class", "axis").attr("transform", `translate(0,${H - m.bottom})`).call(d3.axisBottom(x).ticks(8));
-  const xlab = svg.append("text").attr("x", (m.left + W - m.right) / 2).attr("y", H - 8).attr("text-anchor", "middle").style("font-size", "12px").style("fill", k.text2).text("Crash share in rain ÷ share of hours with rain, with 95% interval");
-  svg.append("line").attr("x1", x(1)).attr("x2", x(1)).attr("y1", m.top - 8).attr("y2", H - m.bottom).style("stroke", k.warn).attr("stroke-dasharray", "4,4");
-  svg.append("text").attr("x", x(1) + 6).attr("y", m.top - 10).style("font-size", "12px").style("fill", k.warn).text("1 = crashes in rain as often as it rains");
-  const yAxis = svg.append("g").attr("class", "axis").attr("transform", `translate(${m.left - 10},0)`);
-  const hlRow = svg.append("rect").attr("x", m.left - 140).attr("width", W - m.right - m.left + 170).attr("height", 0).attr("rx", 6).style("fill", k.rain).style("fill-opacity", 0.09);
-  const rows = svg.append("g");
-  let sortBy = "ratio", miles = 1;
-  const render = () => {
-    const data = base.map(d => ({...d, r: d.ratio / miles, lo: d.ratioLo / miles, hi: d.ratioHi / miles}))
-        .sort(sortBy === "crashes" ? (a, b) => b.crashes - a.crashes : (a, b) => a.r - b.r);
-    y.domain(data.map(d => d.metro));
-    yAxis.transition().duration(dur(700)).call(d3.axisLeft(y).tickSize(0)).on("end", () => yAxis.select(".domain").remove());
-    yAxis.selectAll("text").style("font-size", "13px").style("cursor", "pointer").on("click", (ev, d) => selectMetro(d));
-    hlRow.attr("height", y.bandwidth() * 2.2).transition().duration(dur(500)).attr("y", y(selectedMetro) - y.bandwidth() * 0.6);
-    const g = rows.selectAll("g.r").data(data, d => d.metro).join(enter => {
-      const gg = enter.append("g").attr("class", "r").attr("transform", d => `translate(0,${y(d.metro) + y.bandwidth() / 2})`).style("cursor", "pointer");
-      gg.append("line").attr("class", "ci").style("stroke", k.rain).attr("stroke-width", 5).attr("stroke-linecap", "round").attr("opacity", 0.45);
-      gg.append("text").attr("class", "arrow").attr("x", x(clip) + 4).attr("dy", "0.35em").style("font-size", "11px").style("fill", k.muted);
-      gg.append("circle").attr("r", 9).style("fill", k.ink).style("stroke", k.bg).attr("stroke-width", 1.5);
-      gg.append("text").attr("class", "v").attr("y", -14).attr("text-anchor", "middle").style("font-size", "12px").style("font-weight", 600).style("fill", k.ink);
-      gg.append("text").attr("class", "n").attr("x", m.left - 10).attr("y", 16).attr("text-anchor", "end").style("font-size", "11px").style("fill", k.muted).text(d => `${d.rainCrashes} of ${fmtN(d.crashes)} in rain`);
-      gg.append("rect").attr("x", m.left - 10).attr("y", -y.bandwidth()).attr("width", W - m.left - m.right + 10).attr("height", y.bandwidth() * 2).attr("fill", "transparent");
-      gg.on("mousemove", (ev, d) => showTip(ev, `<b>${d.metro}</b><br>Ratio ${fmt2(d.ratio)} (95% interval ${fmt2(d.ratioLo)} to ${fmt2(d.ratioHi)})<br>${d.rainCrashes} of ${fmtN(d.crashes)} crashes in rain<br>Rain in ${fmtP(d.rainHours)} of hours${miles < 1 ? `<br>At ${fmtP0(miles)} of usual miles: ${fmt2(d.ratio / miles)}` : ""}`)).on("mouseleave", hideTip).on("click", (ev, d) => selectMetro(d.metro));
-      return gg;
-    });
-    g.transition().duration(dur(700)).attr("transform", d => `translate(0,${y(d.metro) + y.bandwidth() / 2})`);
-    g.select("line.ci").transition().duration(dur(700)).attr("x1", d => x(Math.min(d.lo, clip))).attr("x2", d => x(Math.min(d.hi, clip)));
-    g.select("text.arrow").text(d => d.hi > clip ? `→ ${fmt2(d.hi)}` : "");
-    g.select("circle").transition().duration(dur(700)).attr("cx", d => x(Math.min(d.r, clip))).style("fill", d => d.r >= 1 ? k.warn : k.ink);
-    g.select("text.v").transition().duration(dur(700)).attr("x", d => x(Math.min(d.r, clip))).text(d => fmt2(d.r)).style("fill", d => d.r >= 1 ? k.warn : k.ink);
-    xlab.text(miles < 1 ? `Ratio rescaled as if fleets drove ${fmtP0(miles)} of their usual miles in rain` : "Crash share in rain ÷ share of hours with rain, with 95% interval");
-  };
-  render();
-  listeners.push(() => hlRow.transition().duration(dur(400)).attr("y", y(selectedMetro) - y.bandwidth() * 0.6));
-  el.update = s => { sortBy = s; render(); };
-  const slider = document.getElementById("miles"), lbl = document.getElementById("milesLbl");
-  slider.addEventListener("input", () => { miles = +slider.value / 100; lbl.textContent = slider.value + "%"; render(); });
-}
-
 // ---------- small multiples over time ----------
 function drawMultiples(el) {
   const k = C();
-  const W = widthOf(el), m = {top: 8, right: 20, bottom: 28, left: 128}, ph = 88, gap = 14;
+  const W = widthOf(el), m = {top: 8, right: 20, bottom: 28, left: 128}, ph = Math.max(60, Math.min(96, (heightOf(el) - 50) / 6 - 14)), gap = 14;
   const H = m.top + metros.length * (ph + gap) + m.bottom;
   const months = d3.range(0, 61).map(i => { const y = 2021 + Math.floor((i + 6) / 12), mo = (i + 6) % 12 + 1; return `${y}-${String(mo).padStart(2, "0")}`; });
   const x = d3.scaleBand().domain(months).range([m.left, W - m.right]).padding(0.18);
@@ -752,7 +494,7 @@ function drawMultiples(el) {
 function drawInjury(el) {
   const k = C();
   const data = DATA.injury;
-  const W = widthOf(el), H = 360, m = {top: 40, right: 40, bottom: 44, left: 130};
+  const W = widthOf(el), H = Math.min(460, heightOf(el)), m = {top: 40, right: 40, bottom: 44, left: 130};
   const x = d3.scaleLinear().domain([0, 0.18]).range([m.left, W - m.right]);
   const labels = ["Clear", "Cloudy", "Rain", "", "Dry", "Wet"];
   const y = d3.scaleBand().domain(labels).range([m.top, H - m.bottom]).padding(0.45);
@@ -778,67 +520,30 @@ function drawInjury(el) {
   g.append("rect").attr("x", m.left - 10).attr("y", -y.bandwidth()).attr("width", W - m.left - m.right + 10).attr("height", y.bandwidth() * 2).attr("fill", "transparent");
 }
 
-// ---------- crash partner slope chart ----------
-function drawPartner(el) {
-  const k = C();
-  const data = DATA.partner.slice().sort((a, b) => b.clear - a.clear);
-  const W = widthOf(el), H = 540, m = {top: 40, right: 150, bottom: 30, left: 150};
-  const x0 = m.left + 60, x1 = W - m.right - 60;
-  const y = d3.scaleLinear().domain([0, d3.max(data, d => Math.max(d.clear, d.rain))]).nice().range([H - m.bottom, m.top]);
-  const svg = d3.select(el).append("svg").attr("viewBox", [0, 0, W, H]).attr("width", "100%");
-  [[x0, "Clear weather (2,272 crashes)"], [x1, "Rain (114 crashes)"]].forEach(([xx, t]) => {
-    svg.append("line").attr("x1", xx).attr("x2", xx).attr("y1", m.top - 6).attr("y2", H - m.bottom).style("stroke", k.line);
-    svg.append("text").attr("x", xx).attr("y", m.top - 14).attr("text-anchor", "middle").style("font-size", "13px").style("font-weight", 600).style("fill", k.ink).text(t);
-  });
-  const up = d => d.rain - d.clear > 0.015, down = d => d.clear - d.rain > 0.015;
-  const col = d => up(d) ? k.warn : down(d) ? k.rain : k.bar;
-  const g = svg.append("g").selectAll("g").data(data).join("g").attr("class", "sl");
-  g.append("line").attr("x1", x0).attr("x2", x0).attr("y1", d => y(d.clear)).attr("y2", d => y(d.clear)).style("stroke", col).attr("stroke-width", d => up(d) || down(d) ? 3 : 1.5)
-     .transition().duration(dur(900)).delay((d, i) => dur(i * 60)).attr("x2", x1).attr("y2", d => y(d.rain));
-  g.append("circle").attr("cx", x0).attr("cy", d => y(d.clear)).attr("r", 4).style("fill", col);
-  g.append("circle").attr("cx", x1).attr("cy", d => y(d.rain)).attr("r", 4).style("fill", col).style("opacity", 0).transition().delay(dur(900)).duration(dur(300)).style("opacity", 1);
-  g.append("line").attr("x1", x0).attr("x2", x1).attr("y1", d => y(d.clear)).attr("y2", d => y(d.rain)).attr("stroke", "transparent").attr("stroke-width", 14);
-  const place = (key, xx, anchor, dx) => {
-    const sorted = data.slice().sort((a, b) => y(a[key]) - y(b[key])); let last = -Infinity;
-    sorted.forEach(d => { let yy = y(d[key]); if (yy - last < 14) yy = last + 14; last = yy; d["_" + key] = yy; });
-    return svg.append("g").selectAll("text").data(data).join("text").attr("class", "lbl").attr("x", xx + dx).attr("y", d => d["_" + key]).attr("dy", "0.35em").attr("text-anchor", anchor)
-       .style("font-size", "12px").style("fill", d => col(d) === k.bar ? k.text2 : col(d)).style("font-weight", d => col(d) === k.bar ? 400 : 600)
-       .text(d => anchor === "end" ? `${d.partner}  ${fmtP0(d[key])}` : `${fmtP0(d[key])}  ${d.partner}`);
-  };
-  const l1 = place("clear", x0, "end", -10), l2 = place("rain", x1, "start", 10);
-  const focus = d => { g.style("opacity", o => d && o !== d ? 0.12 : 1); l1.style("opacity", o => d && o !== d ? 0.2 : 1); l2.style("opacity", o => d && o !== d ? 0.2 : 1); };
-  g.on("mousemove", (ev, d) => { focus(d); showTip(ev, `<b>${d.partner}</b><br>Clear: ${fmtP(d.clear)} of crashes<br>Rain: ${fmtP(d.rain)} of crashes<br>Change: ${d.rain - d.clear >= 0 ? "+" : "−"}${fmtP(Math.abs(d.rain - d.clear))} points`); }).on("mouseleave", () => { focus(null); hideTip(); });
-  svg.append("text").attr("x", (x0 + x1) / 2).attr("y", H - 6).attr("text-anchor", "middle").style("font-size", "11px").style("fill", k.muted).text("Red: more common in rain. Blue: less common. Gray: within 1.5 points. Hover a line to isolate it.");
-}
-
 // ---------- wiring ----------
-heroInit();
 const drawn = new Set();
-const draws = {steps: drawSteps, c3: drawDumbbell, c4: drawSim, c5: drawRatio, c6: drawMultiples, c7: drawInjury, c8: drawPartner};
+const draws = {s1: () => drawQuestion(), s2: () => drawRings(), s3: () => drawSim(document.getElementById("c4")), s4: () => drawMultiples(document.getElementById("c6")), s5: () => drawInjury(document.getElementById("c7"))};
 const slides = [...document.querySelectorAll("section.slide")];
-const snaps = [...document.querySelectorAll(".snap")];
 const dotsNav = d3.select("#dots").selectAll("a").data(slides).join("a").attr("href", (d, i) => "#s" + (i + 1)).attr("aria-label", (d, i) => "Section " + (i + 1));
 const io = new IntersectionObserver(entries => entries.forEach(e => {
   if (!e.isIntersecting) return;
   dotsNav.classed("on", d => d === e.target);
-  e.target.querySelectorAll("[id]").forEach(el => { if (draws[el.id] && !drawn.has(el.id)) { drawn.add(el.id); draws[el.id](el); } });
-}), {threshold: 0.25});
+  const id = e.target.id; if (draws[id] && !drawn.has(id)) { drawn.add(id); draws[id](); }
+}), {threshold: 0.3});
 slides.forEach(s => io.observe(s));
-setTimeout(() => Object.keys(draws).forEach(id => { const el = document.getElementById(id); if (el && !drawn.has(id)) { drawn.add(id); draws[id](el); } }), 2000);
-
+setTimeout(() => Object.keys(draws).forEach(id => { if (!drawn.has(id)) { drawn.add(id); draws[id](); } }), 2500);
 document.querySelectorAll(".controls").forEach(c => c.addEventListener("click", ev => {
-  const b = ev.target.closest("button.ctl"); if (!b || b.id === "play" || b.id === "runSim" || b.parentElement.id === "simMetros") return;
-  const key = b.dataset.mode ? "mode" : b.dataset.sort ? "sort" : "series";
-  c.querySelectorAll(`button.ctl[data-${key}]`).forEach(x => x.classList.toggle("on", x === b));
-  const chart = c.parentElement.querySelector(".chart");
-  if (chart && chart.update) chart.update(b.dataset[key]);
+  const b = ev.target.closest("button.ctl"); if (!b || !b.dataset.series) return;
+  c.querySelectorAll("button.ctl[data-series]").forEach(x => x.classList.toggle("on", x === b));
+  const chart = c.parentElement.querySelector(".frame");
+  if (chart && chart.update) chart.update(b.dataset.series);
 }));
 document.addEventListener("keydown", ev => {
   if (ev.target.tagName === "INPUT") return;
-  const cur = snaps.findIndex(s => s.getBoundingClientRect().top > 10);
-  const idx = cur === -1 ? snaps.length : cur; // index of the first snap below the top edge
-  if (ev.key === "ArrowDown" || ev.key === "PageDown" || ev.key === " ") { ev.preventDefault(); (snaps[idx] || snaps[snaps.length - 1]).scrollIntoView(); }
-  if (ev.key === "ArrowUp" || ev.key === "PageUp") { ev.preventDefault(); (snaps[Math.max(0, idx - 2)] || snaps[0]).scrollIntoView(); }
+  const cur = slides.findIndex(s => s.getBoundingClientRect().top > 10);
+  const idx = cur === -1 ? slides.length : cur;
+  if (ev.key === "ArrowDown" || ev.key === "PageDown" || ev.key === " ") { ev.preventDefault(); (slides[idx] || slides[slides.length - 1]).scrollIntoView(); }
+  if (ev.key === "ArrowUp" || ev.key === "PageUp") { ev.preventDefault(); (slides[Math.max(0, idx - 2)] || slides[0]).scrollIntoView(); }
 });
 </script>
 </body></html>
