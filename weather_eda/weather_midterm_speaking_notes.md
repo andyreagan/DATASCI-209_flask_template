@@ -1,6 +1,8 @@
 # Midterm speaking notes, weather section (about 3 minutes)
 
-Open `weather_midterm_d3.html` in Chrome, press F11 for full screen, move with the down arrow. Each section is one slide. Numbers in brackets are the rubric lines the slide covers.
+Open `weather_midterm_d3.html` in Chrome, press F11 for full screen, move with the down arrow. Each section is one slide. Numbers in brackets are the rubric lines the slide covers. The page follows the system light or dark theme.
+
+Interactions worth showing live: click a metro row in section 3 or 4 and section 5 switches to that metro; drag the "what if" slider in section 4 to about 50 percent and watch every ratio land on 1; press "Play the months" in section 5; hover a line in section 7 to isolate it.
 
 ## Section 1, title (25 seconds) [general task, specific task, audience, data set]
 
@@ -20,9 +22,12 @@ Click "Crash share in rain" first, then "Add how often it rains" while talking.
 
 "One number per metro: crash share divided by rain share, so one means neutral. Everything is below one, between 0.38 and 0.63, and the four metros with the most data have intervals that exclude one. Las Vegas has one rain crash, so its interval runs off the chart; we show that rather than hide it. Without intervals Atlanta looks like the strongest evidence; with them San Francisco is, because it has 48 rain crashes behind it."
 
+Drag the slider to 50 percent: "The reports have no miles. If fleets drove only half their usual miles in rain, every metro would land on one. That is the exposure explanation, and it is why the next data we want is miles."
+
+
 ## Section 5, month by month (25 seconds) [iteration, appropriate type]
 
-Toggle to "all crashes" mid sentence.
+Toggle to "all crashes" mid sentence. If time allows, click Austin or LA to show the same shape in a second metro.
 
 "Is this an averaging artifact? In San Francisco rain crashes rise and fall with the wet winters, r of 0.56. Switch to all crashes and the correlation disappears; total crashes track how many vehicles were on the road. My first version was a dual axis chart and the course was right that it says nothing; two panels sharing a time axis is clearer."
 
