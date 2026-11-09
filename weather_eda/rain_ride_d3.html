@@ -99,16 +99,39 @@
   .cannot .c span { font-size:13.5px; color:var(--text2); line-height:1.45; }
   footer { margin-top:34px; font-size:13px; color:var(--muted); line-height:1.6; }
   footer a { color:var(--rain); }
+  /* the sky: a very quiet backdrop that follows the chosen weather. Never more than a hint. */
+  .sky { position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden; }
+  .sky > div { position:absolute; inset:-10%; opacity:0; transition:opacity 1.2s ease; }
+  .sky .sun { background:radial-gradient(circle at 85% 0%, color-mix(in srgb, var(--clear) 22%, transparent) 0%, transparent 42%); }
+  .sky .clouds::before, .sky .clouds::after { content:""; position:absolute; width:60vw; height:60vw; max-width:900px; max-height:900px; border-radius:50%; background:radial-gradient(circle, color-mix(in srgb, var(--cloudy) 16%, transparent) 0%, transparent 60%); filter:blur(10px); }
+  .sky .clouds::before { top:-20vw; left:-10vw; animation:drift 70s ease-in-out infinite alternate; }
+  .sky .clouds::after { top:10vh; right:-25vw; animation:drift 90s ease-in-out infinite alternate-reverse; }
+  .sky .rain { background-image:repeating-linear-gradient(100deg, transparent 0 22px, color-mix(in srgb, var(--rain) 9%, transparent) 22px 23px); background-size:100% 100%; animation:fall 2.2s linear infinite; mask-image:linear-gradient(to bottom, rgba(0,0,0,.9), rgba(0,0,0,.35) 60%, transparent); }
+  .sky .rain::after { content:""; position:absolute; inset:0; background-image:repeating-linear-gradient(100deg, transparent 0 41px, color-mix(in srgb, var(--rain) 6%, transparent) 41px 42px); animation:fall 3.4s linear infinite; }
+  body[data-w="0"] .sky .sun, body[data-w="1"] .sky .clouds, body[data-w="2"] .sky .rain { opacity:1; }
+  @keyframes fall { from { transform:translateY(-120px); } to { transform:translateY(0); } }
+  @keyframes drift { from { transform:translateX(0); } to { transform:translateX(12vw); } }
+  @media (prefers-reduced-motion: reduce) { .sky .rain, .sky .rain::after, .sky .clouds::before, .sky .clouds::after { animation:none !important; } }
+  .wrap { position:relative; z-index:1; }
+  /* who is driving */
+  .who { margin-top:16px; border-top:1px solid var(--line); padding-top:14px; display:grid; grid-template-columns:auto minmax(0,1fr); gap:10px 16px; align-items:center; }
+  .who .wl { display:flex; align-items:center; gap:10px; font-weight:600; color:var(--ink); font-size:15px; white-space:nowrap; }
+  .who .wl svg { width:22px; height:22px; }
+  .who .wbar { display:flex; height:14px; border-radius:7px; overflow:hidden; background:var(--grid); }
+  .who .wbar i { display:block; height:100%; }
+  .who .wkey { grid-column:2; font-size:13px; color:var(--text2); display:flex; gap:14px; flex-wrap:wrap; }
+  .who .wkey span::before { content:""; display:inline-block; width:9px; height:9px; border-radius:50%; margin-right:6px; background:var(--sw); vertical-align:-1px; }
   .tip { position:fixed; pointer-events:none; background:var(--tipbg); color:var(--fg); border:1px solid var(--line); border-radius:8px; padding:9px 11px; font-size:13px; line-height:1.45; box-shadow:0 4px 18px rgba(0,0,0,.14); opacity:0; transition:opacity .12s; max-width:280px; z-index:11; }
   .tip b { color:var(--ink); }
   svg text { font-family:inherit; }
   .axis path, .axis line { stroke:var(--line); }
   .axis text { fill:var(--text2); font-size:12px; }
   @media (prefers-reduced-motion: reduce) { * { transition:none !important; animation:none !important; } html { scroll-behavior:auto; } }
-  @media (max-width: 760px) { .ask { grid-template-columns:1fr; } .map { height:230px; } .tiles { grid-template-columns:1fr; } .cannot { grid-template-columns:1fr; } .answer { padding:20px 18px; } .prow { grid-template-columns:1fr; gap:6px; } .card { padding:16px; } }
+  @media (max-width: 760px) { .who { grid-template-columns:1fr; } .who .wkey { grid-column:1; } .ask { grid-template-columns:1fr; } .map { height:230px; } .tiles { grid-template-columns:1fr; } .cannot { grid-template-columns:1fr; } .answer { padding:20px 18px; } .prow { grid-template-columns:1fr; gap:6px; } .card { padding:16px; } }
 </style>
 
 <div class="tip" id="tip"></div>
+<div class="sky" aria-hidden="true"><div class="sun"></div><div class="clouds"></div><div class="rain"></div></div>
 <div class="wrap">
   <div class="top">
     <div class="logo"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18h20l-2.5-6.5a2 2 0 0 0-1.9-1.3H10.4a2 2 0 0 0-1.9 1.3z"/><rect x="4" y="18" width="24" height="7" rx="2"/><circle cx="10" cy="26" r="2"/><circle cx="22" cy="26" r="2"/><path d="M11 4v3M16 3v4M21 4v3" stroke="#2b6cd4"/></svg>Robotaxi Rain Check</div>
@@ -132,6 +155,7 @@
     <p class="sub" id="aSub"></p>
     <div class="sure" id="aSure"></div>
     <div class="tiles" id="tiles"></div>
+    <div class="who" id="who"></div>
   </section>
 
   <section class="why">
@@ -224,7 +248,7 @@ function facts() {
   const inj = byW.map(s => { const k = s.filter(isInj).length; return {k, n: s.length, rate: s.length ? k / s.length : 0, ci: wilson(k, s.length)}; });
   const injAll = {k: rows.filter(isInj).length, n, rate: rows.filter(isInj).length / n};
   const moName = mi >= 0 && DATA.monthly[state.city].rRain >= 0.4 ? state.city : "San Francisco";
-  return {mi, city: state.city, here: mi >= 0 ? state.city : "the six cities", n, byW, nW: byW.map(s => s.length), predicted, reported, ratio, excludesOne: ratioHi < 1, rainHours, inj, injAll, w: state.w, wName: WNAME[state.w], mo: DATA.monthly[moName], moName, thin: reported < 10};
+  return {mi, city: state.city, here: mi >= 0 ? state.city : "the six cities", rows, n, byW, nW: byW.map(s => s.length), predicted, reported, ratio, excludesOne: ratioHi < 1, rainHours, inj, injAll, w: state.w, wName: WNAME[state.w], mo: DATA.monthly[moName], moName, thin: reported < 10};
 }
 
 // ---------- the map: where the cars are, and where the rain crashes are. It is also the city picker ----------
@@ -320,6 +344,19 @@ function renderAnswer(f) {
   }
 }
 
+// ---------- who is driving here ----------
+const OPCOLOR = ["#2b6cd4", "#7c5cbf", "#e2a23b", "#3aa17e", "#c0564a", "#8a95a3", "#d98ac4", "#5aa9d6", "#aab3bd"];
+function renderWho(f) {
+  const counts = d3.rollups(f.rows, v => v.length, r => r[4]).map(([op, n]) => ({op, name: L.operators[op], n, share: n / f.n})).sort((a, b) => b.n - a.n);
+  const top = counts[0], shown = counts.slice(0, 4), rest = d3.sum(counts.slice(4), d => d.n);
+  const parts = [...shown, ...(rest ? [{op: 8, name: "Others", n: rest, share: rest / f.n}] : [])];
+  document.getElementById("who").innerHTML = `
+    <div class="wl">${ICON.car}<span>Who is driving ${f.mi >= 0 ? "here" : "these"}: mostly ${top.name}</span></div>
+    <div class="wbar" title="share of crash reports by company">${parts.map(p => `<i style="width:${(p.share * 100).toFixed(1)}%;background:${OPCOLOR[Math.min(p.op, 8)]}" data-tip="${p.name}: ${fmtN(p.n)} reports, ${fmtP0(p.share)}"></i>`).join("")}</div>
+    <div class="wkey">${parts.map(p => `<span style="--sw:${OPCOLOR[Math.min(p.op, 8)]}">${p.name} ${fmtP0(p.share)}</span>`).join("")}<span style="--sw:transparent;color:var(--muted)">share of crash reports, which mostly mirrors how many cars each company runs</span></div>`;
+  d3.selectAll("#who .wbar i").on("mousemove", function (ev) { showTip(ev, `<b>${this.dataset.tip.split(":")[0]}</b><br>${this.dataset.tip.split(": ")[1]}`); }).on("mouseleave", hideTip);
+}
+
 // ---------- picture 1: expected against reported, as rings ----------
 let miles = 1;
 function renderRings(f) {
@@ -394,7 +431,8 @@ function render() {
   const f = facts();
   document.getElementById("wxNote").textContent = f.w === 2 ? "Rain is the weather people worry about, and the one the data can test." : `${WLABEL[f.w]} is the everyday case. Pick Rain to see the comparison people ask about.`;
   if (!map) map = buildMap(); else map.select();
-  renderAnswer(f); renderRings(f); renderCompare(f); renderPeople(f); renderMonths(f);
+  document.body.dataset.w = state.w;
+  renderAnswer(f); renderWho(f); renderRings(f); renderCompare(f); renderPeople(f); renderMonths(f);
 }
 render();
 let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { map = null; render(); }, 150); });
