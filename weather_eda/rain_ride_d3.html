@@ -33,25 +33,26 @@
   .seg button.on[data-w="1"] { background:var(--cloudy); color:#111; }
   .seg button.on[data-w="2"] { background:var(--rain); color:#fff; }
   .seg button:focus-visible, button.ctl:focus-visible, input:focus-visible { outline:2px solid var(--rain); outline-offset:2px; }
-  section.slide { min-height:calc(100vh - var(--barH, 62px)); padding-block:26px 18px; padding-left:max(56px, env(safe-area-inset-left, 0px)); padding-right:max(56px, env(safe-area-inset-right, 0px)); display:flex; flex-direction:column; scroll-margin-top:var(--barH, 62px); }
+  section.slide { min-height:calc(100vh - var(--barH, 62px)); padding-block:18px 12px; padding-left:max(56px, env(safe-area-inset-left, 0px)); padding-right:max(56px, env(safe-area-inset-right, 0px)); display:flex; flex-direction:column; scroll-margin-top:var(--barH, 62px); }
   section.slide.alt { background:var(--bg2); }
   .kicker { font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--rain); font-weight:600; margin:0 0 8px; }
-  h1 { font-size:34px; line-height:1.1; margin:0 0 12px; color:var(--ink); text-wrap:balance; font-weight:700; letter-spacing:-.01em; }
+  h1 { font-size:28px; line-height:1.1; margin:0 0 8px; color:var(--ink); text-wrap:balance; font-weight:700; letter-spacing:-.01em; }
   h2 { font-size:26px; line-height:1.15; margin:0 0 10px; color:var(--ink); text-wrap:balance; font-weight:600; }
-  .beat { display:grid; grid-template-columns:minmax(0,1fr) 380px; gap:36px; flex:1; min-height:0; align-items:stretch; }
+  .beat { display:grid; grid-template-columns:minmax(0,1fr) 300px; gap:28px; flex:1; min-height:0; align-items:stretch; }
   .visual { min-width:0; display:flex; flex-direction:column; }
-  .frame { position:relative; flex:1; min-height:380px; max-height:calc(100vh - 210px); }
+  .frame { position:relative; flex:1; min-height:460px; max-height:calc(100vh - 150px); }
   .frame canvas { position:absolute; inset:0; width:100%; height:100%; display:block; }
-  .frame.short { max-height:calc(100vh - 400px); min-height:300px; }
+  .frame.short { max-height:calc(100vh - 360px); min-height:340px; }
   .legend { position:absolute; left:0; top:0; display:flex; gap:14px; font-size:12.5px; color:var(--text2); flex-wrap:wrap; }
   .legend span::before { content:""; display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:6px; vertical-align:-1px; background:var(--sw); }
-  .under { height:190px; margin-top:6px; }
+  .under { height:200px; margin-top:6px; }
   .under svg { display:block; }
   .story { font-size:14px; line-height:1.5; color:var(--text2); display:flex; flex-direction:column; justify-content:center; min-width:0; }
   .story p { margin:0 0 12px; }
+  .story .how { font-size:12.5px; color:var(--muted); line-height:1.45; margin:0; }
   .story .n { font-size:13px; color:var(--rain); font-weight:700; letter-spacing:.04em; margin-bottom:4px; }
   /* the rider sentence: the one line each screen ends on */
-  .say { font-size:19px; line-height:1.35; color:var(--ink); background:var(--card); border:1px solid var(--line); border-left:4px solid var(--rain); border-radius:10px; padding:14px 16px; margin:4px 0 14px; font-weight:600; text-wrap:pretty; }
+  .say { font-size:18px; line-height:1.35; color:var(--ink); background:var(--card); border:1px solid var(--line); border-left:4px solid var(--rain); border-radius:10px; padding:14px 16px; margin:4px 0 14px; font-weight:600; text-wrap:pretty; }
   .say.w0 { border-left-color:var(--clear); } .say.w1 { border-left-color:var(--cloudy); }
   .box { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:12px 14px; margin-top:4px; font-size:13px; line-height:1.45; }
   .box h3 { margin:0 0 6px; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--rain); }
@@ -69,16 +70,18 @@
   .axis text { fill:var(--text2); font-size:12px; }
   .grid line { stroke:var(--grid); }
   .grid path { display:none; }
-  .foot { margin-top:auto; padding-top:8px; font-size:12px; color:var(--muted); display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  .foot { margin-top:auto; padding-top:6px; font-size:11.5px; color:var(--muted); display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
   .tip { position:fixed; pointer-events:none; background:var(--tipbg); color:var(--fg); border:1px solid var(--line); border-radius:8px; padding:9px 11px; font-size:13px; line-height:1.45; box-shadow:0 4px 18px rgba(0,0,0,.14); opacity:0; transition:opacity .12s; max-width:290px; z-index:11; }
   .tip b { color:var(--ink); }
   .hint { font-size:12px; color:var(--muted); }
   /* verdict screen */
-  .verdict { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); gap:28px; align-items:start; }
+  .verdict { display:grid; grid-template-columns:minmax(0,1.7fr) minmax(0,1fr); gap:28px; align-items:start; }
   .vcard { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:22px 26px; box-shadow:0 10px 30px rgba(0,0,0,.06); }
   .vcard .where { font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); font-weight:600; display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
   .vcard .where i { display:inline-block; width:10px; height:10px; border-radius:50%; background:var(--rain); }
   .vcard h2 { font-size:30px; margin:8px 0 14px; }
+  .vviz { margin:4px 0 14px; }
+  .vviz svg { display:block; width:100%; height:auto; }
   .vcard p { font-size:16px; line-height:1.55; color:var(--fg); margin:0 0 12px; }
   .vcard .cannot { border-top:1px dashed var(--line); margin-top:14px; padding-top:12px; font-size:14px; color:var(--text2); }
   .vcard .cannot b { color:var(--ink); }
@@ -112,17 +115,16 @@
       <div class="controls"><span>Sort the dots:</span>
         <button class="ctl on" data-lay="all">in order filed</button>
         <button class="ctl" data-lay="weather">by weather</button>
-        <span class="hint">Every dot is one NHTSA crash report. Your city is bright, your weather is in front. Hover any dot.</span></div>
+        <span class="hint">One dot per NHTSA crash report. Hover any dot.</span></div>
       <div class="frame"><canvas id="cv1" aria-label="Every ADS crash report as one dot"></canvas><div class="legend" id="lg1"></div></div>
     </div>
     <div class="story">
       <div class="n">1 of 6 · Every crash, one dot</div>
       <div class="say" id="say1"></div>
-      <p>Since July 2021 every company running an automated driving system has had to report each crash to NHTSA under the Standing General Order. After de-duplication that is 2,945 reports. Each one is a dot here, colored by the weather box the operator ticked.</p>
-      <p>Rain is 114 of them, 3.9 percent. On its own that number says nothing about your ride. It would be a lot in Seattle and a lot of nothing in Phoenix. The next five screens find the right comparison.</p>
+      <p class="how">Rain is 3.9 percent of all reports. That number means nothing until it is compared with how often it rains where the cars drive. Five screens do that.</p>
     </div>
   </div>
-  <div class="foot"><span>Data: NHTSA SGO ADS reports, Jul 2021 to Aug 2026, two schemas merged and de-duplicated. Weather is a tick box per report; fog, snow and wind together are six reports.</span><span>1 / 6</span></div>
+  <div class="foot"><span>NHTSA Standing General Order ADS reports, Jul 2021 to Aug 2026, de-duplicated.</span><span>1 / 6</span></div>
 </section>
 
 <!-- 2. Where -->
@@ -134,18 +136,17 @@
         <button class="ctl" id="mapReset">Whole country</button>
         <button class="ctl" id="mapPlay">▶ Play the months</button>
         <span class="pill" id="mapMonth">Jul 2021 to Aug 2026</span>
-        <span class="hint">Bubble area = reports. Click one of the six big bubbles to make it your city.</span></div>
+        <span class="hint">Click a big bubble to make it your city.</span></div>
       <div class="frame map short" id="c2"></div>
       <div class="under" id="dumb"></div>
     </div>
     <div class="story">
       <div class="n">2 of 6 · Where the cars crash</div>
       <div class="say" id="say2"></div>
-      <p>The fleets are not everywhere. Six metros carry 82 percent of all reports, and the map fills in the order they expanded: San Francisco first, then Phoenix, Los Angeles, Austin, Atlanta and Las Vegas. Press play to watch it.</p>
-      <p>The strip under the map is the first fair comparison. For each metro, the gray dot is how often it rains there, as a share of all hours, from an hourly weather archive. The blue dot is the share of that metro's crashes that happened in rain. If rain made no difference the two would sit on top of each other.</p>
+      <p class="how">Below the map: gray is how often it rains there, blue is how often its crashes are in rain. If rain changed nothing the two dots would sit together.</p>
     </div>
   </div>
-  <div class="foot"><span>City positions are zip code centroids. Hourly precipitation from the Open-Meteo Historical Weather API for the six metros with at least 60 reports.</span><span>2 / 6</span></div>
+  <div class="foot"><span>Hourly rain from the Open-Meteo Historical Weather API, six metros with 60+ reports.</span><span>2 / 6</span></div>
 </section>
 
 <!-- 3. What rain does -->
@@ -162,11 +163,10 @@
     <div class="story">
       <div class="n">3 of 6 · What rain does</div>
       <div class="say" id="say3"></div>
-      <p>Take your city's crash count and multiply by the share of hours it was raining there. That is how many rain crashes there would be if rain made no difference. Each ring is one of those predicted crashes; each filled dot is a rain crash that was really reported. Empty rings are the missing ones.</p>
-      <p>The slider asks the obvious question: how much less would the fleet have to drive in rain for the rings to fill? The small chart underneath asks the other one: could the gap be luck? It reruns the world a thousand times with rain assigned by chance and counts how often a world lands as low as the real number.</p>
+      <p class="how">Rings are rain crashes the weather predicts, filled dots are the ones reported. Drag the slider to see how little the fleet would have to drive in rain for the rings to fill. Run the worlds to see whether chance could do it.</p>
     </div>
   </div>
-  <div class="foot"><span>Prediction = crashes × share of hours with precipitation, over the months the metro had reports. Chance test: binomial draws per metro, summed.</span><span>3 / 6</span></div>
+  <div class="foot"><span>Prediction = crashes × share of hours with rain. Chance test: binomial draws per metro.</span><span>3 / 6</span></div>
 </section>
 
 <!-- 4. Do they drive in rain -->
@@ -182,29 +182,27 @@
     <div class="story">
       <div class="n">4 of 6 · Do the cars even go out in the rain</div>
       <div class="say" id="say4"></div>
-      <p>The easy explanation for the empty rings is that the cars are simply parked when it pours. If that were the whole story, rain crashes would not follow the rainy season at all.</p>
-      <p>Gray bars are hours of rain each month; each blue dot is one rain crash. When they rise and fall together, the cars are out in the rain and crashing in proportion to how much it rains, just less than the weather alone would predict. Switch to all crashes and the line ignores the seasons entirely, which is what fleet growth looks like.</p>
+      <p class="how">If the cars were simply parked in the rain, the blue dots would not pile up under the tall bars. Switch to all crashes and the seasons disappear.</p>
     </div>
   </div>
-  <div class="foot"><span>r is the Pearson correlation between monthly rain hours and the monthly count shown. It measures whether two series move together; it does not say that one causes the other.</span><span>4 / 6</span></div>
+  <div class="foot"><span>r = correlation of monthly rain hours with the count shown. Moving together is not causing.</span><span>4 / 6</span></div>
 </section>
 
 <!-- 5. How bad -->
 <section class="slide" id="s5">
   <div class="beat">
     <div class="visual">
-      <div class="controls"><span class="hint">Each column is a severity level; every dot is one report from your city, colored by weather. Hover a dot, or a row in the chart below. <b id="ratesTitle"></b></span></div>
+      <div class="controls"><span class="hint">One column per severity level, one dot per report. <span id="ratesTitle"></span></span></div>
       <div class="frame short"><canvas id="cv5" aria-label="Crash reports sorted by severity"></canvas><div class="legend" id="lg5"></div></div>
       <div class="under" id="rates"></div>
     </div>
     <div class="story">
       <div class="n">5 of 6 · How bad it gets</div>
       <div class="say" id="say5"></div>
-      <p>If rain crashes were rarer but worse, the worry would survive in another form. So sort every report by the most serious injury it recorded. About nine in ten report no injury at all, and fatalities are a handful nationwide.</p>
-      <p>The chart underneath turns that into a rate for each weather, with a 95 percent interval. The interval is wide where the count is small: your city may have only a few rain crashes, and a few crashes cannot pin down a rate.</p>
+      <p class="how">Rarer but worse would still be a worry. Below: the share of crashes with any injury, by weather, with a 95 percent interval. Wide bars mean few crashes.</p>
     </div>
   </div>
-  <div class="foot"><span>Injury = any severity above "no injury" in the report. Wilson score intervals, z = 1.96. Unknown severity stays in the denominator.</span><span>5 / 6</span></div>
+  <div class="foot"><span>Injury = any severity above "no injury". Wilson intervals.</span><span>5 / 6</span></div>
 </section>
 
 <!-- 6. Verdict -->
@@ -215,6 +213,7 @@
       <div class="vcard" id="vcard">
         <div class="where" id="vwhere"></div>
         <h2 id="vhead"></h2>
+        <div id="vviz" class="vviz"></div>
         <div id="vbody"></div>
         <div class="cannot" id="vcannot"></div>
       </div>
@@ -222,27 +221,25 @@
     </div>
     <div class="methods">
       <h2 style="font-size:20px">How we know, and what we do not</h2>
-      <details open><summary>Where the data comes from</summary>
+      <details open><summary>Sources</summary>
         <ul>
-          <li><a href="https://www.nhtsa.gov/laws-regulations/standing-general-order-crash-reporting" target="_blank" rel="noopener">NHTSA Standing General Order crash reports</a>, automated driving systems only, July 2021 to August 2026. Two report schemas merged and de-duplicated by report and incident id: 2,945 crashes.</li>
-          <li><a href="https://open-meteo.com/en/docs/historical-weather-api" target="_blank" rel="noopener">Open-Meteo Historical Weather API</a>, hourly precipitation for the six metros with at least 60 reports, turned into the share of hours with rain per metro per month.</li>
+          <li><a href="https://www.nhtsa.gov/laws-regulations/standing-general-order-crash-reporting" target="_blank" rel="noopener">NHTSA Standing General Order crash reports</a>, ADS only, Jul 2021 to Aug 2026, de-duplicated: 2,945 crashes.</li>
+          <li><a href="https://open-meteo.com/en/docs/historical-weather-api" target="_blank" rel="noopener">Open-Meteo Historical Weather API</a>, hourly rain for six metros, as the share of hours with rain per month.</li>
         </ul></details>
-      <details><summary>How the prediction works</summary>
-        <p>For each metro and month, crashes × share of hours with rain = rain crashes expected if rain made no difference. Summing over months gives the prediction; the reports give what happened. The ratio of the two is the headline number, with a 95 percent interval from a binomial model, and the thousand worlds are the same model run as a simulation so it needs no equation.</p></details>
-      <details><summary>What the reports cannot tell you</summary>
+      <details><summary>The prediction</summary>
+        <p>Crashes × share of hours with rain, per metro and month, summed. The ratio of reported to predicted is the headline, with a binomial interval; the thousand worlds are that model as a simulation.</p></details>
+      <details><summary>What the reports cannot say</summary>
         <ul>
-          <li><b>No miles.</b> Nobody reports how far the cars drove, in rain or at all, so there is no crash rate per mile. "Safer in rain" and "mostly absent in rain" look identical in this data.</li>
-          <li><b>No location below the city.</b> NHTSA redacts it, so the page cannot say which neighborhood is safer.</li>
-          <li><b>No rain intensity.</b> Weather is a tick box on the report. Drizzle and a downpour are both "rain".</li>
-          <li><b>Small counts.</b> 114 rain crashes nationwide, 48 in San Francisco, one in Las Vegas. Intervals are shown wherever a rate is.</li>
+          <li><b>No miles</b>, so no rate per mile. Safer in rain and absent in rain look the same.</li>
+          <li><b>No location below the city</b>; NHTSA redacts it.</li>
+          <li><b>No rain intensity</b>; weather is a tick box.</li>
+          <li><b>Small counts</b>: 114 rain crashes nationwide, one in Las Vegas.</li>
         </ul></details>
-      <details><summary>What would change the verdict</summary>
-        <p>Waymo publishes rider-only miles by city and month. Joining those to rain hours would turn the prediction into a true rate per rain mile and settle which of the two explanations is right. That is the next data task.</p></details>
-      <details><summary>Code</summary>
-        <p>weather_eda folder of the team repo: clean_sgo.py (de-duplication), Group4_Weather_EDA.ipynb (exposure join, intervals, charts), and this page, D3 v7 on canvas and SVG.</p></details>
+      <details><summary>What would change it</summary>
+        <p>Waymo's rider-only miles by city and month, joined to rain hours, would give a true rate per rain mile.</p></details>
     </div>
   </div>
-  <div class="foot"><span>Group 4, DATASCI 209, UC Berkeley MIDS. Hypothesis 3: do self driving cars crash more in the rain? Answer: not that the reports can show, and they are mostly not out in it.</span><span>End</span></div>
+  <div class="foot"><span>Group 4, DATASCI 209, UC Berkeley MIDS. Code: weather_eda in the team repo.</span><span>End</span></div>
 </section>
 
 <script>
@@ -398,7 +395,7 @@ function dotField(canvas, legendEl) {
       if (ex.length === 1) {
         const e = ex[0], E = Math.round(expectedOf(e) * miles), E0 = Math.round(expectedOf(e));
         const total = Math.max(E, e.rainCrashes, 1), ncol = Math.max(4, Math.ceil(Math.sqrt(total * 1.7)));
-        const nrow = Math.ceil(total / ncol), sp = Math.max(8, Math.min(34, (W - 60) / ncol, (H - 110) / nrow)), rr = sp * 0.36;
+        const nrow = Math.ceil(total / ncol), sp = Math.max(8, Math.min(44, (W - 60) / ncol, (H - 110) / nrow)), rr = sp * 0.36;
         const x0 = W / 2 - ncol * sp / 2, y0 = 58 + ((H - 110) - nrow * sp) / 2;
         const slot = j => [x0 + (j % ncol) * sp + sp / 2, y0 + Math.floor(j / ncol) * sp + sp / 2];
         const rainDots = nodes.filter(d => d.metro === mi && d.w === 2);
@@ -742,11 +739,45 @@ function drawInjury() {
 }
 
 // ---------- 6. the verdict card ----------
+function drawVerdictViz(fx) {
+  // three small pictures of the verdict: the gap, the severity, the rain share
+  const k = C(), el = document.getElementById("vviz"), W = Math.max(420, el.getBoundingClientRect().width || 600), H = 150, colW = W / 3, pad = 14;
+  d3.select(el).selectAll("*").remove();
+  const svg = d3.select(el).append("svg").attr("viewBox", [0, 0, W, H]);
+  const panel = (i, title) => { const g = svg.append("g").attr("transform", `translate(${i * colW + pad},0)`); g.append("text").attr("y", 14).style("font-size", "11.5px").style("font-weight", 600).style("letter-spacing", ".06em").style("fill", k.muted).text(title.toUpperCase()); return g; };
+  const w = colW - pad * 2;
+  // 1. reported against predicted, as dots in a row of rings
+  const g1 = panel(0, "rain crashes");
+  const total = Math.max(fx.predicted, fx.reported, 1), ncol = Math.ceil(Math.sqrt(total * (w / 70))), nrow = Math.ceil(total / ncol), sp = Math.min(14, w / ncol, 70 / nrow), rr = sp * 0.36;
+  d3.range(total).forEach(j => g1.append("circle").attr("cx", (j % ncol) * sp + sp / 2).attr("cy", 30 + Math.floor(j / ncol) * sp + sp / 2).attr("r", rr).style("fill", j < fx.reported ? k.rain : "none").style("stroke", k.rain).attr("stroke-width", 1.1));
+  g1.append("text").attr("y", H - 26).style("font-size", "22px").style("font-weight", 700).style("fill", k.ink).attr("font-family", "Fraunces, Georgia, serif").text(`${fx.reported} of ${fx.predicted}`);
+  g1.append("text").attr("y", H - 8).style("font-size", "11.5px").style("fill", k.text2).text("reported, of what the weather predicts");
+  // 2. injury rate, clear against this weather
+  const g2 = panel(1, "crashes with an injury");
+  const x2 = d3.scaleLinear().domain([0, Math.max(0.2, fx.inj[fx.w].ci[1] * 1.1)]).range([0, w - 40]);
+  const rowsI = [{lab: "clear", d: fx.inj[0], c: k.clear}, {lab: fx.wName, d: fx.inj[fx.w], c: [k.clear, k.cloudy, k.rain][fx.w]}];
+  if (fx.w === 0) rowsI.splice(1, 1, {lab: "rain", d: fx.inj[2], c: k.rain});
+  rowsI.forEach((r, i) => { const y = 42 + i * 30; g2.append("line").attr("x1", x2(r.d.ci[0])).attr("x2", x2(r.d.ci[1])).attr("y1", y).attr("y2", y).style("stroke", r.c).attr("stroke-width", 5).attr("stroke-linecap", "round").attr("opacity", 0.45); g2.append("circle").attr("cx", x2(r.d.rate)).attr("cy", y).attr("r", 6).style("fill", r.c); g2.append("text").attr("x", x2(r.d.ci[1]) + 8).attr("y", y).attr("dy", "0.35em").style("font-size", "11.5px").style("fill", k.text2).text(`${r.lab} ${fmtP(r.d.rate)}`); });
+  g2.append("text").attr("y", H - 26).style("font-size", "22px").style("font-weight", 700).style("fill", k.ink).attr("font-family", "Fraunces, Georgia, serif").text(fmtP(fx.inj[fx.w].rate));
+  g2.append("text").attr("y", H - 8).style("font-size", "11.5px").style("fill", k.text2).text(`of ${fmtN(fx.inj[fx.w].n)} ${fx.wName} crashes injured anyone`);
+  // 3. share of hours in rain against share of crashes in rain
+  const g3 = panel(2, "rain share");
+  const x3 = d3.scaleLinear().domain([0, Math.max(0.1, fx.rainHours * 1.3)]).range([0, w - 10]), y3 = 54;
+  g3.append("line").attr("x1", x3(fx.crashShare)).attr("x2", x3(fx.rainHours)).attr("y1", y3).attr("y2", y3).style("stroke", k.muted).attr("stroke-width", 2);
+  g3.append("circle").attr("cx", x3(fx.rainHours)).attr("cy", y3).attr("r", 7).style("fill", k.gray);
+  g3.append("circle").attr("cx", x3(fx.crashShare)).attr("cy", y3).attr("r", 7).style("fill", k.rain);
+  g3.append("text").attr("x", x3(fx.rainHours)).attr("y", y3 - 14).attr("text-anchor", "middle").style("font-size", "11.5px").style("fill", k.text2).text(`${fmtP(fx.rainHours)} of hours`);
+  g3.append("text").attr("x", x3(fx.crashShare)).attr("y", y3 + 24).attr("text-anchor", "middle").style("font-size", "11.5px").style("fill", k.rain).text(`${fmtP(fx.crashShare)} of crashes`);
+  g3.append("text").attr("y", H - 26).style("font-size", "22px").style("font-weight", 700).style("fill", k.ink).attr("font-family", "Fraunces, Georgia, serif").text(`${fmt2(fx.ratio)}×`);
+  g3.append("text").attr("y", H - 8).style("font-size", "11.5px").style("fill", k.text2).text("crashes in rain ÷ hours in rain");
+}
 function drawVerdict() {
   const copyBtn = document.getElementById("copyV"), hint = document.getElementById("copyHint");
   let plain = "";
+  let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => drawVerdictViz(facts()), 150); });
   onState(() => {
     const fx = facts(), v = S.verdict(fx);
+    drawVerdictViz(fx);
     document.getElementById("vwhere").innerHTML = `<i style="background:var(--${WNAME[fx.w]})"></i>${state.city} · ${fx.wName} · ${fmtN(fx.n)} reports`;
     document.getElementById("vhead").textContent = v.head;
     document.getElementById("vbody").innerHTML = v.body.map(p => `<p>${p}</p>`).join("");
