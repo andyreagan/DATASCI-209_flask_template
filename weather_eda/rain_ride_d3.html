@@ -26,14 +26,22 @@
   h1 { font-size:clamp(30px, 4.6vw, 46px); line-height:1.08; margin:0 0 10px; font-weight:700; letter-spacing:-.01em; text-wrap:balance; }
   .lede { font-size:17px; color:var(--text2); margin:0 0 22px; max-width:640px; text-wrap:pretty; }
   /* pickers */
-  .ask { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-bottom:22px; }
+  .ask { display:grid; grid-template-columns:minmax(0,1.7fr) minmax(260px,1fr); gap:18px; margin-bottom:22px; align-items:stretch; }
+  .lblhint { text-transform:none; letter-spacing:0; font-weight:500; color:var(--text2); font-size:13px; margin-left:4px; }
+  .map { position:relative; height:300px; margin:4px 0 10px; }
+  .map svg { display:block; width:100%; height:100%; }
+  .map .lab { font-size:12px; font-weight:600; fill:var(--ink); paint-order:stroke; stroke:var(--card); stroke-width:3px; pointer-events:none; }
+  .maprow { display:flex; gap:12px; align-items:center; justify-content:space-between; flex-wrap:wrap; }
+  .ctl.play { font-size:12.5px; color:var(--text2); }
+  .wxnote { font-size:13px; color:var(--text2); margin:12px 0 0; line-height:1.45; }
+  .wx { display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; }
+  @media (min-width: 761px) { .wx { grid-template-columns:1fr; } .wx button { flex-direction:row; justify-content:flex-start; gap:12px; padding:12px 14px; font-size:15px; } .wx button svg { width:30px; height:30px; } }
   .q { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px 18px; }
   .q .lbl { font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); font-weight:600; margin:0 0 10px; }
   .chips { display:flex; flex-wrap:wrap; gap:8px; }
   .chips button { font:inherit; font-size:14.5px; padding:9px 14px; border:1.5px solid var(--line); border-radius:999px; background:transparent; color:var(--ink); cursor:pointer; }
   .chips button:hover { border-color:var(--rain); }
   .chips button.on { background:var(--ink); color:var(--card); border-color:var(--ink); }
-  .wx { display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; }
   .wx button { font:inherit; font-size:14px; font-weight:600; padding:12px 8px 10px; border:1.5px solid var(--line); border-radius:14px; background:transparent; color:var(--text2); cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:6px; }
   .wx button svg { width:36px; height:36px; opacity:.55; }
   .wx button:hover { border-color:var(--rain); }
@@ -76,6 +84,8 @@
   .row { display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-bottom:10px; font-size:14px; color:var(--text2); }
   .row input[type=range] { accent-color:var(--rain); width:200px; }
   .pill { display:inline-block; padding:2px 10px; border-radius:999px; background:var(--pale); color:var(--ink); font-size:13px; font-weight:600; }
+  .compare svg { display:block; width:100%; height:auto; }
+  .compare .crow { cursor:pointer; }
   .people { display:flex; flex-direction:column; gap:14px; }
   .prow { display:grid; grid-template-columns:120px 1fr; gap:14px; align-items:center; }
   .prow .pl { font-weight:600; color:var(--ink); font-size:15px; }
@@ -95,7 +105,7 @@
   .axis path, .axis line { stroke:var(--line); }
   .axis text { fill:var(--text2); font-size:12px; }
   @media (prefers-reduced-motion: reduce) { * { transition:none !important; animation:none !important; } html { scroll-behavior:auto; } }
-  @media (max-width: 760px) { .ask { grid-template-columns:1fr; } .tiles { grid-template-columns:1fr; } .cannot { grid-template-columns:1fr; } .answer { padding:20px 18px; } .prow { grid-template-columns:1fr; gap:6px; } .card { padding:16px; } }
+  @media (max-width: 760px) { .ask { grid-template-columns:1fr; } .map { height:230px; } .tiles { grid-template-columns:1fr; } .cannot { grid-template-columns:1fr; } .answer { padding:20px 18px; } .prow { grid-template-columns:1fr; gap:6px; } .card { padding:16px; } }
 </style>
 
 <div class="tip" id="tip"></div>
@@ -109,8 +119,10 @@
     <h1 id="h1">Is it safe to take a robotaxi in the rain?</h1>
     <p class="lede">Pick your city and today's weather. We checked 2,945 crash reports against the weather at the time, and we will tell you what they say, and what they cannot.</p>
     <div class="ask">
-      <div class="q"><p class="lbl">Where are you?</p><div class="chips" id="cityPick"></div></div>
-      <div class="q"><p class="lbl">What is the weather?</p><div class="wx" id="wxPick"></div></div>
+      <div class="q mapq"><p class="lbl">Where are you? <span class="lblhint">Tap your city on the map. Bubble size is how many crashes were reported there; the blue center is how many happened in rain.</span></p>
+        <div class="map" id="map"></div>
+        <div class="maprow"><div class="chips" id="cityPick"></div><button class="ctl play" id="mapPlay">▶ Watch the fleets spread, 2021 to 2026</button></div></div>
+      <div class="q"><p class="lbl">What is the weather?</p><div class="wx" id="wxPick"></div><p class="wxnote" id="wxNote"></p></div>
     </div>
   </div>
 
@@ -131,6 +143,7 @@
       <div class="viz" id="vRings"></div>
       <div class="row" style="margin-top:12px"><span>What if the cars drive less in the rain? Usual driving in rain: <span class="pill" id="milesLbl">100%</span></span><input type="range" id="miles" min="30" max="100" step="5" value="100" aria-label="share of usual driving in rain"><span id="milesHint" style="color:var(--muted);font-size:13px">Slide left until the empty rings disappear.</span></div>
       <p class="how">Each ring is a rain crash we would expect if rain made no difference, based on how many hours it actually rained. Each filled dot is a rain crash that really happened.</p>
+      <div class="compare"><p class="lbl" style="margin:16px 0 6px">How your city compares <span class="lblhint">Filled bar = rain crashes that happened. Outline = what the weather predicted. Tap a city to switch.</span></p><div id="vCompare"></div></div>
     </div>
 
     <div class="card" id="cardInjury">
@@ -212,6 +225,61 @@ function facts() {
   const injAll = {k: rows.filter(isInj).length, n, rate: rows.filter(isInj).length / n};
   const moName = mi >= 0 && DATA.monthly[state.city].rRain >= 0.4 ? state.city : "San Francisco";
   return {mi, city: state.city, here: mi >= 0 ? state.city : "the six cities", n, byW, nW: byW.map(s => s.length), predicted, reported, ratio, excludesOne: ratioHi < 1, rainHours, inj, injAll, w: state.w, wName: WNAME[state.w], mo: DATA.monthly[moName], moName, thin: reported < 10};
+}
+
+// ---------- the map: where the cars are, and where the rain crashes are. It is also the city picker ----------
+function buildMap() {
+  const el = document.getElementById("map"), k = C();
+  const box = el.getBoundingClientRect(), W = Math.max(320, box.width || 640), H = Math.max(200, box.height || 300);
+  const cities = DATA.cities, proj = d3.geoAlbersUsa().fitExtent([[6, 6], [W - 6, H - 6]], DATA.states), path = d3.geoPath(proj);
+  cities.forEach(c => { const p = proj([c.lon, c.lat]); c.px = p ? p[0] : null; c.py = p ? p[1] : null; c.cum = d3.cumsum(c.months); });
+  const placed = cities.filter(c => c.px != null), rS = d3.scaleSqrt().domain([0, d3.max(cities, c => c.n)]).range([0, Math.min(W, H) * 0.085]);
+  const svg = d3.select(el).selectAll("svg").data([0]).join("svg").attr("viewBox", [0, 0, W, H]);
+  svg.selectAll("*").remove();
+  svg.append("g").selectAll("path").data(DATA.states.features).join("path").attr("d", path).attr("fill", k.card).attr("stroke", k.line).attr("stroke-width", 0.8);
+  let shown = 61;
+  const rad = c => rS(shown >= 61 ? c.n : c.cum[shown]);
+  const sorted = placed.slice().sort((a, b) => b.n - a.n);
+  const g = svg.append("g").selectAll("g").data(sorted).join("g").attr("transform", c => `translate(${c.px},${c.py})`).style("cursor", c => c.metro >= 0 ? "pointer" : "default");
+  g.append("circle").attr("class", "outer").attr("r", 0).attr("fill", k.rain).attr("fill-opacity", c => c.metro >= 0 ? 0.28 : 0.18).attr("stroke", k.rain).attr("stroke-opacity", 0.7).attr("stroke-width", 1);
+  g.append("circle").attr("class", "inner").attr("r", 0).attr("fill", k.rain).attr("fill-opacity", 0.9);
+  g.append("circle").attr("class", "sel").attr("r", 0).attr("fill", "none").attr("stroke", k.ink).attr("stroke-width", 2).attr("stroke-dasharray", "4,3");
+  const restyle = t => { const sel = t ? g.transition().duration(t) : g; sel.select("circle.outer").attr("r", rad); sel.select("circle.inner").attr("r", c => rS(shown >= 61 ? c.rain : Math.round(c.rain * c.cum[shown] / c.n))); g.select("circle.sel").attr("r", c => c.metro >= 0 && metros[c.metro] === state.city ? rad(c) + 5 : 0); };
+  restyle(dur(800));
+  svg.append("g").selectAll("text").data(placed.filter(c => metros.includes(c.city))).join("text").attr("class", "lab")
+    .attr("x", c => c.city === "Las Vegas" ? c.px + rS(c.n) + 5 : c.px).attr("y", c => c.city === "Los Angeles" ? c.py + rS(c.n) + 13 : c.city === "Las Vegas" ? c.py + 4 : c.py - rS(c.n) - 6)
+    .attr("text-anchor", c => c.city === "Las Vegas" ? "start" : "middle").text(c => c.city);
+  g.on("mousemove", (ev, c) => showTip(ev, `<b>${c.city}, ${c.state}</b><br>${fmtN(c.n)} crash reports, ${c.rain} in rain${c.metro >= 0 ? `<br><span style="color:var(--muted)">tap to choose this city</span>` : `<br><span style="color:var(--muted)">too few reports to analyze the weather here</span>`}`)).on("mouseleave", hideTip)
+    .on("click", (ev, c) => { if (c.metro >= 0) setState({city: metros[c.metro]}); });
+  const btn = document.getElementById("mapPlay"); let playing = false;
+  btn.onclick = () => {
+    if (playing) return; playing = true; shown = 0; restyle(0); const per = dur(110) || 1;
+    const t = d3.interval(() => { shown++; btn.textContent = new Date(2021, 6 + Math.min(shown, 61), 1).toLocaleString("en-US", {month: "short", year: "numeric"}) + ` · ${fmtN(d3.sum(placed, c => c.cum[Math.min(shown, 61)]))} reports so far`; restyle(per); if (shown >= 61) { t.stop(); playing = false; btn.textContent = "▶ Watch the fleets spread, 2021 to 2026"; } }, per);
+  };
+  return {select: () => restyle(0)};
+}
+let map = null;
+
+// ---------- how your city compares: six small bars, tap to switch ----------
+function renderCompare(f) {
+  const k = C(), el = document.getElementById("vCompare"), W = Math.max(320, el.getBoundingClientRect().width || 900), rowH = 28, m = {left: 110, right: 150};
+  const ex = DATA.exposure.slice().sort((a, b) => expectedOf(b) - expectedOf(a)), H = ex.length * rowH + 4;
+  const x = d3.scaleLinear().domain([0, d3.max(ex, e => Math.round(expectedOf(e)))]).range([0, W - m.left - m.right]);
+  const svg = d3.select(el).selectAll("svg").data([0]).join("svg").attr("viewBox", [0, 0, W, H]);
+  const rows = svg.selectAll("g.crow").data(ex, e => e.metro).join(enter => {
+    const g = enter.append("g").attr("class", "crow").attr("transform", (e, i) => `translate(0,${i * rowH + 2})`);
+    g.append("rect").attr("class", "hit").attr("x", 0).attr("y", 0).attr("width", W).attr("height", rowH).attr("fill", "transparent");
+    g.append("text").attr("class", "nm").attr("x", m.left - 10).attr("y", rowH / 2).attr("dy", "0.35em").attr("text-anchor", "end").style("font-size", "13px");
+    g.append("rect").attr("class", "exp").attr("x", m.left).attr("y", 6).attr("height", rowH - 12).attr("rx", 4).attr("fill", "none").attr("stroke", k.rain).attr("stroke-width", 1.2).attr("stroke-dasharray", "3,2");
+    g.append("rect").attr("class", "rep").attr("x", m.left).attr("y", 6).attr("height", rowH - 12).attr("rx", 4).attr("fill", k.rain);
+    g.append("text").attr("class", "val").attr("y", rowH / 2).attr("dy", "0.35em").style("font-size", "12.5px");
+    return g;
+  });
+  rows.select("text.nm").text(e => e.metro).style("font-weight", e => e.metro === state.city ? 700 : 500).style("fill", e => e.metro === state.city ? k.ink : k.text2);
+  rows.select("rect.exp").attr("width", e => x(Math.round(expectedOf(e))));
+  rows.select("rect.rep").transition().duration(dur(500)).attr("width", e => x(e.rainCrashes)).attr("fill-opacity", e => state.city === ALL || e.metro === state.city ? 1 : 0.45);
+  rows.select("text.val").attr("x", e => m.left + x(Math.round(expectedOf(e))) + 8).style("fill", e => e.metro === state.city ? k.ink : k.muted).text(e => `${e.rainCrashes} of ${Math.round(expectedOf(e))} expected`);
+  rows.on("click", (ev, e) => setState({city: e.metro})).on("mousemove", (ev, e) => showTip(ev, `<b>${e.metro}</b><br>${fmtN(e.crashes)} crashes, rain ${fmtP(e.rainHours)} of hours<br>${e.rainCrashes} rain crashes against ${Math.round(expectedOf(e))} expected`)).on("mouseleave", hideTip);
 }
 
 // ---------- the answer ----------
@@ -324,10 +392,12 @@ function render() {
   d3.selectAll("#cityPick button").classed("on", d => d === state.city);
   d3.selectAll("#wxPick button").classed("on", (d, i) => i === state.w);
   const f = facts();
-  renderAnswer(f); renderRings(f); renderPeople(f); renderMonths(f);
+  document.getElementById("wxNote").textContent = f.w === 2 ? "Rain is the weather people worry about, and the one the data can test." : `${WLABEL[f.w]} is the everyday case. Pick Rain to see the comparison people ask about.`;
+  if (!map) map = buildMap(); else map.select();
+  renderAnswer(f); renderRings(f); renderCompare(f); renderPeople(f); renderMonths(f);
 }
 render();
-let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(render, 150); });
+let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { map = null; render(); }, 150); });
 matchMedia("(prefers-color-scheme: dark)").addEventListener("change", render);
 
 </script>
