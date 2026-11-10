@@ -1,0 +1,41 @@
+
+body {
+    margin: 0;
+    padding: 24px;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #222;
+    background: #fff;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 16px 0;
+    font-size: 30px;
+}
+
+.description {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+#traffic-chart {
+    width: 100%;
+}
+
+#traffic-chart svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.methodology {
+    margin-top: 20px;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.5;
+}
