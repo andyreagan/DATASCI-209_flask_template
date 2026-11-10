@@ -1,0 +1,2184 @@
+region,year,month,hour,manufacturer,type,incident_report_count
+Austin Metro,2022,6,6,"Tesla, Inc.",ADAS,1
+Austin Metro,2022,6,16,Argo AI,ADS,1
+Austin Metro,2022,6,16,Ford Motor Company,ADS,1
+Austin Metro,2022,8,21,"Tesla, Inc.",ADAS,1
+Austin Metro,2022,10,5,"Tesla, Inc.",ADAS,1
+Austin Metro,2022,10,8,Argo AI,ADS,1
+Austin Metro,2022,10,8,Ford Motor Company,ADS,1
+Austin Metro,2022,10,13,Argo AI,ADS,1
+Austin Metro,2022,10,13,Ford Motor Company,ADS,1
+Austin Metro,2022,11,12,"Tesla, Inc.",ADAS,1
+Austin Metro,2022,12,8,"Tesla, Inc.",ADAS,1
+Austin Metro,2022,12,15,"Subaru of America, Inc.",ADAS,1
+Austin Metro,2023,1,14,"Tesla, Inc.",ADAS,1
+Austin Metro,2023,1,17,"Tesla, Inc.",ADAS,1
+Austin Metro,2023,3,11,"Tesla, Inc.",ADAS,1
+Austin Metro,2023,4,3,Cruise LLC,ADS,2
+Austin Metro,2023,4,3,"General Motors, LLC",ADS,2
+Austin Metro,2023,5,0,Cruise LLC,ADS,3
+Austin Metro,2023,5,0,"General Motors, LLC",ADS,3
+Austin Metro,2023,5,1,"Tesla, Inc.",ADAS,1
+Austin Metro,2023,5,23,Cruise LLC,ADS,1
+Austin Metro,2023,5,23,"General Motors, LLC",ADS,1
+Austin Metro,2023,6,21,Cruise LLC,ADS,1
+Austin Metro,2023,6,21,"General Motors, LLC",ADS,1
+Austin Metro,2023,7,2,Cruise LLC,ADS,1
+Austin Metro,2023,7,2,"General Motors, LLC",ADS,1
+Austin Metro,2023,7,5,Cruise LLC,ADS,1
+Austin Metro,2023,7,5,"General Motors, LLC",ADS,1
+Austin Metro,2023,7,19,Cruise LLC,ADS,1
+Austin Metro,2023,7,19,"General Motors, LLC",ADS,1
+Austin Metro,2023,8,0,Cruise LLC,ADS,3
+Austin Metro,2023,8,0,"General Motors, LLC",ADS,3
+Austin Metro,2023,8,23,Cruise LLC,ADS,1
+Austin Metro,2023,8,23,"General Motors, LLC",ADS,1
+Austin Metro,2023,9,2,Cruise LLC,ADS,1
+Austin Metro,2023,9,2,"General Motors, LLC",ADS,1
+Austin Metro,2023,9,3,Cruise LLC,ADS,1
+Austin Metro,2023,9,3,"General Motors, LLC",ADS,1
+Austin Metro,2023,9,4,Cruise LLC,ADS,1
+Austin Metro,2023,9,4,"General Motors, LLC",ADS,1
+Austin Metro,2023,9,10,Cruise LLC,ADS,1
+Austin Metro,2023,9,10,"General Motors, LLC",ADS,1
+Austin Metro,2023,9,22,Cruise LLC,ADS,1
+Austin Metro,2023,9,22,"General Motors, LLC",ADS,1
+Austin Metro,2023,9,23,Cruise LLC,ADS,2
+Austin Metro,2023,9,23,"General Motors, LLC",ADS,2
+Austin Metro,2023,10,1,Cruise LLC,ADS,1
+Austin Metro,2023,10,1,"General Motors, LLC",ADS,1
+Austin Metro,2023,10,5,Cruise LLC,ADS,1
+Austin Metro,2023,10,5,"General Motors, LLC",ADS,1
+Austin Metro,2023,10,12,Avride Inc.,ADS,1
+Austin Metro,2023,11,4,Transdev Alternative Services,ADS,1
+Austin Metro,2023,11,4,Waymo LLC,ADS,1
+Austin Metro,2023,12,21,"Tesla, Inc.",ADAS,1
+Austin Metro,2024,1,9,Mobileye Vision Technologies,ADS,1
+Austin Metro,2024,1,9,"Volkswagen Group of America, Inc.",ADS,1
+Austin Metro,2024,2,11,Mobileye Vision Technologies,ADS,1
+Austin Metro,2024,2,11,"Nissan North America, Inc.",ADAS,1
+Austin Metro,2024,2,11,"Volkswagen Group of America, Inc.",ADS,1
+Austin Metro,2024,2,17,Transdev Alternative Services,ADS,1
+Austin Metro,2024,2,17,Waymo LLC,ADS,1
+Austin Metro,2024,3,10,Transdev Alternative Services,ADS,1
+Austin Metro,2024,3,10,Waymo LLC,ADS,1
+Austin Metro,2024,4,10,Mobileye Vision Technologies,ADS,1
+Austin Metro,2024,4,10,"Volkswagen Group of America, Inc.",ADS,1
+Austin Metro,2024,4,14,"Tesla, Inc.",ADAS,1
+Austin Metro,2024,5,14,Mobileye Vision Technologies,ADS,1
+Austin Metro,2024,5,14,"Volkswagen Group of America, Inc.",ADS,1
+Austin Metro,2024,5,19,"Tesla, Inc.",ADAS,1
+Austin Metro,2024,6,12,Mobileye Vision Technologies,ADS,1
+Austin Metro,2024,6,12,"Volkswagen Group of America, Inc.",ADS,1
+Austin Metro,2024,6,23,"Tesla, Inc.",ADAS,1
+Austin Metro,2024,7,9,"Tesla, Inc.",ADAS,1
+Austin Metro,2024,7,11,Waymo LLC,ADS,1
+Austin Metro,2024,7,17,"Tesla, Inc.",ADAS,1
+Austin Metro,2024,7,18,"Tesla, Inc.",ADAS,1
+Austin Metro,2024,8,2,"Tesla, Inc.",ADAS,1
+Austin Metro,2024,8,13,"Tesla, Inc.",ADAS,1
+Austin Metro,2024,9,6,Waymo LLC,ADS,1
+Austin Metro,2024,9,16,Transdev Alternative Services,ADS,1
+Austin Metro,2024,9,16,Waymo LLC,ADS,2
+Austin Metro,2024,10,0,"Tesla, Inc.",ADAS,1
+Austin Metro,2024,10,9,Waymo LLC,ADS,2
+Austin Metro,2024,10,17,"Tesla, Inc.",ADAS,1
+Austin Metro,2024,10,17,Waymo LLC,ADS,1
+Austin Metro,2024,10,19,"Tesla, Inc.",ADAS,1
+Austin Metro,2024,10,23,Waymo LLC,ADS,1
+Austin Metro,2024,11,0,Waymo LLC,ADS,1
+Austin Metro,2024,11,6,Waymo LLC,ADS,1
+Austin Metro,2024,11,21,"Tesla, Inc.",ADAS,1
+Austin Metro,2024,11,23,Transdev Alternative Services,ADS,1
+Austin Metro,2024,11,23,Waymo LLC,ADS,1
+Austin Metro,2024,12,2,"Tesla, Inc.",ADAS,1
+Austin Metro,2024,12,11,Waymo LLC,ADS,1
+Austin Metro,2024,12,12,Waymo LLC,ADS,1
+Austin Metro,2024,12,14,Avride Inc.,ADS,1
+Austin Metro,2024,12,15,Transdev Alternative Services,ADS,1
+Austin Metro,2024,12,15,Waymo LLC,ADS,1
+Austin Metro,2024,12,16,"Tesla, Inc.",ADAS,1
+Austin Metro,2024,12,17,"Tesla, Inc.",ADAS,1
+Austin Metro,2025,1,2,Waymo LLC,ADS,1
+Austin Metro,2025,1,13,Waymo LLC,ADS,1
+Austin Metro,2025,1,20,Waymo LLC,ADS,1
+Austin Metro,2025,2,8,Waymo LLC,ADS,2
+Austin Metro,2025,2,10,Waymo LLC,ADS,1
+Austin Metro,2025,3,0,Waymo LLC,ADS,1
+Austin Metro,2025,3,5,Waymo LLC,ADS,1
+Austin Metro,2025,3,8,"Tesla, Inc.",ADAS,1
+Austin Metro,2025,3,11,Avride Inc.,ADS,1
+Austin Metro,2025,3,17,Waymo LLC,ADS,2
+Austin Metro,2025,3,18,Waymo LLC,ADS,1
+Austin Metro,2025,3,21,Waymo LLC,ADS,2
+Austin Metro,2025,3,23,"Tesla, Inc.",ADAS,1
+Austin Metro,2025,4,2,"Tesla, Inc.",ADAS,1
+Austin Metro,2025,4,2,Waymo LLC,ADS,2
+Austin Metro,2025,4,7,Waymo LLC,ADS,1
+Austin Metro,2025,4,13,Waymo LLC,ADS,2
+Austin Metro,2025,4,16,Waymo LLC,ADS,1
+Austin Metro,2025,4,19,"Tesla, Inc.",ADAS,1
+Austin Metro,2025,4,20,Waymo LLC,ADS,1
+Austin Metro,2025,4,22,"Tesla, Inc.",ADAS,1
+Austin Metro,2025,4,23,Waymo LLC,ADS,1
+Austin Metro,2025,5,1,Waymo LLC,ADS,1
+Austin Metro,2025,5,2,"Tesla, Inc.",ADAS,1
+Austin Metro,2025,5,5,Waymo LLC,ADS,1
+Austin Metro,2025,5,7,Waymo LLC,ADS,1
+Austin Metro,2025,5,15,Transdev Alternative Services,ADS,1
+Austin Metro,2025,5,15,Waymo LLC,ADS,1
+Austin Metro,2025,5,16,Waymo LLC,ADS,1
+Austin Metro,2025,5,17,"Tesla, Inc.",ADAS,1
+Austin Metro,2025,5,18,Waymo LLC,ADS,1
+Austin Metro,2025,5,19,Waymo LLC,ADS,1
+Austin Metro,2025,5,20,"Tesla, Inc.",ADAS,1
+Austin Metro,2025,5,21,"Tesla, Inc.",ADAS,1
+Austin Metro,2025,5,22,Waymo LLC,ADS,1
+Austin Metro,2025,6,7,"Tesla, Inc.",ADAS,1
+Austin Metro,2025,6,7,Waymo LLC,ADS,1
+Austin Metro,2025,6,9,Avride Inc.,ADS,1
+Austin Metro,2025,6,9,Waymo LLC,ADS,1
+Austin Metro,2025,6,13,Waymo LLC,ADS,1
+Austin Metro,2025,6,15,Waymo LLC,ADS,1
+Austin Metro,2025,6,17,Waymo LLC,ADS,1
+Austin Metro,2025,6,18,Waymo LLC,ADS,2
+Austin Metro,2025,6,21,Waymo LLC,ADS,2
+Austin Metro,2025,6,22,Waymo LLC,ADS,2
+Austin Metro,2025,6,23,"Tesla, Inc.",ADAS,1
+Austin Metro,2025,7,0,"Tesla, Inc.",ADAS,1
+Austin Metro,2025,7,1,Waymo LLC,ADS,1
+Austin Metro,2025,7,3,"Tesla, Inc.",ADS,1
+Austin Metro,2025,7,9,Waymo LLC,ADS,1
+Austin Metro,2025,7,11,Waymo LLC,ADS,1
+Austin Metro,2025,7,12,"Tesla, Inc.",ADAS,1
+Austin Metro,2025,7,12,"Tesla, Inc.",ADS,1
+Austin Metro,2025,7,12,Waymo LLC,ADS,1
+Austin Metro,2025,7,15,"Tesla, Inc.",ADS,1
+Austin Metro,2025,7,16,"Tesla, Inc.",ADAS,1
+Austin Metro,2025,7,19,Waymo LLC,ADS,1
+Austin Metro,2025,8,5,"Tesla, Inc.",ADAS,1
+Austin Metro,2025,8,7,"Tesla, Inc.",ADAS,1
+Austin Metro,2025,9,1,"Tesla, Inc.",ADS,1
+Austin Metro,2025,9,2,Waymo LLC,ADS,1
+Austin Metro,2025,9,3,"Tesla, Inc.",ADS,1
+Austin Metro,2025,9,8,Waymo LLC,ADS,1
+Austin Metro,2025,9,10,Waymo LLC,ADS,1
+Austin Metro,2025,9,13,"Tesla, Inc.",ADS,1
+Austin Metro,2025,9,16,Waymo LLC,ADS,1
+Austin Metro,2025,9,17,Waymo LLC,ADS,1
+Austin Metro,2025,9,18,Waymo LLC,ADS,2
+Austin Metro,2025,9,20,"Tesla, Inc.",ADS,1
+Austin Metro,2025,9,21,"Tesla, Inc.",ADAS,1
+Austin Metro,2025,9,22,Waymo LLC,ADS,1
+Austin Metro,2025,9,23,"Tesla, Inc.",ADAS,1
+Austin Metro,2025,9,23,Waymo LLC,ADS,1
+Austin Metro,2025,10,0,Waymo LLC,ADS,1
+Austin Metro,2025,10,1,"Tesla, Inc.",ADS,1
+Austin Metro,2025,10,7,Waymo LLC,ADS,1
+Austin Metro,2025,10,9,Avride Inc.,ADS,1
+Austin Metro,2025,10,9,Waymo LLC,ADS,1
+Austin Metro,2025,10,11,Waymo LLC,ADS,1
+Austin Metro,2025,10,14,Waymo LLC,ADS,2
+Austin Metro,2025,10,17,Waymo LLC,ADS,1
+Austin Metro,2025,10,18,Waymo LLC,ADS,2
+Austin Metro,2025,10,19,"Tesla, Inc.",ADAS,1
+Austin Metro,2025,10,20,"Tesla, Inc.",ADAS,1
+Austin Metro,2025,11,0,Waymo LLC,ADS,2
+Austin Metro,2025,11,11,Waymo LLC,ADS,2
+Austin Metro,2025,11,15,Avride Inc.,ADS,1
+Austin Metro,2025,11,15,Waymo LLC,ADS,1
+Austin Metro,2025,11,16,Waymo LLC,ADS,1
+Austin Metro,2025,11,18,Avride Inc.,ADS,1
+Austin Metro,2025,11,20,Waymo LLC,ADS,1
+Austin Metro,2025,11,21,Avride Inc.,ADS,2
+Austin Metro,2025,11,22,"Tesla, Inc.",ADS,1
+Austin Metro,2025,12,0,Waymo LLC,ADS,2
+Austin Metro,2025,12,2,Waymo LLC,ADS,2
+Austin Metro,2025,12,6,Avride Inc.,ADS,1
+Austin Metro,2025,12,7,Avride Inc.,ADS,2
+Austin Metro,2025,12,7,Waymo LLC,ADS,1
+Austin Metro,2025,12,10,Waymo LLC,ADS,1
+Austin Metro,2025,12,14,Waymo LLC,ADS,1
+Austin Metro,2025,12,15,Waymo LLC,ADS,2
+Austin Metro,2025,12,16,Waymo LLC,ADS,1
+Austin Metro,2025,12,19,Avride Inc.,ADS,1
+Austin Metro,2025,12,22,"Tesla, Inc.",ADAS,1
+Austin Metro,2025,12,22,"Tesla, Inc.",ADS,1
+Austin Metro,2025,12,23,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,1,11,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,1,18,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,2,0,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,2,2,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,2,6,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,2,7,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,2,18,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,3,2,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,3,8,"Mercedes-Benz USA, LLC",ADS,1
+Los Angeles Metro,2022,3,8,"Robert Bosch, LLC",ADS,1
+Los Angeles Metro,2022,3,11,Pony.ai,ADS,1
+Los Angeles Metro,2022,3,13,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,3,15,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,3,16,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2022,4,5,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,4,6,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,5,2,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,5,5,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,5,6,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,5,9,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,5,15,"Mercedes-Benz USA, LLC",ADS,1
+Los Angeles Metro,2022,5,15,Pony.ai,ADS,1
+Los Angeles Metro,2022,5,18,Toyota Motor Engineering & Manufacturing,ADAS,1
+Los Angeles Metro,2022,6,2,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,6,8,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,6,9,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,7,1,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,7,11,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,7,14,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2022,7,21,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,7,22,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,8,0,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,8,7,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,8,13,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,8,18,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,9,5,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,9,13,"Kia America, Inc.",ADAS,1
+Los Angeles Metro,2022,9,13,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,9,15,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,9,17,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,9,19,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,10,7,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,10,13,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,10,19,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,11,0,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,11,2,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2022,11,5,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,11,9,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,11,10,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,11,11,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,11,13,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,11,16,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2022,11,19,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,11,22,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,11,23,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,12,1,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,12,3,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,12,4,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,12,6,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,12,8,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2022,12,9,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2022,12,12,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,12,14,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2022,12,18,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,12,19,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2022,12,23,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,1,6,"Lucid USA, Inc.",ADAS,1
+Los Angeles Metro,2023,1,7,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,1,8,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,1,10,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,2,4,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,2,8,"Mercedes-Benz USA, LLC",ADS,1
+Los Angeles Metro,2023,2,11,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,2,13,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,2,14,"Tesla, Inc.",ADAS,3
+Los Angeles Metro,2023,2,15,"Mercedes-Benz USA, LLC",ADS,1
+Los Angeles Metro,2023,2,16,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,2,22,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2023,3,2,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2023,3,5,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2023,3,10,Transdev Alternative Services,ADS,1
+Los Angeles Metro,2023,3,10,Waymo LLC,ADS,1
+Los Angeles Metro,2023,3,17,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,3,22,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,4,1,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2023,4,10,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,4,14,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,4,15,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,4,17,Transdev Alternative Services,ADS,1
+Los Angeles Metro,2023,4,17,Waymo LLC,ADS,1
+Los Angeles Metro,2023,4,20,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,4,21,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,4,22,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,5,0,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,5,13,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,5,14,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,5,21,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,6,0,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,6,1,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,6,5,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,6,6,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2023,6,9,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,6,19,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,6,23,Transdev Alternative Services,ADS,1
+Los Angeles Metro,2023,6,23,Waymo LLC,ADS,1
+Los Angeles Metro,2023,7,1,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,7,7,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,7,11,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,7,13,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,7,14,Transdev Alternative Services,ADS,1
+Los Angeles Metro,2023,7,14,Waymo LLC,ADS,1
+Los Angeles Metro,2023,7,15,Transdev Alternative Services,ADS,1
+Los Angeles Metro,2023,7,15,Waymo LLC,ADS,1
+Los Angeles Metro,2023,7,17,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,7,18,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,7,20,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,8,1,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,8,7,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,8,9,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2023,8,13,"Mercedes-Benz USA, LLC",ADS,1
+Los Angeles Metro,2023,8,14,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,8,16,Toyota Motor Engineering & Manufacturing,ADAS,1
+Los Angeles Metro,2023,8,16,Waymo LLC,ADS,1
+Los Angeles Metro,2023,8,17,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,8,19,Waymo LLC,ADS,1
+Los Angeles Metro,2023,8,20,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,9,1,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,9,6,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,9,7,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2023,9,8,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,9,17,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,10,0,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,10,1,Cruise LLC,ADS,1
+Los Angeles Metro,2023,10,1,"General Motors, LLC",ADS,1
+Los Angeles Metro,2023,10,3,"Kia America, Inc.",ADAS,1
+Los Angeles Metro,2023,10,4,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,10,10,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,10,23,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2023,11,6,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,11,13,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,11,17,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2023,11,19,Transdev Alternative Services,ADS,1
+Los Angeles Metro,2023,11,19,Waymo LLC,ADS,1
+Los Angeles Metro,2023,11,22,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,12,4,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,12,5,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,12,6,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,12,8,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,12,11,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2023,12,14,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2023,12,16,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2023,12,20,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,1,1,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,1,2,"Polestar Automotive USA, Inc.",ADAS,1
+Los Angeles Metro,2024,1,8,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,1,12,Waymo LLC,ADS,1
+Los Angeles Metro,2024,1,17,Waymo LLC,ADS,1
+Los Angeles Metro,2024,1,19,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,2,5,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,2,22,Waymo LLC,ADS,1
+Los Angeles Metro,2024,3,3,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,3,4,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,3,7,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2024,3,7,Transdev Alternative Services,ADS,1
+Los Angeles Metro,2024,3,7,Waymo LLC,ADS,1
+Los Angeles Metro,2024,3,8,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,3,9,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2024,3,12,Waymo LLC,ADS,1
+Los Angeles Metro,2024,3,14,Waymo LLC,ADS,1
+Los Angeles Metro,2024,3,15,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,3,20,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,3,22,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,4,0,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,4,6,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,4,7,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,4,21,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,4,23,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,4,23,Waymo LLC,ADS,1
+Los Angeles Metro,2024,5,0,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,5,0,Transdev Alternative Services,ADS,1
+Los Angeles Metro,2024,5,0,Waymo LLC,ADS,2
+Los Angeles Metro,2024,5,2,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,5,3,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2024,5,4,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,5,7,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,5,8,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,5,9,Hyundai Motor America,ADAS,1
+Los Angeles Metro,2024,5,9,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,5,10,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,5,14,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,5,15,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2024,5,19,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,5,20,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,5,21,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,5,21,Waymo LLC,ADS,1
+Los Angeles Metro,2024,5,22,Waymo LLC,ADS,1
+Los Angeles Metro,2024,6,0,Waymo LLC,ADS,1
+Los Angeles Metro,2024,6,6,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,6,7,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,6,11,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,6,11,Waymo LLC,ADS,1
+Los Angeles Metro,2024,6,16,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,6,16,Transdev Alternative Services,ADS,1
+Los Angeles Metro,2024,6,16,Waymo LLC,ADS,1
+Los Angeles Metro,2024,6,19,"Lucid USA, Inc.",ADAS,1
+Los Angeles Metro,2024,6,20,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2024,6,21,Waymo LLC,ADS,1
+Los Angeles Metro,2024,6,22,Waymo LLC,ADS,1
+Los Angeles Metro,2024,7,8,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,7,9,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,7,12,Waymo LLC,ADS,1
+Los Angeles Metro,2024,7,13,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2024,7,15,Waymo LLC,ADS,1
+Los Angeles Metro,2024,7,17,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,7,22,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,8,1,"General Motors, LLC",ADAS,1
+Los Angeles Metro,2024,8,3,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,8,7,"Lucid USA, Inc.",ADAS,1
+Los Angeles Metro,2024,8,10,Transdev Alternative Services,ADS,1
+Los Angeles Metro,2024,8,10,Waymo LLC,ADS,2
+Los Angeles Metro,2024,8,11,Waymo LLC,ADS,2
+Los Angeles Metro,2024,8,12,Waymo LLC,ADS,1
+Los Angeles Metro,2024,8,15,Waymo LLC,ADS,1
+Los Angeles Metro,2024,8,20,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,8,21,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,9,1,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,9,2,Waymo LLC,ADS,1
+Los Angeles Metro,2024,9,4,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,9,5,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2024,9,7,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,9,7,Waymo LLC,ADS,1
+Los Angeles Metro,2024,9,10,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,9,11,Waymo LLC,ADS,1
+Los Angeles Metro,2024,9,13,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,9,14,Waymo LLC,ADS,1
+Los Angeles Metro,2024,9,16,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,9,18,Waymo LLC,ADS,1
+Los Angeles Metro,2024,9,19,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,10,0,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,10,0,Waymo LLC,ADS,1
+Los Angeles Metro,2024,10,1,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,10,2,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,10,3,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,10,5,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2024,10,6,Waymo LLC,ADS,1
+Los Angeles Metro,2024,10,7,"General Motors, LLC",ADAS,1
+Los Angeles Metro,2024,10,7,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,10,7,Waymo LLC,ADS,1
+Los Angeles Metro,2024,10,9,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,10,9,Waymo LLC,ADS,1
+Los Angeles Metro,2024,10,12,"BMW of North America, LLC",ADAS,1
+Los Angeles Metro,2024,10,12,Waymo LLC,ADS,1
+Los Angeles Metro,2024,10,13,Waymo LLC,ADS,1
+Los Angeles Metro,2024,10,14,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,10,18,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,10,21,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,11,0,Waymo LLC,ADS,1
+Los Angeles Metro,2024,11,1,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,11,1,Waymo LLC,ADS,1
+Los Angeles Metro,2024,11,2,Waymo LLC,ADS,1
+Los Angeles Metro,2024,11,3,Waymo LLC,ADS,1
+Los Angeles Metro,2024,11,4,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,11,4,Waymo LLC,ADS,1
+Los Angeles Metro,2024,11,6,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,11,8,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,11,9,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,11,10,Waymo LLC,ADS,1
+Los Angeles Metro,2024,11,11,Waymo LLC,ADS,1
+Los Angeles Metro,2024,11,12,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,11,12,Waymo LLC,ADS,1
+Los Angeles Metro,2024,11,14,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,11,14,Waymo LLC,ADS,1
+Los Angeles Metro,2024,11,15,Waymo LLC,ADS,1
+Los Angeles Metro,2024,11,16,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,11,17,Waymo LLC,ADS,2
+Los Angeles Metro,2024,11,18,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,11,18,Waymo LLC,ADS,2
+Los Angeles Metro,2024,11,19,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,11,20,Waymo LLC,ADS,1
+Los Angeles Metro,2024,11,21,Waymo LLC,ADS,2
+Los Angeles Metro,2024,11,23,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,12,0,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,12,0,Waymo LLC,ADS,1
+Los Angeles Metro,2024,12,1,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,12,2,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,12,2,Waymo LLC,ADS,1
+Los Angeles Metro,2024,12,3,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2024,12,3,Waymo LLC,ADS,1
+Los Angeles Metro,2024,12,7,Transdev Alternative Services,ADS,1
+Los Angeles Metro,2024,12,7,Waymo LLC,ADS,1
+Los Angeles Metro,2024,12,8,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,12,8,Waymo LLC,ADS,1
+Los Angeles Metro,2024,12,9,Waymo LLC,ADS,2
+Los Angeles Metro,2024,12,10,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2024,12,10,Waymo LLC,ADS,1
+Los Angeles Metro,2024,12,11,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,12,12,Waymo LLC,ADS,3
+Los Angeles Metro,2024,12,13,Waymo LLC,ADS,1
+Los Angeles Metro,2024,12,14,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,12,16,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,12,16,Waymo LLC,ADS,1
+Los Angeles Metro,2024,12,17,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,12,18,"Mercedes-Benz USA, LLC",ADAS,1
+Los Angeles Metro,2024,12,18,Waymo LLC,ADS,1
+Los Angeles Metro,2024,12,19,"Tesla, Inc.",ADAS,3
+Los Angeles Metro,2024,12,19,Waymo LLC,ADS,2
+Los Angeles Metro,2024,12,20,Transdev Alternative Services,ADS,1
+Los Angeles Metro,2024,12,20,Waymo LLC,ADS,1
+Los Angeles Metro,2024,12,22,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2024,12,22,Waymo LLC,ADS,1
+Los Angeles Metro,2025,1,1,Waymo LLC,ADS,1
+Los Angeles Metro,2025,1,3,Waymo LLC,ADS,1
+Los Angeles Metro,2025,1,4,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,1,5,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,1,6,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,1,8,Waymo LLC,ADS,1
+Los Angeles Metro,2025,1,15,Waymo LLC,ADS,1
+Los Angeles Metro,2025,1,16,Transdev Alternative Services,ADS,1
+Los Angeles Metro,2025,1,16,Waymo LLC,ADS,1
+Los Angeles Metro,2025,1,17,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2025,1,17,Waymo LLC,ADS,1
+Los Angeles Metro,2025,1,18,Waymo LLC,ADS,1
+Los Angeles Metro,2025,1,21,Transdev Alternative Services,ADS,1
+Los Angeles Metro,2025,1,21,Waymo LLC,ADS,2
+Los Angeles Metro,2025,1,22,Waymo LLC,ADS,1
+Los Angeles Metro,2025,1,23,Waymo LLC,ADS,1
+Los Angeles Metro,2025,2,0,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,2,4,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,2,6,Hyundai Motor America,ADAS,1
+Los Angeles Metro,2025,2,7,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,2,7,Waymo LLC,ADS,1
+Los Angeles Metro,2025,2,8,Waymo LLC,ADS,1
+Los Angeles Metro,2025,2,9,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2025,2,10,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,2,11,Waymo LLC,ADS,1
+Los Angeles Metro,2025,2,14,Waymo LLC,ADS,1
+Los Angeles Metro,2025,2,16,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2025,2,18,Waymo LLC,ADS,1
+Los Angeles Metro,2025,2,19,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,2,19,Waymo LLC,ADS,2
+Los Angeles Metro,2025,2,20,Waymo LLC,ADS,1
+Los Angeles Metro,2025,2,21,Waymo LLC,ADS,3
+Los Angeles Metro,2025,2,22,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,2,22,Waymo LLC,ADS,1
+Los Angeles Metro,2025,3,0,Waymo LLC,ADS,3
+Los Angeles Metro,2025,3,1,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,3,1,Waymo LLC,ADS,2
+Los Angeles Metro,2025,3,4,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,3,5,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,3,6,Waymo LLC,ADS,1
+Los Angeles Metro,2025,3,8,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,3,8,Waymo LLC,ADS,1
+Los Angeles Metro,2025,3,9,Waymo LLC,ADS,1
+Los Angeles Metro,2025,3,11,Waymo LLC,ADS,1
+Los Angeles Metro,2025,3,12,"Tesla, Inc.",ADAS,3
+Los Angeles Metro,2025,3,12,Waymo LLC,ADS,2
+Los Angeles Metro,2025,3,13,Waymo LLC,ADS,3
+Los Angeles Metro,2025,3,14,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,3,14,Waymo LLC,ADS,1
+Los Angeles Metro,2025,3,15,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,3,15,Waymo LLC,ADS,1
+Los Angeles Metro,2025,3,16,Waymo LLC,ADS,2
+Los Angeles Metro,2025,3,18,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,3,19,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,3,20,Waymo LLC,ADS,1
+Los Angeles Metro,2025,3,22,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,3,22,Waymo LLC,ADS,4
+Los Angeles Metro,2025,3,23,Waymo LLC,ADS,3
+Los Angeles Metro,2025,4,0,Waymo LLC,ADS,3
+Los Angeles Metro,2025,4,1,Waymo LLC,ADS,1
+Los Angeles Metro,2025,4,5,Waymo LLC,ADS,1
+Los Angeles Metro,2025,4,6,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,4,9,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,4,10,Waymo LLC,ADS,2
+Los Angeles Metro,2025,4,11,Waymo LLC,ADS,2
+Los Angeles Metro,2025,4,12,Transdev Alternative Services,ADS,1
+Los Angeles Metro,2025,4,12,Waymo LLC,ADS,1
+Los Angeles Metro,2025,4,14,Waymo LLC,ADS,2
+Los Angeles Metro,2025,4,16,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,4,16,Waymo LLC,ADS,1
+Los Angeles Metro,2025,4,17,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2025,4,17,Waymo LLC,ADS,1
+Los Angeles Metro,2025,4,18,"Tesla, Inc.",ADAS,3
+Los Angeles Metro,2025,4,18,Waymo LLC,ADS,1
+Los Angeles Metro,2025,4,20,Waymo LLC,ADS,2
+Los Angeles Metro,2025,4,21,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,4,21,Waymo LLC,ADS,1
+Los Angeles Metro,2025,4,22,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2025,4,23,"Tesla, Inc.",ADAS,3
+Los Angeles Metro,2025,5,0,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,5,1,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2025,5,3,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,5,5,Waymo LLC,ADS,1
+Los Angeles Metro,2025,5,6,Waymo LLC,ADS,2
+Los Angeles Metro,2025,5,7,Waymo LLC,ADS,2
+Los Angeles Metro,2025,5,9,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,5,9,Waymo LLC,ADS,1
+Los Angeles Metro,2025,5,10,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,5,11,Waymo LLC,ADS,3
+Los Angeles Metro,2025,5,13,Waymo LLC,ADS,1
+Los Angeles Metro,2025,5,14,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,5,14,Waymo LLC,ADS,1
+Los Angeles Metro,2025,5,15,"Tesla, Inc.",ADAS,3
+Los Angeles Metro,2025,5,15,Waymo LLC,ADS,1
+Los Angeles Metro,2025,5,16,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,5,16,Waymo LLC,ADS,3
+Los Angeles Metro,2025,5,17,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2025,5,17,Waymo LLC,ADS,1
+Los Angeles Metro,2025,5,18,Waymo LLC,ADS,1
+Los Angeles Metro,2025,5,19,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,5,19,Waymo LLC,ADS,1
+Los Angeles Metro,2025,5,20,Waymo LLC,ADS,4
+Los Angeles Metro,2025,5,21,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,5,21,Waymo LLC,ADS,2
+Los Angeles Metro,2025,5,22,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2025,6,0,Waymo LLC,ADS,2
+Los Angeles Metro,2025,6,1,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,6,2,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2025,6,2,Waymo LLC,ADS,1
+Los Angeles Metro,2025,6,5,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,6,7,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,6,11,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,6,11,Waymo LLC,ADS,1
+Los Angeles Metro,2025,6,13,Waymo LLC,ADS,1
+Los Angeles Metro,2025,6,15,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2025,6,16,Waymo LLC,ADS,1
+Los Angeles Metro,2025,6,17,Waymo LLC,ADS,1
+Los Angeles Metro,2025,6,18,Waymo LLC,ADS,1
+Los Angeles Metro,2025,6,19,Waymo LLC,ADS,1
+Los Angeles Metro,2025,6,22,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,6,22,Waymo LLC,ADS,1
+Los Angeles Metro,2025,7,0,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2025,7,1,Waymo LLC,ADS,1
+Los Angeles Metro,2025,7,2,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2025,7,2,Waymo LLC,ADS,1
+Los Angeles Metro,2025,7,3,Waymo LLC,ADS,1
+Los Angeles Metro,2025,7,4,Waymo LLC,ADS,1
+Los Angeles Metro,2025,7,6,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,7,7,Waymo LLC,ADS,1
+Los Angeles Metro,2025,7,8,Waymo LLC,ADS,1
+Los Angeles Metro,2025,7,9,Waymo LLC,ADS,1
+Los Angeles Metro,2025,7,10,Waymo LLC,ADS,1
+Los Angeles Metro,2025,7,11,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,7,12,Waymo LLC,ADS,1
+Los Angeles Metro,2025,7,13,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,7,14,Waymo LLC,ADS,1
+Los Angeles Metro,2025,7,16,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,7,16,Waymo LLC,ADS,2
+Los Angeles Metro,2025,7,18,Waymo LLC,ADS,1
+Los Angeles Metro,2025,7,19,Waymo LLC,ADS,1
+Los Angeles Metro,2025,7,22,Waymo LLC,ADS,1
+Los Angeles Metro,2025,8,0,Waymo LLC,ADS,3
+Los Angeles Metro,2025,8,1,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,8,2,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2025,8,3,Waymo LLC,ADS,1
+Los Angeles Metro,2025,8,4,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,8,8,Waymo LLC,ADS,1
+Los Angeles Metro,2025,8,9,Waymo LLC,ADS,1
+Los Angeles Metro,2025,8,9,"Zoox, Inc.",ADS,1
+Los Angeles Metro,2025,8,10,Waymo LLC,ADS,1
+Los Angeles Metro,2025,8,11,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,8,11,Waymo LLC,ADS,2
+Los Angeles Metro,2025,8,12,Waymo LLC,ADS,1
+Los Angeles Metro,2025,8,16,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,8,17,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,8,18,Waymo LLC,ADS,1
+Los Angeles Metro,2025,8,20,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,8,22,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,8,22,Waymo LLC,ADS,2
+Los Angeles Metro,2025,8,23,"Tesla, Inc.",ADAS,3
+Los Angeles Metro,2025,9,0,Waymo LLC,ADS,1
+Los Angeles Metro,2025,9,1,Waymo LLC,ADS,1
+Los Angeles Metro,2025,9,2,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,9,2,Waymo LLC,ADS,1
+Los Angeles Metro,2025,9,4,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2025,9,4,Waymo LLC,ADS,1
+Los Angeles Metro,2025,9,5,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2025,9,5,Waymo LLC,ADS,1
+Los Angeles Metro,2025,9,8,Waymo LLC,ADS,1
+Los Angeles Metro,2025,9,9,Waymo LLC,ADS,1
+Los Angeles Metro,2025,9,10,Waymo LLC,ADS,1
+Los Angeles Metro,2025,9,11,Waymo LLC,ADS,1
+Los Angeles Metro,2025,9,12,Waymo LLC,ADS,1
+Los Angeles Metro,2025,9,14,Waymo LLC,ADS,1
+Los Angeles Metro,2025,9,15,Waymo LLC,ADS,1
+Los Angeles Metro,2025,9,17,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,9,17,Waymo LLC,ADS,2
+Los Angeles Metro,2025,9,18,Waymo LLC,ADS,1
+Los Angeles Metro,2025,9,20,"Tesla, Inc.",ADAS,3
+Los Angeles Metro,2025,9,21,Waymo LLC,ADS,1
+Los Angeles Metro,2025,9,22,Waymo LLC,ADS,1
+Los Angeles Metro,2025,9,23,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,9,23,Waymo LLC,ADS,1
+Los Angeles Metro,2025,10,0,Waymo LLC,ADS,1
+Los Angeles Metro,2025,10,2,Waymo LLC,ADS,1
+Los Angeles Metro,2025,10,3,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2025,10,5,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,10,8,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,10,9,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2025,10,9,Waymo LLC,ADS,1
+Los Angeles Metro,2025,10,12,Waymo LLC,ADS,1
+Los Angeles Metro,2025,10,13,Waymo LLC,ADS,1
+Los Angeles Metro,2025,10,14,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,10,15,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,10,15,Waymo LLC,ADS,2
+Los Angeles Metro,2025,10,16,Waymo LLC,ADS,3
+Los Angeles Metro,2025,10,17,"Tesla, Inc.",ADAS,3
+Los Angeles Metro,2025,10,17,Waymo LLC,ADS,2
+Los Angeles Metro,2025,10,19,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,10,20,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,10,20,Waymo LLC,ADS,1
+Los Angeles Metro,2025,10,22,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,10,22,Waymo LLC,ADS,2
+Los Angeles Metro,2025,10,23,Waymo LLC,ADS,2
+Los Angeles Metro,2025,11,0,Waymo LLC,ADS,2
+Los Angeles Metro,2025,11,1,Waymo LLC,ADS,2
+Los Angeles Metro,2025,11,2,Waymo LLC,ADS,3
+Los Angeles Metro,2025,11,3,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2025,11,3,Waymo LLC,ADS,2
+Los Angeles Metro,2025,11,4,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,11,4,Waymo LLC,ADS,1
+Los Angeles Metro,2025,11,5,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,11,6,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2025,11,6,Waymo LLC,ADS,1
+Los Angeles Metro,2025,11,7,Waymo LLC,ADS,1
+Los Angeles Metro,2025,11,8,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,11,8,Waymo LLC,ADS,1
+Los Angeles Metro,2025,11,10,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,11,11,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,11,11,Waymo LLC,ADS,3
+Los Angeles Metro,2025,11,12,Waymo LLC,ADS,2
+Los Angeles Metro,2025,11,14,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,11,15,Waymo LLC,ADS,3
+Los Angeles Metro,2025,11,16,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,11,16,Waymo LLC,ADS,2
+Los Angeles Metro,2025,11,17,Hyundai Motor America,ADAS,1
+Los Angeles Metro,2025,11,17,Waymo LLC,ADS,2
+Los Angeles Metro,2025,11,18,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,11,19,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,11,19,Waymo LLC,ADS,2
+Los Angeles Metro,2025,11,20,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,11,21,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,11,22,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2025,11,22,Waymo LLC,ADS,2
+Los Angeles Metro,2025,11,23,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,12,0,Waymo LLC,ADS,2
+Los Angeles Metro,2025,12,1,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,12,1,Waymo LLC,ADS,1
+Los Angeles Metro,2025,12,2,Waymo LLC,ADS,1
+Los Angeles Metro,2025,12,3,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2025,12,5,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,12,6,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,12,7,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2025,12,7,Waymo LLC,ADS,1
+Los Angeles Metro,2025,12,8,Waymo LLC,ADS,3
+Los Angeles Metro,2025,12,9,"Tesla, Inc.",ADAS,3
+Los Angeles Metro,2025,12,9,Waymo LLC,ADS,1
+Los Angeles Metro,2025,12,10,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,12,10,Waymo LLC,ADS,1
+Los Angeles Metro,2025,12,12,Waymo LLC,ADS,2
+Los Angeles Metro,2025,12,13,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,12,13,Waymo LLC,ADS,2
+Los Angeles Metro,2025,12,15,Waymo LLC,ADS,2
+Los Angeles Metro,2025,12,16,"Tesla, Inc.",ADAS,3
+Los Angeles Metro,2025,12,16,Waymo LLC,ADS,2
+Los Angeles Metro,2025,12,17,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,12,17,Waymo LLC,ADS,2
+Los Angeles Metro,2025,12,18,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2025,12,18,Waymo LLC,ADS,1
+Los Angeles Metro,2025,12,19,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2025,12,20,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2025,12,21,"Tesla, Inc.",ADAS,1
+Los Angeles Metro,2025,12,21,Waymo LLC,ADS,2
+Los Angeles Metro,2025,12,22,Waymo LLC,ADS,1
+Los Angeles Metro,2025,12,23,"Tesla, Inc.",ADAS,2
+Los Angeles Metro,2025,12,23,Waymo LLC,ADS,1
+Phoenix Metro,2022,1,10,Ford Motor Company,ADAS,1
+Phoenix Metro,2022,2,10,Waymo LLC,ADS,2
+Phoenix Metro,2022,3,14,Waymo LLC,ADS,1
+Phoenix Metro,2022,3,18,Waymo LLC,ADS,1
+Phoenix Metro,2022,3,21,Waymo LLC,ADS,1
+Phoenix Metro,2022,4,15,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2022,4,18,Waymo LLC,ADS,1
+Phoenix Metro,2022,4,23,Waymo LLC,ADS,1
+Phoenix Metro,2022,5,1,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2022,5,1,Transdev Alternative Services,ADS,1
+Phoenix Metro,2022,5,1,Waymo LLC,ADS,1
+Phoenix Metro,2022,5,2,Waymo LLC,ADS,1
+Phoenix Metro,2022,5,14,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2022,5,18,"Volkswagen Group of America, Inc.",ADAS,1
+Phoenix Metro,2022,7,0,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2022,7,0,Waymo LLC,ADS,1
+Phoenix Metro,2022,7,2,Transdev Alternative Services,ADS,1
+Phoenix Metro,2022,7,2,Waymo LLC,ADS,1
+Phoenix Metro,2022,7,4,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2022,7,9,Transdev Alternative Services,ADS,1
+Phoenix Metro,2022,7,9,Waymo LLC,ADS,1
+Phoenix Metro,2022,7,21,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2022,8,0,Transdev Alternative Services,ADS,1
+Phoenix Metro,2022,8,0,Waymo LLC,ADS,1
+Phoenix Metro,2022,8,10,Transdev Alternative Services,ADS,1
+Phoenix Metro,2022,8,10,Waymo LLC,ADS,1
+Phoenix Metro,2022,8,11,Transdev Alternative Services,ADS,1
+Phoenix Metro,2022,8,11,Waymo LLC,ADS,1
+Phoenix Metro,2022,8,12,Waymo LLC,ADS,1
+Phoenix Metro,2022,8,23,Transdev Alternative Services,ADS,1
+Phoenix Metro,2022,8,23,Waymo LLC,ADS,1
+Phoenix Metro,2022,9,9,May Mobility,ADS,1
+Phoenix Metro,2022,9,9,Toyota Motor Engineering & Manufacturing,ADS,1
+Phoenix Metro,2022,9,13,Transdev Alternative Services,ADS,1
+Phoenix Metro,2022,9,13,Waymo LLC,ADS,1
+Phoenix Metro,2022,10,13,Transdev Alternative Services,ADS,1
+Phoenix Metro,2022,10,13,Waymo LLC,ADS,1
+Phoenix Metro,2022,11,8,Waymo LLC,ADS,1
+Phoenix Metro,2022,11,9,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2022,12,5,Transdev Alternative Services,ADS,1
+Phoenix Metro,2022,12,5,Waymo LLC,ADS,1
+Phoenix Metro,2022,12,9,May Mobility,ADS,1
+Phoenix Metro,2022,12,9,Toyota Motor Engineering & Manufacturing,ADS,1
+Phoenix Metro,2022,12,20,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2022,12,21,Waymo LLC,ADS,1
+Phoenix Metro,2023,1,13,Waymo LLC,ADS,2
+Phoenix Metro,2023,1,17,Waymo LLC,ADS,1
+Phoenix Metro,2023,1,21,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2023,2,4,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2023,2,13,Transdev Alternative Services,ADS,1
+Phoenix Metro,2023,2,13,Waymo LLC,ADS,1
+Phoenix Metro,2023,2,17,Transdev Alternative Services,ADS,1
+Phoenix Metro,2023,2,17,Waymo LLC,ADS,1
+Phoenix Metro,2023,3,12,Waymo LLC,ADS,1
+Phoenix Metro,2023,3,13,Cruise LLC,ADS,1
+Phoenix Metro,2023,3,13,"General Motors, LLC",ADS,1
+Phoenix Metro,2023,3,13,Transdev Alternative Services,ADS,1
+Phoenix Metro,2023,3,13,Waymo LLC,ADS,1
+Phoenix Metro,2023,3,17,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2023,3,19,Transdev Alternative Services,ADS,1
+Phoenix Metro,2023,3,19,Waymo LLC,ADS,1
+Phoenix Metro,2023,4,0,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2023,4,8,Waymo LLC,ADS,1
+Phoenix Metro,2023,4,14,Cruise LLC,ADS,1
+Phoenix Metro,2023,4,14,"General Motors, LLC",ADS,1
+Phoenix Metro,2023,4,15,Waymo LLC,ADS,1
+Phoenix Metro,2023,5,9,Waymo LLC,ADS,1
+Phoenix Metro,2023,5,13,Waymo LLC,ADS,1
+Phoenix Metro,2023,5,17,Waymo LLC,ADS,2
+Phoenix Metro,2023,5,21,Transdev Alternative Services,ADS,1
+Phoenix Metro,2023,5,21,Waymo LLC,ADS,1
+Phoenix Metro,2023,5,23,Transdev Alternative Services,ADS,1
+Phoenix Metro,2023,5,23,Waymo LLC,ADS,1
+Phoenix Metro,2023,6,4,Cruise LLC,ADS,1
+Phoenix Metro,2023,6,4,"General Motors, LLC",ADS,1
+Phoenix Metro,2023,6,5,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2023,6,13,Transdev Alternative Services,ADS,1
+Phoenix Metro,2023,6,13,Waymo LLC,ADS,1
+Phoenix Metro,2023,6,20,Transdev Alternative Services,ADS,1
+Phoenix Metro,2023,6,20,Waymo LLC,ADS,1
+Phoenix Metro,2023,6,21,Transdev Alternative Services,ADS,1
+Phoenix Metro,2023,6,21,Waymo LLC,ADS,1
+Phoenix Metro,2023,7,9,Waymo LLC,ADS,1
+Phoenix Metro,2023,7,15,Waymo LLC,ADS,1
+Phoenix Metro,2023,7,18,Waymo LLC,ADS,1
+Phoenix Metro,2023,7,20,Cruise LLC,ADS,1
+Phoenix Metro,2023,7,20,"General Motors, LLC",ADS,1
+Phoenix Metro,2023,8,3,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2023,8,15,Waymo LLC,ADS,1
+Phoenix Metro,2023,8,18,Waymo LLC,ADS,1
+Phoenix Metro,2023,8,19,Waymo LLC,ADS,2
+Phoenix Metro,2023,8,20,Waymo LLC,ADS,1
+Phoenix Metro,2023,8,21,Waymo LLC,ADS,1
+Phoenix Metro,2023,9,0,Cruise LLC,ADS,1
+Phoenix Metro,2023,9,0,"General Motors, LLC",ADS,1
+Phoenix Metro,2023,9,1,Waymo LLC,ADS,1
+Phoenix Metro,2023,9,10,Waymo LLC,ADS,1
+Phoenix Metro,2023,9,15,Waymo LLC,ADS,1
+Phoenix Metro,2023,9,17,Waymo LLC,ADS,1
+Phoenix Metro,2023,9,19,Waymo LLC,ADS,1
+Phoenix Metro,2023,10,8,Waymo LLC,ADS,1
+Phoenix Metro,2023,10,11,Waymo LLC,ADS,1
+Phoenix Metro,2023,10,13,Waymo LLC,ADS,1
+Phoenix Metro,2023,10,18,Waymo LLC,ADS,2
+Phoenix Metro,2023,10,19,Waymo LLC,ADS,1
+Phoenix Metro,2023,11,10,Waymo LLC,ADS,1
+Phoenix Metro,2023,11,17,Waymo LLC,ADS,1
+Phoenix Metro,2023,11,21,Waymo LLC,ADS,1
+Phoenix Metro,2023,12,0,Waymo LLC,ADS,1
+Phoenix Metro,2023,12,6,Waymo LLC,ADS,1
+Phoenix Metro,2023,12,10,Waymo LLC,ADS,2
+Phoenix Metro,2023,12,14,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2023,12,14,Waymo LLC,ADS,1
+Phoenix Metro,2023,12,15,Waymo LLC,ADS,1
+Phoenix Metro,2023,12,16,Waymo LLC,ADS,2
+Phoenix Metro,2023,12,17,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2023,12,19,Waymo LLC,ADS,1
+Phoenix Metro,2023,12,22,Transdev Alternative Services,ADS,1
+Phoenix Metro,2023,12,22,Waymo LLC,ADS,2
+Phoenix Metro,2024,1,0,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2024,1,3,Transdev Alternative Services,ADS,1
+Phoenix Metro,2024,1,3,Waymo LLC,ADS,2
+Phoenix Metro,2024,1,7,Waymo LLC,ADS,1
+Phoenix Metro,2024,1,8,Waymo LLC,ADS,2
+Phoenix Metro,2024,1,9,Waymo LLC,ADS,1
+Phoenix Metro,2024,1,12,Waymo LLC,ADS,1
+Phoenix Metro,2024,1,15,Waymo LLC,ADS,1
+Phoenix Metro,2024,2,1,Waymo LLC,ADS,1
+Phoenix Metro,2024,2,2,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2024,2,6,Waymo LLC,ADS,1
+Phoenix Metro,2024,2,9,Waymo LLC,ADS,1
+Phoenix Metro,2024,2,16,Waymo LLC,ADS,2
+Phoenix Metro,2024,2,17,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2024,2,18,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2024,2,18,Waymo LLC,ADS,1
+Phoenix Metro,2024,2,20,Transdev Alternative Services,ADS,1
+Phoenix Metro,2024,2,20,Waymo LLC,ADS,2
+Phoenix Metro,2024,2,21,Waymo LLC,ADS,1
+Phoenix Metro,2024,3,1,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2024,3,2,Waymo LLC,ADS,1
+Phoenix Metro,2024,3,13,Waymo LLC,ADS,1
+Phoenix Metro,2024,3,15,Waymo LLC,ADS,2
+Phoenix Metro,2024,3,16,Waymo LLC,ADS,1
+Phoenix Metro,2024,3,19,Waymo LLC,ADS,1
+Phoenix Metro,2024,3,20,Waymo LLC,ADS,1
+Phoenix Metro,2024,3,21,Waymo LLC,ADS,2
+Phoenix Metro,2024,3,23,Waymo LLC,ADS,1
+Phoenix Metro,2024,4,6,Waymo LLC,ADS,1
+Phoenix Metro,2024,4,14,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2024,4,15,Waymo LLC,ADS,1
+Phoenix Metro,2024,4,18,Waymo LLC,ADS,1
+Phoenix Metro,2024,5,1,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2024,5,8,Waymo LLC,ADS,2
+Phoenix Metro,2024,5,10,Waymo LLC,ADS,1
+Phoenix Metro,2024,5,11,Waymo LLC,ADS,4
+Phoenix Metro,2024,5,12,Waymo LLC,ADS,1
+Phoenix Metro,2024,5,14,Waymo LLC,ADS,2
+Phoenix Metro,2024,5,15,Waymo LLC,ADS,1
+Phoenix Metro,2024,5,21,Waymo LLC,ADS,3
+Phoenix Metro,2024,6,0,Waymo LLC,ADS,1
+Phoenix Metro,2024,6,4,Cruise LLC,ADS,1
+Phoenix Metro,2024,6,4,"General Motors, LLC",ADS,1
+Phoenix Metro,2024,6,4,Waymo LLC,ADS,1
+Phoenix Metro,2024,6,7,Waymo LLC,ADS,1
+Phoenix Metro,2024,6,8,Waymo LLC,ADS,1
+Phoenix Metro,2024,6,10,Waymo LLC,ADS,1
+Phoenix Metro,2024,6,12,Waymo LLC,ADS,1
+Phoenix Metro,2024,6,13,Waymo LLC,ADS,1
+Phoenix Metro,2024,6,16,Toyota Motor Engineering & Manufacturing,ADAS,1
+Phoenix Metro,2024,6,16,Waymo LLC,ADS,1
+Phoenix Metro,2024,6,18,Waymo LLC,ADS,2
+Phoenix Metro,2024,6,22,Waymo LLC,ADS,1
+Phoenix Metro,2024,6,23,Waymo LLC,ADS,1
+Phoenix Metro,2024,7,0,Waymo LLC,ADS,1
+Phoenix Metro,2024,7,2,Waymo LLC,ADS,1
+Phoenix Metro,2024,7,3,Waymo LLC,ADS,1
+Phoenix Metro,2024,7,4,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2024,7,8,Waymo LLC,ADS,1
+Phoenix Metro,2024,7,11,Waymo LLC,ADS,2
+Phoenix Metro,2024,7,16,Waymo LLC,ADS,1
+Phoenix Metro,2024,7,20,Waymo LLC,ADS,1
+Phoenix Metro,2024,7,22,Waymo LLC,ADS,1
+Phoenix Metro,2024,8,6,Waymo LLC,ADS,1
+Phoenix Metro,2024,8,10,Transdev Alternative Services,ADS,1
+Phoenix Metro,2024,8,10,Waymo LLC,ADS,2
+Phoenix Metro,2024,8,12,Waymo LLC,ADS,1
+Phoenix Metro,2024,8,13,Waymo LLC,ADS,1
+Phoenix Metro,2024,8,14,Waymo LLC,ADS,3
+Phoenix Metro,2024,8,15,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2024,8,17,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2024,8,17,Waymo LLC,ADS,1
+Phoenix Metro,2024,8,18,Waymo LLC,ADS,2
+Phoenix Metro,2024,8,20,Waymo LLC,ADS,1
+Phoenix Metro,2024,8,22,Waymo LLC,ADS,2
+Phoenix Metro,2024,8,23,Waymo LLC,ADS,1
+Phoenix Metro,2024,9,1,Waymo LLC,ADS,1
+Phoenix Metro,2024,9,5,Waymo LLC,ADS,2
+Phoenix Metro,2024,9,6,Waymo LLC,ADS,1
+Phoenix Metro,2024,9,7,Waymo LLC,ADS,2
+Phoenix Metro,2024,9,10,Waymo LLC,ADS,2
+Phoenix Metro,2024,9,18,Waymo LLC,ADS,2
+Phoenix Metro,2024,9,22,Transdev Alternative Services,ADS,1
+Phoenix Metro,2024,9,22,Waymo LLC,ADS,3
+Phoenix Metro,2024,9,23,Waymo LLC,ADS,1
+Phoenix Metro,2024,10,0,Waymo LLC,ADS,1
+Phoenix Metro,2024,10,2,Waymo LLC,ADS,2
+Phoenix Metro,2024,10,6,Waymo LLC,ADS,1
+Phoenix Metro,2024,10,9,Waymo LLC,ADS,2
+Phoenix Metro,2024,10,12,Waymo LLC,ADS,2
+Phoenix Metro,2024,10,15,Waymo LLC,ADS,1
+Phoenix Metro,2024,10,16,Waymo LLC,ADS,2
+Phoenix Metro,2024,10,17,Waymo LLC,ADS,2
+Phoenix Metro,2024,10,19,Waymo LLC,ADS,1
+Phoenix Metro,2024,10,20,Waymo LLC,ADS,1
+Phoenix Metro,2024,10,22,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2024,11,0,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2024,11,0,Waymo LLC,ADS,2
+Phoenix Metro,2024,11,1,Waymo LLC,ADS,2
+Phoenix Metro,2024,11,4,Waymo LLC,ADS,1
+Phoenix Metro,2024,11,8,Waymo LLC,ADS,1
+Phoenix Metro,2024,11,12,Waymo LLC,ADS,1
+Phoenix Metro,2024,11,13,Waymo LLC,ADS,1
+Phoenix Metro,2024,11,16,Waymo LLC,ADS,2
+Phoenix Metro,2024,11,18,Waymo LLC,ADS,2
+Phoenix Metro,2024,11,20,Waymo LLC,ADS,1
+Phoenix Metro,2024,11,21,Waymo LLC,ADS,1
+Phoenix Metro,2024,11,22,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2024,11,22,Waymo LLC,ADS,1
+Phoenix Metro,2024,11,23,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2024,12,0,Waymo LLC,ADS,1
+Phoenix Metro,2024,12,7,Waymo LLC,ADS,1
+Phoenix Metro,2024,12,8,Waymo LLC,ADS,1
+Phoenix Metro,2024,12,9,Waymo LLC,ADS,1
+Phoenix Metro,2024,12,10,Waymo LLC,ADS,1
+Phoenix Metro,2024,12,11,Waymo LLC,ADS,1
+Phoenix Metro,2024,12,12,Waymo LLC,ADS,2
+Phoenix Metro,2024,12,15,Waymo LLC,ADS,1
+Phoenix Metro,2024,12,17,Waymo LLC,ADS,1
+Phoenix Metro,2024,12,18,Waymo LLC,ADS,1
+Phoenix Metro,2024,12,21,Waymo LLC,ADS,2
+Phoenix Metro,2024,12,22,Waymo LLC,ADS,2
+Phoenix Metro,2024,12,23,Waymo LLC,ADS,1
+Phoenix Metro,2025,1,2,Waymo LLC,ADS,1
+Phoenix Metro,2025,1,4,Transdev Alternative Services,ADS,1
+Phoenix Metro,2025,1,4,Waymo LLC,ADS,1
+Phoenix Metro,2025,1,7,Waymo LLC,ADS,2
+Phoenix Metro,2025,1,9,Waymo LLC,ADS,1
+Phoenix Metro,2025,1,12,Waymo LLC,ADS,1
+Phoenix Metro,2025,1,13,Waymo LLC,ADS,2
+Phoenix Metro,2025,1,14,Waymo LLC,ADS,2
+Phoenix Metro,2025,1,15,Waymo LLC,ADS,1
+Phoenix Metro,2025,1,16,Waymo LLC,ADS,2
+Phoenix Metro,2025,1,18,Waymo LLC,ADS,1
+Phoenix Metro,2025,1,19,Waymo LLC,ADS,1
+Phoenix Metro,2025,1,22,Waymo LLC,ADS,2
+Phoenix Metro,2025,2,1,"Tesla, Inc.",ADAS,3
+Phoenix Metro,2025,2,2,Waymo LLC,ADS,1
+Phoenix Metro,2025,2,3,Waymo LLC,ADS,1
+Phoenix Metro,2025,2,5,Waymo LLC,ADS,1
+Phoenix Metro,2025,2,8,Waymo LLC,ADS,1
+Phoenix Metro,2025,2,9,Waymo LLC,ADS,2
+Phoenix Metro,2025,2,11,Waymo LLC,ADS,1
+Phoenix Metro,2025,2,13,Waymo LLC,ADS,1
+Phoenix Metro,2025,2,17,Waymo LLC,ADS,2
+Phoenix Metro,2025,2,18,Waymo LLC,ADS,2
+Phoenix Metro,2025,2,19,Waymo LLC,ADS,1
+Phoenix Metro,2025,2,20,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2025,2,20,Waymo LLC,ADS,1
+Phoenix Metro,2025,2,21,Waymo LLC,ADS,1
+Phoenix Metro,2025,2,22,Waymo LLC,ADS,2
+Phoenix Metro,2025,2,23,Waymo LLC,ADS,1
+Phoenix Metro,2025,3,5,Waymo LLC,ADS,1
+Phoenix Metro,2025,3,6,Waymo LLC,ADS,1
+Phoenix Metro,2025,3,7,Waymo LLC,ADS,1
+Phoenix Metro,2025,3,8,Waymo LLC,ADS,1
+Phoenix Metro,2025,3,11,Waymo LLC,ADS,3
+Phoenix Metro,2025,3,15,Waymo LLC,ADS,1
+Phoenix Metro,2025,3,16,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2025,3,16,Waymo LLC,ADS,1
+Phoenix Metro,2025,3,17,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2025,3,17,Waymo LLC,ADS,1
+Phoenix Metro,2025,3,21,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2025,3,23,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2025,3,23,Waymo LLC,ADS,1
+Phoenix Metro,2025,4,0,Waymo LLC,ADS,3
+Phoenix Metro,2025,4,1,Waymo LLC,ADS,1
+Phoenix Metro,2025,4,2,Waymo LLC,ADS,3
+Phoenix Metro,2025,4,3,Waymo LLC,ADS,1
+Phoenix Metro,2025,4,7,Waymo LLC,ADS,2
+Phoenix Metro,2025,4,10,Waymo LLC,ADS,1
+Phoenix Metro,2025,4,12,Waymo LLC,ADS,2
+Phoenix Metro,2025,4,13,Waymo LLC,ADS,1
+Phoenix Metro,2025,4,14,Waymo LLC,ADS,1
+Phoenix Metro,2025,4,15,Waymo LLC,ADS,1
+Phoenix Metro,2025,4,18,Waymo LLC,ADS,1
+Phoenix Metro,2025,4,20,Waymo LLC,ADS,1
+Phoenix Metro,2025,4,21,Waymo LLC,ADS,2
+Phoenix Metro,2025,4,23,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2025,5,1,Waymo LLC,ADS,1
+Phoenix Metro,2025,5,3,Waymo LLC,ADS,1
+Phoenix Metro,2025,5,5,Waymo LLC,ADS,1
+Phoenix Metro,2025,5,7,Waymo LLC,ADS,2
+Phoenix Metro,2025,5,8,Waymo LLC,ADS,1
+Phoenix Metro,2025,5,9,Waymo LLC,ADS,2
+Phoenix Metro,2025,5,10,Waymo LLC,ADS,1
+Phoenix Metro,2025,5,11,Waymo LLC,ADS,2
+Phoenix Metro,2025,5,16,Waymo LLC,ADS,1
+Phoenix Metro,2025,5,18,Waymo LLC,ADS,1
+Phoenix Metro,2025,5,19,Waymo LLC,ADS,1
+Phoenix Metro,2025,5,21,Waymo LLC,ADS,1
+Phoenix Metro,2025,5,22,Waymo LLC,ADS,2
+Phoenix Metro,2025,5,23,Waymo LLC,ADS,1
+Phoenix Metro,2025,6,2,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2025,6,2,Waymo LLC,ADS,1
+Phoenix Metro,2025,6,3,Waymo LLC,ADS,1
+Phoenix Metro,2025,6,5,Waymo LLC,ADS,2
+Phoenix Metro,2025,6,8,Waymo LLC,ADS,1
+Phoenix Metro,2025,6,9,Waymo LLC,ADS,1
+Phoenix Metro,2025,6,12,Waymo LLC,ADS,2
+Phoenix Metro,2025,6,15,Waymo LLC,ADS,1
+Phoenix Metro,2025,6,16,Waymo LLC,ADS,1
+Phoenix Metro,2025,6,17,Waymo LLC,ADS,1
+Phoenix Metro,2025,6,18,Waymo LLC,ADS,1
+Phoenix Metro,2025,6,19,Waymo LLC,ADS,1
+Phoenix Metro,2025,6,23,Waymo LLC,ADS,4
+Phoenix Metro,2025,7,0,Waymo LLC,ADS,1
+Phoenix Metro,2025,7,1,Waymo LLC,ADS,2
+Phoenix Metro,2025,7,10,Waymo LLC,ADS,1
+Phoenix Metro,2025,7,11,Waymo LLC,ADS,1
+Phoenix Metro,2025,7,13,Waymo LLC,ADS,1
+Phoenix Metro,2025,7,14,Waymo LLC,ADS,1
+Phoenix Metro,2025,7,18,Waymo LLC,ADS,1
+Phoenix Metro,2025,7,19,Waymo LLC,ADS,1
+Phoenix Metro,2025,7,23,Waymo LLC,ADS,2
+Phoenix Metro,2025,8,1,Waymo LLC,ADS,1
+Phoenix Metro,2025,8,2,Waymo LLC,ADS,1
+Phoenix Metro,2025,8,7,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2025,8,12,Waymo LLC,ADS,3
+Phoenix Metro,2025,8,13,Waymo LLC,ADS,1
+Phoenix Metro,2025,8,15,Waymo LLC,ADS,2
+Phoenix Metro,2025,8,17,Waymo LLC,ADS,1
+Phoenix Metro,2025,8,20,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2025,8,20,Waymo LLC,ADS,1
+Phoenix Metro,2025,8,21,Waymo LLC,ADS,1
+Phoenix Metro,2025,8,22,Waymo LLC,ADS,1
+Phoenix Metro,2025,9,1,Waymo LLC,ADS,1
+Phoenix Metro,2025,9,11,Waymo LLC,ADS,1
+Phoenix Metro,2025,9,14,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2025,9,15,Waymo LLC,ADS,2
+Phoenix Metro,2025,10,0,Waymo LLC,ADS,1
+Phoenix Metro,2025,10,2,Waymo LLC,ADS,1
+Phoenix Metro,2025,10,6,Waymo LLC,ADS,3
+Phoenix Metro,2025,10,7,Waymo LLC,ADS,2
+Phoenix Metro,2025,10,8,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2025,10,9,Waymo LLC,ADS,3
+Phoenix Metro,2025,10,10,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2025,10,10,Waymo LLC,ADS,1
+Phoenix Metro,2025,10,12,Waymo LLC,ADS,2
+Phoenix Metro,2025,10,15,Waymo LLC,ADS,1
+Phoenix Metro,2025,10,16,Waymo LLC,ADS,2
+Phoenix Metro,2025,10,17,Waymo LLC,ADS,2
+Phoenix Metro,2025,10,18,Waymo LLC,ADS,1
+Phoenix Metro,2025,10,21,Waymo LLC,ADS,1
+Phoenix Metro,2025,10,22,"Tesla, Inc.",ADAS,2
+Phoenix Metro,2025,10,23,Waymo LLC,ADS,1
+Phoenix Metro,2025,11,0,Waymo LLC,ADS,1
+Phoenix Metro,2025,11,1,Waymo LLC,ADS,1
+Phoenix Metro,2025,11,2,Waymo LLC,ADS,1
+Phoenix Metro,2025,11,4,"General Motors, LLC",ADAS,1
+Phoenix Metro,2025,11,6,Waymo LLC,ADS,1
+Phoenix Metro,2025,11,8,Waymo LLC,ADS,1
+Phoenix Metro,2025,11,9,Waymo LLC,ADS,1
+Phoenix Metro,2025,11,10,Waymo LLC,ADS,1
+Phoenix Metro,2025,11,12,Waymo LLC,ADS,1
+Phoenix Metro,2025,11,15,Waymo LLC,ADS,2
+Phoenix Metro,2025,11,16,Waymo LLC,ADS,1
+Phoenix Metro,2025,11,17,Waymo LLC,ADS,2
+Phoenix Metro,2025,11,19,Waymo LLC,ADS,1
+Phoenix Metro,2025,11,21,Waymo LLC,ADS,2
+Phoenix Metro,2025,11,23,Waymo LLC,ADS,2
+Phoenix Metro,2025,12,0,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2025,12,0,Waymo LLC,ADS,1
+Phoenix Metro,2025,12,2,"Kia America, Inc.",ADAS,1
+Phoenix Metro,2025,12,3,Waymo LLC,ADS,2
+Phoenix Metro,2025,12,7,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2025,12,8,Waymo LLC,ADS,1
+Phoenix Metro,2025,12,9,Waymo LLC,ADS,1
+Phoenix Metro,2025,12,10,Waymo LLC,ADS,2
+Phoenix Metro,2025,12,12,Waymo LLC,ADS,2
+Phoenix Metro,2025,12,13,"Tesla, Inc.",ADAS,1
+Phoenix Metro,2025,12,13,Waymo LLC,ADS,3
+Phoenix Metro,2025,12,15,Waymo LLC,ADS,3
+Phoenix Metro,2025,12,18,Waymo LLC,ADS,1
+Phoenix Metro,2025,12,19,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,1,2,Waymo LLC,ADS,3
+San Francisco Bay Area,2022,1,3,Cruise LLC,ADS,1
+San Francisco Bay Area,2022,1,3,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2022,1,6,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,1,8,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2022,1,9,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,1,10,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,1,13,Cruise LLC,ADS,1
+San Francisco Bay Area,2022,1,13,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2022,1,14,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,1,17,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,1,17,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2022,1,17,Waymo LLC,ADS,2
+San Francisco Bay Area,2022,1,20,Waymo LLC,ADS,2
+San Francisco Bay Area,2022,1,22,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,2,0,Cruise LLC,ADS,1
+San Francisco Bay Area,2022,2,0,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2022,2,0,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,2,4,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,2,8,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,2,8,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2022,2,13,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,2,15,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,2,15,Waymo LLC,ADS,2
+San Francisco Bay Area,2022,2,16,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2022,2,17,Waymo LLC,ADS,2
+San Francisco Bay Area,2022,2,19,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,2,20,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2022,3,1,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,3,2,Cruise LLC,ADS,1
+San Francisco Bay Area,2022,3,2,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2022,3,2,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,3,7,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,3,8,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2022,3,11,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,3,12,Cruise LLC,ADS,1
+San Francisco Bay Area,2022,3,12,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2022,3,12,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,3,13,Cruise LLC,ADS,1
+San Francisco Bay Area,2022,3,13,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2022,3,15,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,3,15,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2022,3,22,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,4,0,Cruise LLC,ADS,2
+San Francisco Bay Area,2022,4,0,"General Motors, LLC",ADS,2
+San Francisco Bay Area,2022,4,1,Cruise LLC,ADS,1
+San Francisco Bay Area,2022,4,1,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2022,4,2,Waymo LLC,ADS,2
+San Francisco Bay Area,2022,4,3,Cruise LLC,ADS,1
+San Francisco Bay Area,2022,4,3,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2022,4,5,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2022,4,6,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,4,8,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,4,11,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,4,13,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,4,14,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,4,16,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2022,4,16,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,4,19,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,4,19,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,4,22,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,4,23,Cruise LLC,ADS,2
+San Francisco Bay Area,2022,4,23,"General Motors, LLC",ADS,2
+San Francisco Bay Area,2022,5,1,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2022,5,1,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,5,4,Cruise LLC,ADS,1
+San Francisco Bay Area,2022,5,4,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2022,5,9,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2022,5,9,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,5,13,Transdev Alternative Services,ADS,2
+San Francisco Bay Area,2022,5,13,Waymo LLC,ADS,2
+San Francisco Bay Area,2022,5,13,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2022,5,16,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,5,18,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,5,19,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,6,0,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,6,1,Cruise LLC,ADS,1
+San Francisco Bay Area,2022,6,1,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2022,6,1,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2022,6,6,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,6,7,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2022,6,7,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,6,10,Cruise LLC,ADS,1
+San Francisco Bay Area,2022,6,10,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2022,6,10,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2022,6,10,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,6,10,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2022,6,12,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2022,6,12,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,6,13,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2022,6,14,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2022,6,15,Apple Inc.,ADS,1
+San Francisco Bay Area,2022,6,16,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2022,6,16,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,6,21,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,6,23,Cruise LLC,ADS,1
+San Francisco Bay Area,2022,6,23,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2022,6,23,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2022,7,0,Cruise LLC,ADS,1
+San Francisco Bay Area,2022,7,0,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2022,7,1,Cruise LLC,ADS,1
+San Francisco Bay Area,2022,7,1,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2022,7,2,Cruise LLC,ADS,1
+San Francisco Bay Area,2022,7,2,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2022,7,2,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2022,7,2,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,7,3,"Lucid USA, Inc.",ADAS,1
+San Francisco Bay Area,2022,7,6,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2022,7,6,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,7,10,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2022,7,10,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,7,14,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,7,14,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2022,7,15,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,7,18,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2022,7,22,Cruise LLC,ADS,1
+San Francisco Bay Area,2022,7,22,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2022,7,23,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2022,7,23,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,8,3,Cruise LLC,ADS,1
+San Francisco Bay Area,2022,8,3,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2022,8,3,Transdev Alternative Services,ADS,2
+San Francisco Bay Area,2022,8,3,Waymo LLC,ADS,2
+San Francisco Bay Area,2022,8,7,Cruise LLC,ADS,1
+San Francisco Bay Area,2022,8,7,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2022,8,17,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,8,17,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2022,8,18,Transdev Alternative Services,ADS,2
+San Francisco Bay Area,2022,8,18,Waymo LLC,ADS,2
+San Francisco Bay Area,2022,8,21,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2022,9,1,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,9,3,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,9,5,Cruise LLC,ADS,1
+San Francisco Bay Area,2022,9,5,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2022,9,6,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2022,9,6,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,9,9,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2022,9,9,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,9,11,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2022,9,12,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2022,9,12,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,9,14,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,9,15,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,9,17,Argo AI,ADS,1
+San Francisco Bay Area,2022,9,17,Ford Motor Company,ADS,1
+San Francisco Bay Area,2022,9,18,Cruise LLC,ADS,1
+San Francisco Bay Area,2022,9,18,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2022,9,18,NVIDIA CORP,ADAS,2
+San Francisco Bay Area,2022,10,0,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,10,8,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2022,10,8,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,10,10,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,10,13,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2022,10,14,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2022,10,15,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,10,20,"Kia America, Inc.",ADAS,1
+San Francisco Bay Area,2022,10,20,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,10,23,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,11,1,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,11,9,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2022,11,9,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,11,13,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2022,11,16,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2022,11,16,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,11,17,"Mercedes-Benz USA, LLC",ADS,1
+San Francisco Bay Area,2022,11,17,NVIDIA CORP,ADS,1
+San Francisco Bay Area,2022,11,20,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,11,20,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2022,11,21,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,11,22,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,11,22,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2022,12,0,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,12,3,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2022,12,3,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,12,5,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,12,7,"BMW of North America, LLC",ADAS,1
+San Francisco Bay Area,2022,12,8,Cruise LLC,ADS,1
+San Francisco Bay Area,2022,12,8,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2022,12,12,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2022,12,12,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,12,13,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2022,12,13,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,12,15,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2022,12,16,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,12,16,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2022,12,16,Waymo LLC,ADS,1
+San Francisco Bay Area,2022,12,18,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,12,22,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2022,12,23,Cruise LLC,ADS,3
+San Francisco Bay Area,2022,12,23,"General Motors, LLC",ADS,3
+San Francisco Bay Area,2022,12,23,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,1,1,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,1,7,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,1,12,Hyundai Motor America,ADAS,1
+San Francisco Bay Area,2023,1,14,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,1,15,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2023,1,16,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,1,17,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2023,1,17,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2023,1,17,Waymo LLC,ADS,2
+San Francisco Bay Area,2023,1,18,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2023,1,19,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,1,21,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,2,0,Cruise LLC,ADS,2
+San Francisco Bay Area,2023,2,0,"General Motors, LLC",ADS,2
+San Francisco Bay Area,2023,2,0,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,2,2,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,2,2,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,2,5,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,2,7,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,2,11,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,2,13,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2023,2,14,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2023,2,16,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,2,18,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2023,2,22,"General Motors, LLC",ADAS,1
+San Francisco Bay Area,2023,3,1,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,3,1,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,3,1,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,3,2,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2023,3,2,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,3,3,Cruise LLC,ADS,2
+San Francisco Bay Area,2023,3,3,"General Motors, LLC",ADS,2
+San Francisco Bay Area,2023,3,4,Cruise LLC,ADS,2
+San Francisco Bay Area,2023,3,4,"General Motors, LLC",ADS,2
+San Francisco Bay Area,2023,3,5,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,3,13,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,3,14,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,3,14,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,3,15,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,3,17,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,3,17,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2023,3,17,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,3,18,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,3,19,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,3,20,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,3,20,Waymo LLC,ADS,2
+San Francisco Bay Area,2023,3,21,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,3,21,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,3,21,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2023,3,21,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2023,3,21,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,3,22,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,3,23,Cruise LLC,ADS,2
+San Francisco Bay Area,2023,3,23,"General Motors, LLC",ADS,2
+San Francisco Bay Area,2023,4,0,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,4,0,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,4,4,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,4,4,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,4,5,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,4,7,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,4,9,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,4,10,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2023,4,10,Waymo LLC,ADS,2
+San Francisco Bay Area,2023,4,11,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2023,4,13,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,4,15,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,4,17,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,4,20,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,4,20,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,4,21,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,4,21,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,4,22,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2023,4,22,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,4,23,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,4,23,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,5,0,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,5,2,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,5,2,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,5,3,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,5,3,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,5,3,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,5,6,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,5,9,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,5,9,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,5,10,Transdev Alternative Services,ADS,2
+San Francisco Bay Area,2023,5,10,Waymo LLC,ADS,2
+San Francisco Bay Area,2023,5,11,WeRide Corp,ADS,1
+San Francisco Bay Area,2023,5,11,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2023,5,15,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,5,19,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,5,20,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,5,20,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,5,21,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,6,0,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,6,0,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,6,7,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,6,9,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,6,9,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,6,9,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,6,11,Pony.ai,ADS,1
+San Francisco Bay Area,2023,6,12,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,6,14,WeRide Corp,ADS,1
+San Francisco Bay Area,2023,6,15,Apollo Autonomous Driving USA,ADS,1
+San Francisco Bay Area,2023,6,15,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,6,17,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,6,21,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,6,22,Cruise LLC,ADS,3
+San Francisco Bay Area,2023,6,22,"General Motors, LLC",ADS,3
+San Francisco Bay Area,2023,6,22,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,6,23,Cruise LLC,ADS,2
+San Francisco Bay Area,2023,6,23,"General Motors, LLC",ADS,2
+San Francisco Bay Area,2023,7,0,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,7,0,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,7,0,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,7,1,Cruise LLC,ADS,2
+San Francisco Bay Area,2023,7,1,"General Motors, LLC",ADS,2
+San Francisco Bay Area,2023,7,3,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,7,6,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,7,6,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,7,9,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,7,10,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,7,10,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,7,10,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2023,7,10,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,7,11,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,7,11,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,7,13,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,7,13,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2023,7,13,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,7,14,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,7,14,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,7,15,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2023,7,15,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,7,16,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,7,16,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,7,16,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,7,20,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,7,20,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,7,20,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,7,22,Cruise LLC,ADS,3
+San Francisco Bay Area,2023,7,22,"General Motors, LLC",ADS,3
+San Francisco Bay Area,2023,7,23,Cruise LLC,ADS,2
+San Francisco Bay Area,2023,7,23,"General Motors, LLC",ADS,2
+San Francisco Bay Area,2023,7,23,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,8,0,Cruise LLC,ADS,3
+San Francisco Bay Area,2023,8,0,"General Motors, LLC",ADS,3
+San Francisco Bay Area,2023,8,1,Cruise LLC,ADS,2
+San Francisco Bay Area,2023,8,1,"General Motors, LLC",ADS,2
+San Francisco Bay Area,2023,8,4,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,8,4,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,8,7,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,8,7,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,8,8,Cruise LLC,ADS,2
+San Francisco Bay Area,2023,8,8,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,8,9,Cruise LLC,ADS,2
+San Francisco Bay Area,2023,8,9,"General Motors, LLC",ADS,2
+San Francisco Bay Area,2023,8,9,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,8,10,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,8,10,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,8,11,Cruise LLC,ADS,3
+San Francisco Bay Area,2023,8,11,"General Motors, LLC",ADS,3
+San Francisco Bay Area,2023,8,11,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,8,12,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,8,13,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,8,13,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,8,13,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,8,13,WeRide Corp,ADS,1
+San Francisco Bay Area,2023,8,14,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,8,14,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,8,14,Ghost Autonomy Inc.,ADS,1
+San Francisco Bay Area,2023,8,16,Cruise LLC,ADS,3
+San Francisco Bay Area,2023,8,16,"General Motors, LLC",ADS,3
+San Francisco Bay Area,2023,8,16,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,8,17,"Beep, Inc.",ADS,1
+San Francisco Bay Area,2023,8,17,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,8,18,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,8,20,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,8,20,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,8,21,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,8,21,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,8,21,Waymo LLC,ADS,2
+San Francisco Bay Area,2023,8,22,Cruise LLC,ADS,3
+San Francisco Bay Area,2023,8,22,"General Motors, LLC",ADS,3
+San Francisco Bay Area,2023,8,22,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,8,23,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,8,23,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,9,8,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,9,8,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,9,9,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,9,9,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,9,9,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,9,11,Apple Inc.,ADS,1
+San Francisco Bay Area,2023,9,12,Apollo Autonomous Driving USA,ADS,1
+San Francisco Bay Area,2023,9,12,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,9,13,WeRide Corp,ADS,1
+San Francisco Bay Area,2023,9,15,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2023,9,16,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,9,17,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,9,17,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,9,17,Pony.ai,ADS,1
+San Francisco Bay Area,2023,9,18,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,9,19,Waymo LLC,ADS,2
+San Francisco Bay Area,2023,9,20,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2023,9,20,Waymo LLC,ADS,2
+San Francisco Bay Area,2023,9,21,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2023,9,21,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,9,22,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,9,22,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,9,22,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,9,23,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,9,23,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,9,23,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,10,2,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2023,10,3,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,10,3,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,10,4,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,10,7,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2023,10,7,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,10,8,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,10,8,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,10,8,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,10,8,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,10,9,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2023,10,9,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,10,11,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,10,11,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,10,11,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,10,12,Apollo Autonomous Driving USA,ADS,1
+San Francisco Bay Area,2023,10,16,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,10,16,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,10,16,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,10,16,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,10,17,"Rivian Automotive, LLC",ADAS,1
+San Francisco Bay Area,2023,10,17,Waymo LLC,ADS,3
+San Francisco Bay Area,2023,10,19,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,10,19,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,10,20,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2023,10,21,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,10,21,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,10,22,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,10,22,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,10,23,Cruise LLC,ADS,1
+San Francisco Bay Area,2023,10,23,"General Motors, LLC",ADS,1
+San Francisco Bay Area,2023,11,2,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,11,3,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,11,10,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,11,12,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,11,15,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2023,11,15,Waymo LLC,ADS,2
+San Francisco Bay Area,2023,11,22,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2023,11,22,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,11,23,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,12,0,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,12,1,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,12,9,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,12,9,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,12,12,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,12,13,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,12,15,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,12,15,Waymo LLC,ADS,2
+San Francisco Bay Area,2023,12,16,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,12,17,Waymo LLC,ADS,1
+San Francisco Bay Area,2023,12,18,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,12,20,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2023,12,23,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,1,0,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,1,10,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,1,12,WeRide Corp,ADS,1
+San Francisco Bay Area,2024,1,14,Nuro,ADS,1
+San Francisco Bay Area,2024,1,14,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2024,1,16,Ghost Autonomy Inc.,ADS,1
+San Francisco Bay Area,2024,1,17,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,1,19,Nuro,ADS,1
+San Francisco Bay Area,2024,1,20,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,1,21,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2024,2,1,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,2,3,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,2,4,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,2,6,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,2,11,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2024,2,13,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,2,13,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2024,2,14,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,2,16,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,2,17,"Volvo Car USA, LLC",ADAS,1
+San Francisco Bay Area,2024,2,21,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,3,0,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,3,0,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,3,1,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,3,1,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2024,3,1,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,3,4,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,3,5,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,3,7,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,3,15,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2024,3,15,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,3,16,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,3,18,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,3,20,"Lucid USA, Inc.",ADAS,1
+San Francisco Bay Area,2024,3,20,Nuro,ADS,1
+San Francisco Bay Area,2024,3,20,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,3,21,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,3,23,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,4,1,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,4,5,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,4,6,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,4,10,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2024,4,10,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,4,12,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,4,12,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2024,4,13,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,4,14,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,4,15,Pony.ai,ADAS,1
+San Francisco Bay Area,2024,4,15,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,4,18,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,4,19,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,4,20,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,5,1,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,5,3,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,5,6,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,5,9,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,5,11,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2024,5,11,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,5,12,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,5,13,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,5,14,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,5,14,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,5,15,Nuro,ADS,1
+San Francisco Bay Area,2024,5,15,Pony.ai,ADS,1
+San Francisco Bay Area,2024,5,15,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,5,16,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,5,16,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,5,16,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2024,5,18,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,5,19,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,5,19,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,5,21,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,5,22,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,5,23,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,5,23,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2024,5,23,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,6,0,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,6,1,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,6,1,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,6,2,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,6,8,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,6,8,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,6,10,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,6,10,WeRide Corp,ADS,1
+San Francisco Bay Area,2024,6,11,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,6,12,Waymo LLC,ADS,3
+San Francisco Bay Area,2024,6,13,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,6,15,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,6,15,WeRide Corp,ADS,1
+San Francisco Bay Area,2024,6,16,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,6,18,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,6,20,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,6,21,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,6,23,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,7,0,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,7,1,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,7,4,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,7,9,Hyundai Motor America,ADAS,1
+San Francisco Bay Area,2024,7,9,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2024,7,9,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,7,11,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,7,11,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2024,7,12,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,7,12,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,7,13,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2024,7,13,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,7,14,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,7,14,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,7,15,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,7,15,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,7,15,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2024,7,16,Waymo LLC,ADS,4
+San Francisco Bay Area,2024,7,17,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,7,17,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,7,17,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2024,7,18,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,7,18,Waymo LLC,ADS,3
+San Francisco Bay Area,2024,7,18,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2024,7,20,Waymo LLC,ADS,3
+San Francisco Bay Area,2024,7,22,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,7,23,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,8,0,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,8,0,Waymo LLC,ADS,3
+San Francisco Bay Area,2024,8,1,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,8,1,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,8,3,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,8,5,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,8,8,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,8,10,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,8,11,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,8,12,"Lucid USA, Inc.",ADAS,1
+San Francisco Bay Area,2024,8,13,Waymo LLC,ADS,3
+San Francisco Bay Area,2024,8,16,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,8,17,Waymo LLC,ADS,3
+San Francisco Bay Area,2024,8,20,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,8,21,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2024,8,21,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,8,22,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,8,23,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,9,0,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,9,1,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,9,1,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,9,2,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,9,2,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,9,4,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,9,5,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,9,6,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,9,7,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,9,8,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,9,9,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2024,9,9,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,9,10,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,9,11,"General Motors, LLC",ADAS,1
+San Francisco Bay Area,2024,9,11,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,9,12,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,9,12,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,9,13,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2024,9,13,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,9,14,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,9,15,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,9,17,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,9,18,Waymo LLC,ADS,5
+San Francisco Bay Area,2024,9,20,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,9,20,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2024,9,20,Waymo LLC,ADS,4
+San Francisco Bay Area,2024,9,21,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2024,9,21,Waymo LLC,ADS,3
+San Francisco Bay Area,2024,9,23,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,10,1,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,10,2,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,10,2,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,10,5,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,10,7,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,10,8,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,10,9,Waymo LLC,ADS,5
+San Francisco Bay Area,2024,10,9,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2024,10,10,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,10,10,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2024,10,12,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,10,13,Waymo LLC,ADS,4
+San Francisco Bay Area,2024,10,15,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,10,15,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,10,16,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2024,10,16,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,10,17,Waymo LLC,ADS,4
+San Francisco Bay Area,2024,10,18,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,10,19,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,10,20,Waymo LLC,ADS,3
+San Francisco Bay Area,2024,10,21,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,10,22,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,10,23,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2024,10,23,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,11,0,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2024,11,0,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,11,1,Waymo LLC,ADS,4
+San Francisco Bay Area,2024,11,2,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,11,2,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,11,6,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,11,7,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,11,8,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,11,8,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2024,11,8,Waymo LLC,ADS,3
+San Francisco Bay Area,2024,11,9,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2024,11,9,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,11,10,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,11,11,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,11,12,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,11,13,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,11,13,WeRide Corp,ADS,1
+San Francisco Bay Area,2024,11,14,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,11,16,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,11,17,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,11,18,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,11,18,Waymo LLC,ADS,3
+San Francisco Bay Area,2024,11,19,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,11,20,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,11,21,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,11,22,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,12,0,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,12,1,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2024,12,1,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,12,2,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,12,4,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,12,7,Waymo LLC,ADS,4
+San Francisco Bay Area,2024,12,8,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,12,9,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,12,9,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,12,10,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,12,11,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,12,12,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,12,13,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2024,12,13,Waymo LLC,ADS,3
+San Francisco Bay Area,2024,12,14,Waymo LLC,ADS,1
+San Francisco Bay Area,2024,12,15,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,12,16,Waymo LLC,ADS,6
+San Francisco Bay Area,2024,12,17,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,12,18,"Mercedes-Benz USA, LLC",ADAS,1
+San Francisco Bay Area,2024,12,18,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,12,19,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2024,12,20,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,12,21,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,12,21,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2024,12,22,Transdev Alternative Services,ADS,1
+San Francisco Bay Area,2024,12,22,Waymo LLC,ADS,2
+San Francisco Bay Area,2024,12,23,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,1,1,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,1,1,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,1,2,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,1,5,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,1,6,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,1,8,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,1,9,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,1,9,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,1,10,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,1,11,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,1,12,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,1,13,Waymo LLC,ADS,4
+San Francisco Bay Area,2025,1,14,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,1,15,Waymo LLC,ADS,5
+San Francisco Bay Area,2025,1,16,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,1,16,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,1,17,May Mobility,ADS,1
+San Francisco Bay Area,2025,1,17,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,1,17,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,1,18,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,1,18,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2025,1,19,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,1,20,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,1,20,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2025,1,21,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2025,1,22,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,1,22,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,1,22,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2025,2,0,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,2,1,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,2,2,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,2,6,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,2,7,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2025,2,7,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,2,8,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,2,9,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,2,11,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,2,12,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,2,13,Waymo LLC,ADS,4
+San Francisco Bay Area,2025,2,14,"Mercedes-Benz USA, LLC",ADS,1
+San Francisco Bay Area,2025,2,14,NVIDIA CORP,ADS,1
+San Francisco Bay Area,2025,2,14,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2025,2,14,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,2,16,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,2,16,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,2,17,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,2,17,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2025,2,18,AutoX Technologies Inc,ADS,1
+San Francisco Bay Area,2025,2,18,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,2,18,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,2,20,Nuro,ADAS,1
+San Francisco Bay Area,2025,2,21,"Rivian Automotive, LLC",ADAS,1
+San Francisco Bay Area,2025,2,21,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2025,2,22,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,2,23,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,3,0,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,3,2,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,3,3,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,3,4,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2025,3,4,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,3,5,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,3,8,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,3,9,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,3,9,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,3,10,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,3,12,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,3,13,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,3,14,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,3,15,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,3,15,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,3,16,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,3,17,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,3,18,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,3,19,Waymo LLC,ADS,5
+San Francisco Bay Area,2025,3,20,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,3,21,"Mercedes-Benz USA, LLC",ADAS,1
+San Francisco Bay Area,2025,4,0,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,4,1,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,4,2,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,4,4,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,4,6,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,4,6,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,4,7,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,4,8,Ford Motor Company,ADAS,1
+San Francisco Bay Area,2025,4,8,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,4,9,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2025,4,9,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,4,9,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2025,4,10,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,4,10,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2025,4,11,Waymo LLC,ADS,5
+San Francisco Bay Area,2025,4,12,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,4,13,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,4,14,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,4,15,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,4,15,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,4,16,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2025,4,16,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,4,17,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,4,17,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,4,18,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,4,19,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,4,19,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,4,20,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,4,21,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,4,22,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,4,22,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,4,23,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2025,5,2,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,5,4,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,5,5,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,5,5,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,5,7,Waymo LLC,ADS,4
+San Francisco Bay Area,2025,5,8,Waymo LLC,ADS,4
+San Francisco Bay Area,2025,5,8,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2025,5,9,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,5,10,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,5,11,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,5,12,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,5,13,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,5,13,Waymo LLC,ADS,6
+San Francisco Bay Area,2025,5,14,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,5,14,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,5,14,WeRide Corp,ADS,1
+San Francisco Bay Area,2025,5,15,"Mercedes-Benz USA, LLC",ADAS,1
+San Francisco Bay Area,2025,5,15,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,5,16,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,5,17,Waymo LLC,ADS,4
+San Francisco Bay Area,2025,5,18,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,5,19,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,5,19,"Zoox, Inc.",ADS,2
+San Francisco Bay Area,2025,5,20,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2025,5,20,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,5,21,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,5,21,Waymo LLC,ADS,4
+San Francisco Bay Area,2025,5,21,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2025,5,22,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,5,22,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,5,22,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2025,5,23,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,6,0,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,6,7,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,6,9,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,6,9,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,6,11,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,6,12,Nuro,ADS,1
+San Francisco Bay Area,2025,6,13,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,6,14,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,6,14,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2025,6,15,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,6,16,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,6,16,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,6,17,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,6,18,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,6,19,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,6,19,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,6,20,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,6,22,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,6,23,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2025,7,0,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,7,1,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2025,7,2,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,7,4,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,7,6,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,7,8,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,7,9,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,7,11,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,7,11,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,7,12,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,7,13,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,7,13,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,7,14,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,7,14,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,7,15,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,7,15,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,7,16,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,7,17,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,7,18,Nuro,ADS,1
+San Francisco Bay Area,2025,7,18,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,7,18,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2025,7,19,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,7,19,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,7,21,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,7,22,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,8,2,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,8,6,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,8,7,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,8,9,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,8,10,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,8,11,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,8,12,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,8,13,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,8,15,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,8,15,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2025,8,16,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,8,17,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,8,18,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,8,18,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2025,8,19,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,8,20,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,8,21,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,8,23,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,8,23,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,9,0,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,9,2,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,9,4,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,9,7,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,9,9,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,9,9,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,9,10,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,9,10,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2025,9,13,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,9,13,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,9,14,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,9,15,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,9,16,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,9,17,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,9,17,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,9,19,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,9,19,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,9,20,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,9,21,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,9,22,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,9,23,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,9,23,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,10,0,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,10,0,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,10,1,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,10,2,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,10,3,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2025,10,6,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,10,7,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,10,8,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,10,8,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2025,10,9,Waymo LLC,ADS,6
+San Francisco Bay Area,2025,10,10,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,10,11,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,10,12,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,10,12,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,10,13,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,10,14,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,10,15,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,10,15,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2025,10,16,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,10,16,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,10,17,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,10,18,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,10,20,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2025,10,20,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,10,21,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2025,10,22,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,10,22,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,10,23,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,11,0,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2025,11,1,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,11,1,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,11,2,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,11,6,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,11,7,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,11,8,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,11,10,Waymo LLC,ADS,7
+San Francisco Bay Area,2025,11,11,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,11,12,Waymo LLC,ADS,4
+San Francisco Bay Area,2025,11,13,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,11,13,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,11,14,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,11,14,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,11,15,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,11,16,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2025,11,16,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,11,17,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,11,20,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,11,21,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,11,21,Waymo LLC,ADS,3
+San Francisco Bay Area,2025,11,22,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,11,22,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,11,23,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,12,0,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,12,0,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,12,1,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,12,2,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2025,12,2,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,12,4,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,12,5,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,12,6,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,12,7,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,12,7,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,12,8,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,12,9,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,12,10,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,12,10,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,12,11,"Tesla, Inc.",ADAS,1
+San Francisco Bay Area,2025,12,11,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,12,12,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,12,13,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,12,14,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,12,15,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2025,12,15,Waymo LLC,ADS,5
+San Francisco Bay Area,2025,12,16,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2025,12,17,Waymo LLC,ADS,1
+San Francisco Bay Area,2025,12,17,"Zoox, Inc.",ADS,1
+San Francisco Bay Area,2025,12,18,"Tesla, Inc.",ADAS,3
+San Francisco Bay Area,2025,12,18,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,12,19,Waymo LLC,ADS,2
+San Francisco Bay Area,2025,12,20,"Tesla, Inc.",ADAS,2
+San Francisco Bay Area,2025,12,23,Waymo LLC,ADS,2
