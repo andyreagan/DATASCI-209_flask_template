@@ -53,6 +53,8 @@
   button:focus-visible { outline:2px solid var(--rain); outline-offset:2px; }
   /* the answer */
   .answer { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:26px 28px; box-shadow:0 14px 40px rgba(20,33,61,.07); margin-bottom:26px; }
+  .answer.flash { animation:flash 1.1s ease-out; }
+  @keyframes flash { 0% { box-shadow:0 0 0 0 color-mix(in srgb, var(--rain) 45%, transparent), 0 14px 40px rgba(20,33,61,.07); } 100% { box-shadow:0 0 0 14px transparent, 0 14px 40px rgba(20,33,61,.07); } }
   .answer .where { display:flex; align-items:center; gap:10px; font-size:13px; color:var(--muted); font-weight:600; letter-spacing:.06em; text-transform:uppercase; flex-wrap:wrap; }
   .answer .where svg { width:18px; height:18px; }
   .answer h2 { font-size:clamp(24px, 3.4vw, 34px); line-height:1.15; margin:10px 0 8px; text-wrap:balance; }
@@ -234,7 +236,13 @@ const metroIdx = () => state.city === ALL ? -1 : metros.indexOf(state.city);
 const inCity = r => state.city === ALL || r[0] === metroIdx();
 d3.select("#cityPick").selectAll("button").data([...metros, ALL]).join("button").text(d => d).on("click", (ev, d) => setState({city: d}));
 d3.select("#wxPick").selectAll("button").data(WLABEL).join("button").attr("data-w", (d, i) => i).html((d, i) => `${WICON[i]}<span>${d}</span>`).on("click", (ev, d) => setState({w: WLABEL.indexOf(d)}));
-function setState(patch) { Object.assign(state, patch); render(); }
+const CITYSLUG = {"San Francisco": "sf", "Los Angeles": "la", "Austin": "austin", "Phoenix": "phoenix", "Atlanta": "atlanta", "Las Vegas": "lasvegas", [ALL]: "all"};
+function setState(patch) {
+  Object.assign(state, patch); render();
+  const card = document.getElementById("answer"); card.classList.remove("flash"); void card.offsetWidth; card.classList.add("flash");
+  try { history.replaceState(null, "", "#" + CITYSLUG[state.city] + "-" + WNAME[state.w]); } catch (e) {}
+}
+(function fromHash() { const m = /^#(sf|la|austin|phoenix|atlanta|lasvegas|all)-(clear|cloudy|rain)$/.exec(location.hash || ""); if (!m) return; const city = Object.keys(CITYSLUG).find(c => CITYSLUG[c] === m[1]); if (city) { state.city = city; state.w = WNAME.indexOf(m[2]); } })();
 
 // ---------- facts for the current state ----------
 function facts() {
@@ -247,8 +255,17 @@ function facts() {
   const rainHours = d3.sum(ex, e => e.crashes * e.rainHours) / d3.sum(ex, e => e.crashes);
   const inj = byW.map(s => { const k = s.filter(isInj).length; return {k, n: s.length, rate: s.length ? k / s.length : 0, ci: wilson(k, s.length)}; });
   const injAll = {k: rows.filter(isInj).length, n, rate: rows.filter(isInj).length / n};
-  const moName = mi >= 0 && DATA.monthly[state.city].rRain >= 0.4 ? state.city : "San Francisco";
-  return {mi, city: state.city, here: mi >= 0 ? state.city : "the six cities", rows, n, byW, nW: byW.map(s => s.length), predicted, reported, ratio, excludesOne: ratioHi < 1, rainHours, inj, injAll, w: state.w, wName: WNAME[state.w], mo: DATA.monthly[moName], moName, thin: reported < 10};
+  let mo;
+  if (mi >= 0) mo = DATA.monthly[state.city];
+  else {
+    const byMonth = new Map();
+    for (const name of metros) for (const r of DATA.monthly[name].rows) { const a = byMonth.get(r.month) || {month: r.month, crashes: 0, rain: 0, rainHours: 0, cities: 0}; a.crashes += r.crashes; a.rain += r.rain; a.rainHours += r.rainHours; a.cities++; byMonth.set(r.month, a); }
+    const rows = [...byMonth.values()].sort((a, b) => a.month < b.month ? -1 : 1);
+    const corr = (xs, ys) => { const mx = d3.mean(xs), my = d3.mean(ys); return d3.sum(xs.map((x, i) => (x - mx) * (ys[i] - my))) / Math.sqrt(d3.sum(xs.map(x => (x - mx) ** 2)) * d3.sum(ys.map(y => (y - my) ** 2))); };
+    mo = {rows, rRain: corr(rows.map(r => r.rainHours), rows.map(r => r.rain)), rAll: corr(rows.map(r => r.rainHours), rows.map(r => r.crashes)), summed: true};
+  }
+  const moName = mi >= 0 ? state.city : "the six cities together";
+  return {mi, city: state.city, here: mi >= 0 ? state.city : "the six cities", rows, n, byW, nW: byW.map(s => s.length), predicted, reported, ratio, excludesOne: ratioHi < 1, rainHours, inj, injAll, w: state.w, wName: WNAME[state.w], mo, moName, thin: reported < 10};
 }
 
 // ---------- the map: where the cars are, and where the rain crashes are. It is also the city picker ----------
@@ -406,22 +423,23 @@ function renderMonths(f) {
   const md = f.mo, rows = md.rows;
   const months = d3.range(0, 61).map(i => { const y = 2021 + Math.floor((i + 6) / 12), mo = (i + 6) % 12 + 1; return `${y}-${String(mo).padStart(2, "0")}`; });
   document.getElementById("icMonths").innerHTML = ICON.calendar;
-  document.getElementById("t3").textContent = `In ${f.moName}, rainy months bring more rain crashes, so the cars are out there`;
-  document.getElementById("k3").textContent = `They just drive less of it. If the fleet were parked whenever it rained, the dots would not follow the bars at all.`;
-  document.getElementById("h3note").textContent = (f.moName !== f.city && f.mi >= 0 ? `${f.city} has too few rain crashes to show a season, so San Francisco is shown. ` : "") + `Gray bars are hours of rain in the month. Each blue dot is one rain crash. Hover a month.`;
+  const r = md.rRain, nRain = d3.sum(rows, x => x.rain), strong = r >= 0.4, faint = r >= 0.15;
+  document.getElementById("t3").textContent = strong ? `In ${f.moName}, rainy months bring more rain crashes, so the cars are out there` : faint ? `In ${f.city}, rain crashes lean toward the rainy months, but only faintly` : `${f.city} has had ${nRain === 1 ? "one rain crash" : nRain + " rain crashes"}: too few to show a season either way`;
+  document.getElementById("k3").textContent = strong ? `They just drive less of it. If the fleet were parked whenever it rained, the dots would not follow the bars at all.` : faint ? `With ${nRain} rain crashes the pattern is weak here. San Francisco, with the most data, shows it clearly: the cars do go out in the rain.` : `Where there is enough data, San Francisco above all, rain crashes rise and fall with the rainy months, so the cars are out there, just less.`;
+  document.getElementById("h3note").textContent = (md.summed ? "Months are summed across the six cities. " : "") + `Gray bars are hours of rain in the month. Each blue dot is one rain crash. Hover a month.`;
   const svg = d3.select(el).selectAll("svg").data([0]).join("svg").attr("viewBox", [0, 0, W, H]);
   svg.selectAll("*").remove();
   const x = d3.scaleBand().domain(months).range([m.left, W - m.right]).padding(0.2);
-  const yb = d3.scaleLinear().domain([0, d3.max(rows, r => r.rainHours) || 1]).nice().range([H - m.bottom, m.top]);
+  const yb = d3.scaleLinear().domain([0, d3.max(rows, x => x.rainHours) || 1]).nice().range([H - m.bottom, m.top]);
   svg.append("g").attr("class", "axis").attr("transform", `translate(0,${H - m.bottom})`).call(d3.axisBottom(x).tickValues(months.filter(mo => mo.endsWith("-01"))).tickFormat(mo => mo.slice(0, 4))).select(".domain").remove();
   svg.append("g").attr("class", "axis").attr("transform", `translate(${m.left},0)`).call(d3.axisLeft(yb).ticks(4)).select(".domain").remove();
   svg.append("text").attr("x", m.left).attr("y", 14).style("font-size", "12px").style("fill", k.muted).text("hours of rain each month (bars) and rain crashes (one dot each)");
-  svg.append("text").attr("x", W < 600 ? m.left : W - m.right).attr("y", W < 600 ? 28 : 14).attr("text-anchor", W < 600 ? "start" : "end").style("font-size", "12.5px").style("font-weight", 600).style("fill", k.rain).text(`they move together: r = ${md.rRain.toFixed(2)}`);
-  svg.append("g").selectAll("rect").data(rows).join("rect").attr("x", r => x(r.month)).attr("width", x.bandwidth()).attr("y", r => yb(r.rainHours)).attr("height", r => H - m.bottom - yb(r.rainHours)).attr("fill", k.bar);
+  svg.append("text").attr("x", W < 600 ? m.left : W - m.right).attr("y", W < 600 ? 28 : 14).attr("text-anchor", W < 600 ? "start" : "end").style("font-size", "12.5px").style("font-weight", 600).style("fill", k.rain).text(strong ? `they move together: r = ${r.toFixed(2)}` : `r = ${r < 0 ? "−" : ""}${Math.abs(r).toFixed(2)}`);
+  svg.append("g").selectAll("rect").data(rows).join("rect").attr("x", d => x(d.month)).attr("width", x.bandwidth()).attr("y", d => yb(d.rainHours)).attr("height", d => H - m.bottom - yb(d.rainHours)).attr("fill", k.bar);
   const dotR = Math.min(4.5, x.bandwidth() * 0.6), step = dotR * 2 + 1.5;
-  svg.append("g").selectAll("circle").data(rows.flatMap(r => d3.range(r.rain).map(j => ({r, j})))).join("circle").attr("cx", d => x(d.r.month) + x.bandwidth() / 2).attr("cy", d => H - m.bottom - dotR - 1 - d.j * step).attr("r", dotR).attr("fill", k.rain);
-  svg.append("g").selectAll("rect").data(rows).join("rect").attr("x", r => x(r.month)).attr("width", x.bandwidth()).attr("y", m.top).attr("height", H - m.top - m.bottom).attr("fill", "transparent")
-    .on("mousemove", (ev, r) => showTip(ev, `<b>${r.month}</b><br>${r.rainHours} hours of rain<br>${r.crashes} crashes, ${r.rain} in rain`)).on("mouseleave", hideTip);
+  svg.append("g").selectAll("circle").data(rows.flatMap(d => d3.range(d.rain).map(j => ({d, j})))).join("circle").attr("cx", d => x(d.d.month) + x.bandwidth() / 2).attr("cy", d => H - m.bottom - dotR - 1 - d.j * step).attr("r", dotR).attr("fill", k.rain);
+  svg.append("g").selectAll("rect").data(rows).join("rect").attr("x", d => x(d.month)).attr("width", x.bandwidth()).attr("y", m.top).attr("height", H - m.top - m.bottom).attr("fill", "transparent")
+    .on("mousemove", (ev, x) => showTip(ev, `<b>${x.month}</b><br>${fmtN(x.rainHours)} hours of rain${md.summed ? " across the six cities" : ""}<br>${x.crashes} crashes, ${x.rain} in rain`)).on("mouseleave", hideTip);
 }
 
 // ---------- render everything ----------
