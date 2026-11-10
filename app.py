@@ -10,5 +10,9 @@ def w209():
 def nhtsa_adas_ads():
     return render_template('nhtsa_adas_ads.html')
 
+@app.route('/nhtsa-adas-ads-traffic')
+def nhtsa_adas_ads_traffic():
+    return render_template('nhtsa_adas_ads_traffic.html')
+
 if __name__ == '__main__':
     app.run()
